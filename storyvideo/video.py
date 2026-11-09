@@ -206,7 +206,7 @@ def render(plan, audio_path: Path, out_path: Path, workers=4):
         "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
         "-i", str(audio_path),
         "-map", "0:v", "-map", "1:a",
-        "-c:v", "libx264", "-preset", "medium", "-crf", "22", "-tune", "grain", "-pix_fmt", "yuv420p",
+        "-vf", "setsar=1", "-c:v", "libx264", "-preset", "medium", "-crf", "22", "-tune", "grain", "-pix_fmt", "yuv420p",
         "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
         "-shortest", "-movflags", "+faststart", str(out_path),
     ]
