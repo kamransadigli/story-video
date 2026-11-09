@@ -1,0 +1,7 @@
+{
+  "name": "story-video",
+  "private": true,
+  "type": "module",
+  "description": "Draws SVG scenes to PNG with headless Chromium",
+  "dependencies": { "playwright": "^1.47.0" }
+}

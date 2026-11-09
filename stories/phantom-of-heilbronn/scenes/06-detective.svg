@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#2a2620"/>
+  <!-- bookshelf -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="160" width="560" height="900" fill="#4a3424" class="ink"/>
+    <g stroke="#2a1c12" stroke-width="10"><line x1="80" y1="380" x2="640" y2="380"/><line x1="80" y1="600" x2="640" y2="600"/><line x1="80" y1="820" x2="640" y2="820"/></g>
+    <g class="thin">
+      <rect x="110" y="230" width="44" height="145" fill="#8c2a2a"/><rect x="158" y="250" width="40" height="125" fill="#2a5c8c"/><rect x="202" y="220" width="50" height="155" fill="#c9a24a"/><rect x="256" y="245" width="38" height="130" fill="#3d6b4f"/>
+      <rect x="380" y="270" width="200" height="105" fill="#e8dcc0"/>
+      <rect x="110" y="460" width="160" height="135" fill="#d9c9a3"/><rect x="290" y="440" width="44" height="155" fill="#2a5c8c"/><rect x="338" y="455" width="40" height="140" fill="#8c2a2a"/><rect x="382" y="430" width="48" height="165" fill="#3d6b4f"/><rect x="434" y="450" width="40" height="145" fill="#c9a24a"/>
+      <rect x="120" y="680" width="48" height="135" fill="#3d6b4f"/><rect x="172" y="665" width="40" height="150" fill="#c9a24a"/><rect x="216" y="690" width="44" height="125" fill="#8c2a2a"/><rect x="420" y="700" width="180" height="115" fill="#e8dcc0"/>
+    </g>
+  </g>
+  <rect x="0" y="0" width="1080" height="1200" fill="#000" opacity="0.35"/>
+  <!-- lamp glow -->
+  <ellipse cx="300" cy="1180" rx="560" ry="520" fill="url(#lamp)" opacity="0.8"/>
+  <!-- desk -->
+  <path d="M-40 1180 L1120 1180 L1120 1920 L-40 1920 Z" fill="url(#desk)"/>
+  <rect x="-40" y="1168" width="1160" height="24" fill="#7a6555" class="ink"/>
+  <!-- monitor -->
+  <g filter="url(#shadow)">
+    <rect x="560" y="640" width="470" height="400" rx="30" fill="#d9d2c0" class="ink"/>
+    <rect x="590" y="670" width="410" height="330" rx="12" fill="#e8f0e6"/>
+    <path d="M700 1000 C700 900 740 870 795 870 C850 870 890 900 890 1000 Z" fill="#3a3a44"/>
+    <path d="M795 720 C750 720 730 760 732 805 C734 845 726 875 712 900 L878 900 C864 875 856 845 858 805 C860 760 840 720 795 720 Z" fill="#3a3a44"/>
+    <text x="795" y="880" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="140" fill="#e02035">?</text>
+    <path d="M740 1040 L850 1040 L880 1170 L710 1170 Z" fill="#bdb5a3" class="ink"/>
+  </g>
+  <ellipse cx="795" cy="835" rx="330" ry="300" fill="#bff5d8" opacity="0.12" filter="url(#blur)"/>
+  <!-- bankers lamp -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="1150" width="200" height="30" rx="10" fill="#c9a24a" class="ink"/>
+    <rect x="240" y="1000" width="20" height="160" fill="#c9a24a" class="ink"/>
+    <path d="M90 1010 C90 940 160 910 250 910 C340 910 410 940 410 1010 Z" fill="#2c7a4b" class="ink"/>
+  </g>
+  <!-- detective from behind -->
+  <g filter="url(#shadow)">
+    <path d="M60 1920 C40 1640 120 1480 300 1440 C380 1420 470 1430 540 1470 C650 1530 700 1700 690 1920 Z" fill="#8a6a45" class="ink"/>
+    <path d="M300 1450 L370 1600 L440 1450" fill="#6f5235" class="ink"/>
+    <path d="M200 1500 C220 1650 220 1800 210 1920" fill="none" class="ink"/>
+    <ellipse cx="380" cy="1330" rx="105" ry="125" fill="#b77b55" class="ink"/>
+    <ellipse cx="282" cy="1340" rx="22" ry="36" fill="#b77b55" class="ink"/>
+    <path d="M250 1260 C250 1180 300 1150 380 1150 C460 1150 510 1180 510 1260 Z" fill="#3b3a3f" class="ink"/>
+    <path d="M180 1270 C260 1240 500 1240 580 1270 C560 1300 200 1300 180 1270 Z" fill="#2b2a2f" class="ink"/>
+    <rect x="262" y="1236" width="236" height="28" fill="#7a1f1f"/>
+  </g>
+  <!-- mug + papers -->
+  <g filter="url(#shadow)"><rect x="840" y="1250" width="130" height="150" rx="16" fill="#ece4d6" class="ink"/><ellipse cx="905" cy="1252" rx="65" ry="14" fill="#3b2416" class="ink"/></g>
+  <g fill="none" stroke="#fff" stroke-width="6" opacity="0.25" stroke-linecap="round"><path d="M880 1220 C860 1180 900 1150 880 1110"/><path d="M925 1215 C905 1175 945 1145 925 1100"/></g>
+  <g transform="translate(720 1460) rotate(8)" filter="url(#shadowSm)"><rect width="300" height="360" fill="url(#paper)" class="thin"/><rect x="24" y="40" width="250" height="290" fill="url(#lines)"/></g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

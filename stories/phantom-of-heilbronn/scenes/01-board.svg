@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#wallTeal)"/>
+  <!-- corkboard -->
+  <rect x="40" y="250" width="1000" height="1320" rx="10" fill="url(#wood)" class="ink"/>
+  <rect x="68" y="278" width="944" height="1264" fill="url(#cork)"/>
+  <rect x="68" y="278" width="944" height="1264" fill="#000" opacity="0.12"/>
+
+  <!-- clippings -->
+  <g filter="url(#shadowSm)">
+    <g transform="translate(110 320) rotate(-4)">
+      <rect width="330" height="420" fill="url(#paper)" class="thin"/>
+      <text x="165" y="58" text-anchor="middle" class="head" font-size="34">TAGESPOST</text>
+      <rect x="20" y="72" width="290" height="4" fill="#15141f"/>
+      <text x="165" y="138" text-anchor="middle" class="head" font-size="56">40 SCENES</text>
+      <text x="165" y="196" text-anchor="middle" class="head" font-size="50">ONE WOMAN</text>
+      <rect x="20" y="220" width="290" height="180" fill="url(#lines)"/>
+    </g>
+    <g transform="translate(690 330) rotate(5)">
+      <rect width="290" height="360" fill="url(#paper)" class="thin"/>
+      <text x="145" y="60" text-anchor="middle" class="head" font-size="40">SHE STRIKES</text>
+      <text x="145" y="112" text-anchor="middle" class="head" font-size="40">AGAIN</text>
+      <rect x="20" y="140" width="250" height="200" fill="url(#lines)"/>
+    </g>
+    <g transform="translate(120 1080) rotate(3)">
+      <rect width="300" height="380" fill="url(#paper)" class="thin"/>
+      <text x="150" y="60" text-anchor="middle" class="type" font-size="34">CASE FILE 17</text>
+      <rect x="20" y="90" width="260" height="270" fill="url(#lines)"/>
+    </g>
+    <g transform="translate(680 1060) rotate(-3)">
+      <rect width="300" height="400" fill="url(#paper)" class="thin"/>
+      <text x="150" y="58" text-anchor="middle" class="head" font-size="38">DNA PROFILE</text>
+      <g transform="translate(30 90)">
+        <rect x="0" y="40" width="14" height="140" fill="#2a8c5a"/><rect x="24" y="80" width="14" height="100" fill="#c8102e"/>
+        <rect x="48" y="20" width="14" height="160" fill="#2a5c8c"/><rect x="72" y="100" width="14" height="80" fill="#15141f"/>
+        <rect x="96" y="60" width="14" height="120" fill="#2a8c5a"/><rect x="120" y="10" width="14" height="170" fill="#c8102e"/>
+        <rect x="144" y="90" width="14" height="90" fill="#2a5c8c"/><rect x="168" y="50" width="14" height="130" fill="#15141f"/>
+        <rect x="192" y="110" width="14" height="70" fill="#2a8c5a"/><rect x="216" y="30" width="14" height="150" fill="#c8102e"/>
+      </g>
+      <rect x="30" y="300" width="240" height="70" fill="url(#lines)"/>
+    </g>
+  </g>
+
+  <!-- red string -->
+  <g stroke="#d0142f" stroke-width="5" fill="none" opacity="0.95">
+    <path d="M540 900 L275 310"/><path d="M540 900 L850 320"/>
+    <path d="M540 900 L275 1070"/><path d="M540 900 L835 1050"/>
+    <path d="M540 900 L205 745"/><path d="M540 900 L900 755"/>
+  </g>
+
+  <!-- mugshot -->
+  <g transform="translate(380 640) rotate(-2)" filter="url(#shadow)">
+    <use href="#mug" width="320" height="405"/>
+  </g>
+
+  <!-- sticky notes -->
+  <g filter="url(#shadowSm)">
+    <g transform="translate(110 760) rotate(-8)"><rect width="200" height="170" fill="#f7d94c" class="thin"/>
+      <text x="100" y="72" text-anchor="middle" class="marker" font-size="40">WHO IS</text>
+      <text x="100" y="122" text-anchor="middle" class="marker" font-size="40">SHE??</text></g>
+    <g transform="translate(790 760) rotate(7)"><rect width="200" height="170" fill="#9fe08a" class="thin"/>
+      <text x="100" y="72" text-anchor="middle" class="marker" font-size="38">SAME</text>
+      <text x="100" y="122" text-anchor="middle" class="marker" font-size="38">DNA!!</text></g>
+    <g transform="translate(420 1350) rotate(-4)"><rect width="230" height="160" fill="#f6a6b8" class="thin"/>
+      <text x="115" y="68" text-anchor="middle" class="marker" font-size="34">HALF A</text>
+      <text x="115" y="114" text-anchor="middle" class="marker" font-size="34">COOKIE?!</text></g>
+  </g>
+  <use href="#pin" x="255" y="290" width="40" height="46"/><use href="#pin" x="830" y="300" width="40" height="46"/>
+  <use href="#pin" x="255" y="1050" width="40" height="46"/><use href="#pin" x="815" y="1030" width="40" height="46"/>
+  <use href="#pin" x="185" y="725" width="40" height="46"/><use href="#pin" x="880" y="735" width="40" height="46"/>
+  <use href="#pin" x="518" y="612" width="44" height="50"/>
+
+  <!-- desk + coffee -->
+  <rect x="0" y="1650" width="1080" height="270" fill="url(#desk)"/>
+  <rect x="0" y="1650" width="1080" height="10" fill="#7a6555"/>
+  <g transform="translate(760 1560)" filter="url(#shadow)">
+    <path d="M0 20 L20 200 Q22 220 42 220 L178 220 Q198 220 200 200 L220 20 Z" fill="#ece4d6" class="ink"/>
+    <path d="M214 60 C290 60 290 160 204 160" fill="none" class="ink" stroke-width="18" stroke="#15141f"/>
+    <path d="M214 60 C280 62 280 156 206 158" fill="none" stroke="#ece4d6" stroke-width="8"/>
+    <ellipse cx="110" cy="22" rx="110" ry="20" fill="#3b2416" class="ink"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="6" opacity="0.25" stroke-linecap="round">
+    <path d="M840 1530 C820 1490 860 1460 840 1420"/><path d="M890 1520 C870 1480 910 1450 890 1405"/>
+  </g>
+  <!-- folder -->
+  <g transform="translate(60 1700) rotate(-3)" filter="url(#shadow)">
+    <rect width="520" height="160" rx="10" fill="#e3b04b" class="ink"/>
+    <rect x="30" y="40" width="300" height="56" fill="#c8102e"/>
+    <text x="180" y="82" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#fff">PHANTOM</text>
+  </g>
+
+  <!-- lighting -->
+  <ellipse cx="560" cy="820" rx="760" ry="900" fill="url(#lamp)" opacity="0.45"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

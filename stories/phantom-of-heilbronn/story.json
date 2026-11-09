@@ -1,0 +1,106 @@
+{
+  "title": "The Phantom of Heilbronn",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "music": "noir",
+  "style": "stylized 3D cartoon detective story, soft cel shading, cinematic noir lighting, warm amber lamp light against deep teal shadows, muted palette, vertical 9:16 composition, no text",
+  "shots": [
+    {
+      "id": "01",
+      "narration": "For sixteen years, police hunted the most wanted woman in Europe.",
+      "svg": "scenes/01-board.svg",
+      "prompt": "detective evidence board covered in newspaper clippings and red string, a blank silhouette mugshot with a red question mark in the center, desk lamp glow",
+      "motion": "push_in",
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "narration": "Her DNA turned up at forty crime scenes.",
+      "svg": "scenes/02-map.svg",
+      "prompt": "old paper map of Germany, Austria and France pinned to a corkboard, dozens of red pins clustered across it",
+      "motion": "pan_down",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "narration": "Murders. Break-ins. Stolen cars.",
+      "svg": "scenes/03-window.svg",
+      "prompt": "moonlit kitchen at night, a smashed window pane with cracks radiating outward, flashlight beam cutting through the dark",
+      "motion": "pull_out",
+      "sfx": "glass"
+    },
+    {
+      "id": "04",
+      "narration": "She even left it on half a cookie, inside a trailer.",
+      "svg": "scenes/04-cookie.svg",
+      "prompt": "close-up of a half-eaten cookie on a trailer table, a yellow evidence marker numbered 17 beside it, flashlight beam",
+      "motion": "push_in",
+      "sfx": "click"
+    },
+    {
+      "id": "05",
+      "narration": "In 2007, she was linked to the murder of a young police officer in Heilbronn.",
+      "say": "In two thousand seven, she was linked to the murder of a young police officer in Heilbronn.",
+      "svg": "scenes/05-police.svg",
+      "prompt": "police car parked at night in a quiet German town square, blue and red lights glowing, crime scene tape in the foreground",
+      "motion": "pan_right",
+      "sfx": "hit"
+    },
+    {
+      "id": "06",
+      "narration": "Detectives called her the Phantom.",
+      "svg": "scenes/06-detective.svg",
+      "prompt": "tired detective in a fedora sitting at a cluttered desk under a green lamp, staring at a monitor showing a blank silhouette with a question mark",
+      "motion": "push_in",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "07",
+      "narration": "No witness ever saw her. No camera ever caught her.",
+      "svg": "scenes/07-cctv.svg",
+      "prompt": "wall of security camera monitors showing empty streets and static, timestamp overlays, dark control room",
+      "motion": "pull_out",
+      "sfx": "static"
+    },
+    {
+      "id": "08",
+      "narration": "The reward climbed to three hundred thousand euros.",
+      "svg": "scenes/08-reward.svg",
+      "prompt": "newspaper front page with a huge 300,000 euro reward headline and a silhouette wanted poster",
+      "motion": "push_in",
+      "sfx": "hit"
+    },
+    {
+      "id": "09",
+      "narration": "Then her DNA showed up on a man's body. Impossible.",
+      "svg": "scenes/09-match.svg",
+      "prompt": "lab report on a desk with a red MATCH stamp, a male silhouette with a red question mark, harsh desk light",
+      "motion": "push_in",
+      "sfx": "riser"
+    },
+    {
+      "id": "10",
+      "narration": "So they checked the one thing found at every crime scene.",
+      "svg": "scenes/10-lab.svg",
+      "prompt": "forensic lab bench at night, evidence kit open, a gloved hand reaching for a sealed sterile packet",
+      "motion": "pan_up",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "11",
+      "narration": "Their own cotton swabs.",
+      "svg": "scenes/11-swab.svg",
+      "prompt": "dramatic close-up of a single cotton swab in a sterile packet glowing under a spotlight",
+      "motion": "push_in",
+      "sfx": "hit"
+    },
+    {
+      "id": "12",
+      "narration": "The DNA belonged to a factory worker who packed them. The Phantom never existed.",
+      "svg": "scenes/12-closed.svg",
+      "prompt": "evidence board with the silhouette mugshot torn down, a red CASE CLOSED stamp, morning light through the window",
+      "motion": "pull_out",
+      "sfx": "end"
+    }
+  ]
+}

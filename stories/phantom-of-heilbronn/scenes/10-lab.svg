@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#0e2128"/>
+  <!-- cabinets / wall -->
+  <g fill="#173540" stroke="#0a171c" stroke-width="6">
+    <rect x="40" y="120" width="320" height="420" rx="10"/><rect x="380" y="120" width="320" height="420" rx="10"/><rect x="720" y="120" width="320" height="420" rx="10"/>
+  </g>
+  <g fill="#7fc9d6" opacity="0.25"><rect x="70" y="150" width="260" height="360"/><rect x="410" y="150" width="260" height="360"/><rect x="750" y="150" width="260" height="360"/></g>
+  <g class="thin"><rect x="100" y="380" width="40" height="130" fill="#9fd0c4"/><rect x="160" y="400" width="40" height="110" fill="#d7e7c8"/><rect x="460" y="360" width="60" height="150" fill="#c5e3ef"/><rect x="800" y="390" width="50" height="120" fill="#9fd0c4"/></g>
+  <!-- ceiling light -->
+  <path d="M300 0 L780 0 L1080 1300 L0 1300 Z" fill="#dff7ff" opacity="0.07"/>
+  <!-- bench -->
+  <rect x="0" y="1080" width="1080" height="40" fill="#d9e2e4" class="ink"/>
+  <rect x="0" y="1120" width="1080" height="800" fill="#0b1a20"/>
+  <!-- microscope -->
+  <g filter="url(#shadow)" class="ink">
+    <rect x="90" y="1040" width="240" height="44" rx="10" fill="#e9edee"/>
+    <path d="M250 1040 L250 800 C250 760 220 740 190 740 L170 740" fill="none" stroke="#e9edee" stroke-width="40"/>
+    <path d="M250 1040 L250 800 C250 760 220 740 190 740 L170 740" fill="none" stroke="#15141f" stroke-width="5"/>
+    <rect x="120" y="640" width="70" height="210" rx="12" fill="#e9edee" transform="rotate(-20 155 745)"/>
+    <rect x="120" y="920" width="160" height="22" fill="#9aa3a8"/>
+  </g>
+  <!-- test tubes -->
+  <g filter="url(#shadow)">
+    <rect x="780" y="960" width="230" height="40" rx="6" fill="#e9edee" class="ink"/>
+    <g class="thin"><rect x="800" y="860" width="30" height="180" rx="15" fill="#c5e3ef"/><rect x="850" y="880" width="30" height="160" rx="15" fill="#c5e3ef"/><rect x="900" y="850" width="30" height="190" rx="15" fill="#c5e3ef"/><rect x="950" y="870" width="30" height="170" rx="15" fill="#c5e3ef"/></g>
+    <g><rect x="803" y="960" width="24" height="76" rx="12" fill="#c8102e" opacity="0.8"/><rect x="903" y="940" width="24" height="96" rx="12" fill="#2a8c5a" opacity="0.8"/></g>
+  </g>
+  <!-- evidence kit -->
+  <g filter="url(#shadow)">
+    <path d="M330 1060 L760 1060 L760 1300 L330 1300 Z" fill="#e3b04b" class="ink"/>
+    <path d="M330 1060 L760 1060 L700 900 L390 900 Z" fill="#c99332" class="ink"/>
+    <text x="545" y="1210" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="56" fill="#15141f">EVIDENCE KIT</text>
+    <g class="thin"><rect x="400" y="980" width="70" height="110" fill="#f4f4ef" transform="rotate(-8 435 1035)"/><rect x="490" y="970" width="70" height="120" fill="#f4f4ef"/><rect x="580" y="985" width="70" height="105" fill="#f4f4ef" transform="rotate(7 615 1037)"/></g>
+  </g>
+  <!-- gloved hand reaching from bottom -->
+  <g filter="url(#shadow)">
+    <path d="M760 1920 C740 1750 680 1600 610 1480 C590 1450 610 1420 640 1430 C670 1440 700 1490 720 1530 L700 1380 C695 1345 735 1335 745 1370 L770 1500 L770 1350 C770 1315 810 1315 812 1350 L820 1500 L840 1370 C845 1338 885 1342 880 1375 L865 1520 L900 1420 C910 1392 948 1402 940 1432 L900 1640 C890 1740 900 1830 920 1920 Z" fill="#3e8fb0" class="ink"/>
+    <path d="M730 1700 C780 1690 840 1700 880 1710" fill="none" stroke="#2c6d88" stroke-width="6"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

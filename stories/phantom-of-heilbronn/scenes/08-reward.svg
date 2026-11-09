@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#desk)"/>
+  <ellipse cx="540" cy="900" rx="760" ry="900" fill="url(#lamp)" opacity="0.55"/>
+  <g transform="rotate(-4 540 960)" filter="url(#shadow)">
+    <rect x="70" y="190" width="940" height="1500" fill="url(#paper)" class="ink"/>
+    <text x="540" y="320" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="96" fill="#15141f" letter-spacing="4">DIE ABENDPOST</text>
+    <rect x="110" y="345" width="860" height="6" fill="#15141f"/><rect x="110" y="358" width="860" height="2" fill="#15141f"/>
+    <text x="540" y="400" text-anchor="middle" class="type" font-size="26">STUTTGART · 2009 · AUSGABE 112</text>
+    <text x="540" y="580" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="190" fill="#c8102e">€300,000</text>
+    <text x="540" y="720" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="120" fill="#15141f">REWARD</text>
+    <text x="540" y="800" text-anchor="middle" font-family="Oswald" font-weight="400" font-size="52" fill="#15141f">FOR THE "PHANTOM OF HEILBRONN"</text>
+    <rect x="110" y="830" width="860" height="3" fill="#15141f"/>
+    <g transform="translate(120 870)"><use href="#mug" width="400" height="506"/></g>
+    <text x="560" y="910" class="head" font-size="44">WANTED</text>
+    <rect x="560" y="940" width="410" height="440" fill="url(#lines)"/>
+    <rect x="110" y="1420" width="860" height="230" fill="url(#lines)"/>
+  </g>
+  <!-- coins -->
+  <g filter="url(#shadowSm)">
+    <ellipse cx="880" cy="1780" rx="80" ry="34" fill="#c9a24a" class="ink"/><ellipse cx="880" cy="1764" rx="80" ry="34" fill="#e0bb5c" class="ink"/>
+    <ellipse cx="760" cy="1840" rx="70" ry="30" fill="#e0bb5c" class="ink"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

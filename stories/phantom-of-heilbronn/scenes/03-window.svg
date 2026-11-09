@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#tiles)"/>
+  <rect width="1080" height="1920" fill="#06121a" opacity="0.45"/>
+  <!-- window -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="230" width="780" height="900" rx="6" fill="#2d5d67" class="ink"/>
+    <rect x="190" y="270" width="700" height="820" fill="url(#night)"/>
+    <circle cx="700" cy="420" r="150" fill="url(#moonGlow)"/>
+    <circle cx="700" cy="420" r="58" fill="#f1f8ff"/>
+    <g fill="#e8f6ff"><circle cx="300" cy="350" r="3"/><circle cx="420" cy="460" r="2"/><circle cx="820" cy="640" r="3"/><circle cx="260" cy="700" r="2"/></g>
+    <!-- rooftops -->
+    <path d="M190 1090 L190 900 L260 840 L330 900 L330 860 L420 780 L510 860 L510 920 L600 880 L690 940 L690 870 L780 800 L890 890 L890 1090 Z" fill="#0a1820"/>
+    <g fill="#f2c25a" opacity="0.8"><rect x="240" y="940" width="30" height="40"/><rect x="440" y="880" width="28" height="36"/><rect x="760" y="900" width="30" height="40"/></g>
+    <!-- crossbars -->
+    <rect x="530" y="270" width="22" height="820" fill="#2d5d67" class="thin"/>
+    <rect x="190" y="660" width="700" height="22" fill="#2d5d67" class="thin"/>
+    <!-- crack -->
+    <g transform="translate(360 480)" stroke="#f4fbff" stroke-width="5" fill="none" stroke-linecap="round" filter="url(#glow)">
+      <path d="M0 0 L-150 -170"/><path d="M0 0 L-60 -200"/><path d="M0 0 L80 -180"/><path d="M0 0 L160 -40"/>
+      <path d="M0 0 L150 120"/><path d="M0 0 L40 170"/><path d="M0 0 L-90 150"/><path d="M0 0 L-160 30"/>
+      <path d="M-60 -60 L-10 -80 L40 -60 L60 -5 L40 50 L-10 70 L-60 40 L-70 -10 Z" stroke-width="3"/>
+    </g>
+    <path d="M330 450 L390 450 L400 500 L350 520 Z" fill="#06121a"/>
+  </g>
+  <!-- shutter -->
+  <g filter="url(#shadow)"><path d="M930 230 L1060 180 L1060 1180 L930 1130 Z" fill="#335f68" class="ink"/>
+    <g stroke="#1e3f47" stroke-width="6"><line x1="945" y1="320" x2="1050" y2="290"/><line x1="945" y1="480" x2="1050" y2="460"/><line x1="945" y1="640" x2="1050" y2="630"/><line x1="945" y1="800" x2="1050" y2="800"/><line x1="945" y1="960" x2="1050" y2="970"/></g></g>
+  <!-- moonlight beam -->
+  <path d="M190 1090 L890 1090 L1080 1700 L60 1700 Z" fill="#bfe6ff" opacity="0.10"/>
+  <!-- counter -->
+  <rect x="0" y="1180" width="1080" height="60" fill="#c9b79a" class="ink"/>
+  <rect x="0" y="1240" width="1080" height="680" fill="#1b3f48"/>
+  <g stroke="#0e262c" stroke-width="6"><rect x="40" y="1300" width="300" height="540" rx="10" fill="#21505b"/><rect x="390" y="1300" width="300" height="540" rx="10" fill="#21505b"/><rect x="740" y="1300" width="300" height="540" rx="10" fill="#21505b"/></g>
+  <g fill="#c9b79a"><rect x="300" y="1520" width="14" height="80" rx="7"/><rect x="420" y="1520" width="14" height="80" rx="7"/><rect x="770" y="1520" width="14" height="80" rx="7"/></g>
+  <!-- jars -->
+  <g filter="url(#shadowSm)">
+    <rect x="70" y="1020" width="90" height="160" rx="10" fill="#9fd0c4" class="thin"/><rect x="66" y="1000" width="98" height="30" rx="6" fill="#6b4a33" class="thin"/>
+    <rect x="180" y="1060" width="80" height="120" rx="10" fill="#d7e7c8" class="thin"/><rect x="176" y="1042" width="88" height="26" rx="6" fill="#6b4a33" class="thin"/>
+  </g>
+  <!-- shards -->
+  <g fill="#e6f7ff" opacity="0.9" class="thin">
+    <path d="M420 1195 L470 1180 L455 1210 Z"/><path d="M520 1200 L590 1190 L560 1220 Z"/><path d="M640 1190 L670 1172 L690 1205 Z"/><path d="M360 1212 L395 1205 L380 1225 Z"/>
+  </g>
+  <!-- flashlight beam from right -->
+  <path d="M1080 1020 L1080 1180 L380 1260 L330 1120 Z" fill="url(#beam)" opacity="0.55" transform="rotate(-6 1080 1100)"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

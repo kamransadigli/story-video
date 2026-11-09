@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#07090c"/>
+  <path d="M400 0 L680 0 L1060 1500 L20 1500 Z" fill="#fff6dc" opacity="0.08"/>
+  <ellipse cx="540" cy="1000" rx="560" ry="620" fill="url(#spot)" opacity="0.6"/>
+  <ellipse cx="540" cy="1440" rx="460" ry="80" fill="#000" opacity="0.6" filter="url(#blurSm)"/>
+  <g transform="rotate(-28 540 960)" filter="url(#shadow)">
+    <!-- packet -->
+    <rect x="200" y="760" width="680" height="400" rx="30" fill="#eef6f8" opacity="0.92" class="ink"/>
+    <rect x="200" y="760" width="680" height="70" rx="30" fill="#2a5c8c"/>
+    <path d="M200 815 L880 815" stroke="#15141f" stroke-width="4" stroke-dasharray="14 10"/>
+    <text x="540" y="810" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="42" fill="#fff" letter-spacing="8">STERILE</text>
+    <!-- swab -->
+    <rect x="300" y="955" width="420" height="22" rx="11" fill="#f2eee2" class="thin"/>
+    <ellipse cx="760" cy="966" rx="85" ry="48" fill="#ffffff" class="ink"/>
+    <path d="M700 950 C720 930 760 928 800 940" fill="none" stroke="#d6dde0" stroke-width="8" stroke-linecap="round"/>
+    <text x="250" y="1120" font-family="Typewriter" font-size="30" fill="#2a5c8c">FORENSIC SWAB · LOT 0815-B</text>
+    <path d="M230 860 L380 860 M230 890 L340 890" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- dust motes -->
+  <g fill="#fff6dc" opacity="0.6"><circle cx="300" cy="420" r="4"/><circle cx="620" cy="300" r="3"/><circle cx="760" cy="560" r="5"/><circle cx="420" cy="640" r="3"/><circle cx="560" cy="180" r="4"/><circle cx="840" cy="1300" r="3"/><circle cx="220" cy="1240" r="4"/></g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

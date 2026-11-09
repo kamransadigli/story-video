@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#night)"/>
+  <circle cx="200" cy="260" r="120" fill="url(#moonGlow)" opacity="0.6"/><circle cx="200" cy="260" r="40" fill="#e8f4ff"/>
+  <!-- half-timbered houses -->
+  <g class="ink" stroke-width="4">
+    <path d="M-20 1150 L-20 620 L150 440 L320 620 L320 1150 Z" fill="#d8c6a4"/>
+    <path d="M320 1150 L320 560 L520 340 L720 560 L720 1150 Z" fill="#c9b08a"/>
+    <path d="M720 1150 L720 660 L900 480 L1100 660 L1100 1150 Z" fill="#d3bd97"/>
+  </g>
+  <g stroke="#3b2414" stroke-width="12" fill="none">
+    <path d="M-20 760 L320 760 M-20 940 L320 940 M60 620 L60 1150 M240 620 L240 1150 M60 760 L240 940 M240 760 L60 940"/>
+    <path d="M320 700 L720 700 M320 900 L720 900 M420 560 L420 1150 M620 560 L620 1150 M420 700 L620 900 M620 700 L420 900"/>
+    <path d="M720 800 L1100 800 M720 980 L1100 980 M820 660 L820 1150 M1000 660 L1000 1150"/>
+  </g>
+  <g fill="#f2c25a" class="thin"><rect x="110" y="800" width="90" height="110"/><rect x="460" y="740" width="110" height="120"/><rect x="860" y="840" width="100" height="110"/><rect x="480" y="470" width="80" height="90"/></g>
+  <rect x="-20" y="380" width="1120" height="800" fill="#0a1420" opacity="0.35"/>
+  <!-- cobblestone ground -->
+  <rect x="0" y="1150" width="1080" height="770" fill="#22303a"/>
+  <g fill="#2c3d48" stroke="#18222a" stroke-width="4">
+    <ellipse cx="100" cy="1260" rx="70" ry="22"/><ellipse cx="280" cy="1250" rx="70" ry="22"/><ellipse cx="460" cy="1265" rx="70" ry="22"/><ellipse cx="660" cy="1250" rx="70" ry="22"/><ellipse cx="860" cy="1262" rx="70" ry="22"/><ellipse cx="1040" cy="1252" rx="70" ry="22"/>
+    <ellipse cx="190" cy="1720" rx="100" ry="30"/><ellipse cx="420" cy="1740" rx="100" ry="30"/><ellipse cx="660" cy="1725" rx="100" ry="30"/><ellipse cx="900" cy="1740" rx="100" ry="30"/>
+  </g>
+  <!-- light washes -->
+  <ellipse cx="400" cy="1150" rx="520" ry="420" fill="url(#blueGlow)" opacity="0.7"/>
+  <ellipse cx="720" cy="1150" rx="520" ry="420" fill="url(#redGlow)" opacity="0.5"/>
+  <!-- police car -->
+  <g transform="translate(150 1180)" filter="url(#shadow)">
+    <ellipse cx="390" cy="330" rx="420" ry="40" fill="#000" opacity="0.5"/>
+    <path d="M0 200 C0 150 30 130 80 125 L210 110 L300 30 L560 30 L660 110 L740 125 C780 135 800 160 800 210 L800 280 L0 280 Z" fill="#f2f2ee" class="ink"/>
+    <path d="M0 200 L800 200 L800 250 L0 250 Z" fill="#1f7a4c"/>
+    <path d="M320 50 L410 50 L410 115 L240 115 Z M430 50 L545 50 L620 115 L430 115 Z" fill="#7fb3c8" class="thin"/>
+    <text x="400" y="185" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#1f7a4c">POLIZEI</text>
+    <rect x="360" y="0" width="140" height="34" rx="10" fill="#15141f"/>
+    <rect x="368" y="4" width="58" height="26" rx="6" fill="#3d8bff" filter="url(#glow)"/>
+    <rect x="434" y="4" width="58" height="26" rx="6" fill="#ff3344" filter="url(#glow)"/>
+    <circle cx="170" cy="280" r="70" fill="#15141f"/><circle cx="170" cy="280" r="32" fill="#9aa3a8"/>
+    <circle cx="630" cy="280" r="70" fill="#15141f"/><circle cx="630" cy="280" r="32" fill="#9aa3a8"/>
+  </g>
+  <ellipse cx="580" cy="1190" rx="150" ry="110" fill="url(#blueGlow)"/>
+  <ellipse cx="660" cy="1190" rx="150" ry="110" fill="url(#redGlow)"/>
+  <!-- crime tape -->
+  <g transform="rotate(-12 540 1640)" filter="url(#shadowSm)">
+    <rect x="-200" y="1590" width="1480" height="100" fill="#f4f1ea" class="thin"/>
+    <g fill="#c8102e"><path d="M-200 1590 L-150 1590 L-230 1690 L-280 1690 Z"/></g>
+    <text x="540" y="1662" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="58" fill="#c8102e" letter-spacing="6">POLIZEIABSPERRUNG · POLIZEIABSPERRUNG</text>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
