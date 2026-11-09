@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#1d2f3d"/>
+  <g stroke="#14222d" stroke-width="6"><line x1="0" y1="200" x2="1080" y2="200"/><line x1="0" y1="1700" x2="1080" y2="1700"/></g>
+  <!-- door -->
+  <g filter="url(#shadow)">
+    <rect x="200" y="220" width="680" height="1480" rx="30" fill="#2f4b5f" class="ink"/>
+    <rect x="300" y="320" width="480" height="620" rx="40" fill="url(#night)" class="ink"/>
+    <!-- rain -->
+    <g stroke="#bfe6ff" stroke-width="4" opacity="0.5" stroke-linecap="round">
+      <line x1="360" y1="380" x2="350" y2="440"/><line x1="460" y1="520" x2="450" y2="590"/><line x1="600" y1="400" x2="590" y2="460"/><line x1="700" y1="620" x2="690" y2="690"/><line x1="400" y1="760" x2="390" y2="820"/><line x1="640" y1="800" x2="630" y2="870"/>
+    </g>
+    <g fill="#bfe6ff" opacity="0.6"><circle cx="380" cy="600" r="7"/><circle cx="520" cy="440" r="6"/><circle cx="720" cy="500" r="8"/><circle cx="560" cy="860" r="6"/></g>
+    <rect x="290" y="1010" width="500" height="22" fill="#21384a"/>
+    <!-- handle -->
+    <rect x="720" y="1100" width="60" height="300" rx="20" fill="#9aa3a8" class="ink"/>
+    <!-- lock panel -->
+    <rect x="330" y="1100" width="280" height="200" rx="18" fill="#15141f" class="ink"/>
+    <circle cx="400" cy="1200" r="44" fill="#ff3344" filter="url(#glow)"/>
+    <text x="530" y="1215" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="44" fill="#ff8a8a">LOCKED</text>
+    <rect x="290" y="1500" width="500" height="22" fill="#21384a"/>
+  </g>
+  <ellipse cx="400" cy="1200" rx="380" ry="340" fill="url(#redGlow)" opacity="0.45"/>
+  <!-- chain and padlock -->
+  <g filter="url(#shadow)">
+    <path d="M140 1400 C300 1470 700 1470 940 1390" fill="none" stroke="#7d868c" stroke-width="26" stroke-dasharray="40 14"/>
+    <rect x="460" y="1450" width="150" height="130" rx="18" fill="#c9a24a" class="ink"/>
+    <path d="M490 1450 L490 1400 C490 1350 580 1350 580 1400 L580 1450" fill="none" stroke="#7d868c" stroke-width="20"/>
+    <circle cx="535" cy="1510" r="14" fill="#15141f"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

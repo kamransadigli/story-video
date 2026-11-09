@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#night)"/>
+  <circle cx="780" cy="330" r="260" fill="url(#moonGlow)" opacity="0.6"/><circle cx="780" cy="330" r="95" fill="#f1f8ff"/>
+  <g fill="#e8f6ff"><circle cx="160" cy="200" r="3"/><circle cx="320" cy="380" r="2"/><circle cx="520" cy="160" r="3"/><circle cx="960" cy="620" r="2"/><circle cx="90" cy="560" r="2"/></g>
+  <!-- mountains -->
+  <path d="M0 980 L180 760 L330 900 L520 680 L700 880 L880 720 L1080 900 L1080 1300 L0 1300 Z" fill="#16384a"/>
+  <path d="M0 1100 L220 960 L420 1060 L640 940 L860 1060 L1080 980 L1080 1300 L0 1300 Z" fill="#0f2c3a"/>
+  <!-- valley + river -->
+  <rect x="0" y="1260" width="1080" height="660" fill="#061219"/>
+  <path d="M380 1920 C420 1700 520 1600 560 1460 L640 1460 C640 1600 720 1760 760 1920 Z" fill="#1d4a5c" opacity="0.6"/>
+  <!-- bridge -->
+  <rect x="-20" y="1120" width="1120" height="70" fill="#4a5661" class="ink" stroke-width="4"/>
+  <rect x="-20" y="1190" width="1120" height="40" fill="#3a4651"/>
+  <path d="M100 1420 C100 1260 330 1260 330 1420" fill="none" stroke="#3a4651" stroke-width="40"/><path d="M390 1420 C390 1260 620 1260 620 1420" fill="none" stroke="#3a4651" stroke-width="40"/><path d="M680 1420 C680 1260 910 1260 910 1420" fill="none" stroke="#3a4651" stroke-width="40"/>
+  <rect x="40" y="1190" width="60" height="760" fill="#3a4651" class="thin"/><rect x="330" y="1190" width="60" height="760" fill="#3a4651" class="thin"/><rect x="620" y="1190" width="60" height="760" fill="#3a4651" class="thin"/><rect x="910" y="1190" width="60" height="760" fill="#3a4651" class="thin"/>
+  <!-- train -->
+  <g filter="url(#shadow)">
+    <g class="ink" stroke-width="4">
+      <path d="M760 1120 L760 960 C760 920 790 900 830 900 L1000 900 C1060 900 1100 960 1100 1040 L1100 1120 Z" fill="#1f3d55"/>
+      <rect x="380" y="910" width="360" height="210" rx="14" fill="#2a4c66"/>
+      <rect x="0" y="910" width="360" height="210" rx="14" fill="#2a4c66"/>
+    </g>
+    <g fill="#ffd58a" filter="url(#glow)">
+      <rect x="410" y="950" width="70" height="70" rx="8"/><rect x="500" y="950" width="70" height="70" rx="8"/><rect x="590" y="950" width="70" height="70" rx="8"/>
+      <rect x="30" y="950" width="70" height="70" rx="8"/><rect x="120" y="950" width="70" height="70" rx="8"/><rect x="210" y="950" width="70" height="70" rx="8"/>
+      <rect x="800" y="940" width="90" height="70" rx="8"/>
+    </g>
+    <rect x="910" y="1040" width="140" height="56" rx="6" fill="#15141f"/>
+    <text x="980" y="1082" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="44" fill="#ffd58a">404</text>
+    <circle cx="1080" cy="1060" r="20" fill="#fff6dc" filter="url(#glow)"/>
+  </g>
+  <path d="M1090 1060 L1080 1020 L1080 1100 Z" fill="#fff6dc" opacity="0.4"/>
+  <!-- speed streaks -->
+  <g stroke="#ffd58a" stroke-width="4" opacity="0.35" stroke-linecap="round"><line x1="-40" y1="960" x2="0" y2="960"/><line x1="-100" y1="1000" x2="20" y2="1000"/></g>
+  <g stroke="#cfe8ff" stroke-width="3" opacity="0.25"><line x1="0" y1="880" x2="300" y2="880"/><line x1="120" y1="850" x2="520" y2="850"/></g>
+  <!-- steam -->
+  <g fill="#cfd8de" opacity="0.18"><circle cx="820" cy="840" r="60"/><circle cx="720" cy="800" r="80"/><circle cx="580" cy="770" r="100"/></g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

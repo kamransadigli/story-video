@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#120c08"/>
+  <!-- corridor -->
+  <path d="M0 0 L1080 0 L700 700 L380 700 Z" fill="#1f150e"/>
+  <path d="M0 1920 L1080 1920 L700 1180 L380 1180 Z" fill="#24170f"/>
+  <path d="M0 0 L380 700 L380 1180 L0 1920 Z" fill="#2c1d12"/>
+  <path d="M1080 0 L700 700 L700 1180 L1080 1920 Z" fill="#141f29"/>
+  <g fill="url(#night)" opacity="0.7"><path d="M1060 300 L760 760 L760 980 L1060 1300 Z"/></g>
+  <!-- lantern glow -->
+  <ellipse cx="760" cy="1250" rx="520" ry="560" fill="url(#lamp)" opacity="0.9"/>
+  <!-- long shadow -->
+  <path d="M440 1700 L200 1920 L560 1920 Z" fill="#000" opacity="0.4"/>
+  <!-- conductor -->
+  <g filter="url(#shadow)">
+    <path d="M300 1920 C290 1620 330 1420 430 1360 L650 1360 C750 1420 790 1620 780 1920 Z" fill="#1f2a3a" class="ink"/>
+    <g fill="#c9a24a"><circle cx="540" cy="1470" r="12"/><circle cx="540" cy="1570" r="12"/><circle cx="540" cy="1670" r="12"/><circle cx="540" cy="1770" r="12"/></g>
+    <rect x="410" y="1400" width="70" height="20" fill="#c9a24a"/><rect x="600" y="1400" width="70" height="20" fill="#c9a24a"/>
+    <ellipse cx="540" cy="1210" rx="115" ry="140" fill="#8a5a3c" class="ink"/>
+    <!-- shadowed face, glinting eyes -->
+    <path d="M425 1180 C440 1260 640 1260 655 1180 L655 1110 L425 1110 Z" fill="#000" opacity="0.55"/>
+    <ellipse cx="495" cy="1175" rx="16" ry="7" fill="#fff6dc"/><ellipse cx="585" cy="1175" rx="16" ry="7" fill="#fff6dc"/>
+    <path d="M505 1290 C530 1280 560 1280 580 1290" fill="none" stroke="#15141f" stroke-width="6" stroke-linecap="round"/>
+    <!-- peaked cap -->
+    <path d="M420 1110 C420 1030 470 990 540 990 C610 990 660 1030 660 1110 Z" fill="#1f2a3a" class="ink"/>
+    <path d="M400 1110 L680 1110 C700 1130 690 1150 660 1150 L420 1150 C390 1150 380 1130 400 1110 Z" fill="#111" class="ink"/>
+    <rect x="505" y="1030" width="70" height="40" rx="6" fill="#c9a24a" class="thin"/>
+    <!-- arm + lantern -->
+    <path d="M660 1420 C740 1460 770 1560 760 1640" fill="none" stroke="#1f2a3a" stroke-width="70" stroke-linecap="round"/>
+    <path d="M760 1640 L760 1690" stroke="#15141f" stroke-width="8"/>
+    <rect x="700" y="1690" width="120" height="160" rx="16" fill="#3b2a1a" class="ink"/>
+    <rect x="720" y="1715" width="80" height="110" rx="10" fill="#ffd58a" filter="url(#glow)"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -98,7 +98,20 @@ def sfx_end(dur=3.5):
     return _norm(hit + drone, 0.9)
 
 
+def sfx_tick(dur=2.4, rate=2.0):
+    t = _t(dur)
+    out = np.zeros(len(t))
+    tl = int(0.03 * SR)
+    tt = np.arange(tl) / SR
+    tick = _hp(rng.standard_normal(tl), 2500) * np.exp(-tt * 250) + np.sin(2 * np.pi * 3200 * tt) * np.exp(-tt * 300) * 0.5
+    for k in range(int(dur * rate)):
+        a = int(k / rate * SR)
+        out[a:a + tl] += tick * (0.7 if k % 2 else 1.0)
+    return _norm(out, 0.7)
+
+
 SFX = {
+    "tick": (sfx_tick, 0.5),
     "whoosh": (sfx_whoosh, 0.35),
     "hit": (sfx_hit, 0.55),
     "glass": (sfx_glass, 0.55),

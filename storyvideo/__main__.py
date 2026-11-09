@@ -58,12 +58,13 @@ def main():
         dur = len(x) / sr
         start = t
         v_start = start + PRE_VOICE
-        end = v_start + dur + GAP + (TAIL if i == len(shots) - 1 else 0)
+        end = v_start + dur + GAP + (story.get("tail", TAIL) if i == len(shots) - 1 else 0)
         clips.append((v_start, x, sr))
         if s.get("sfx"):
             sfx_events.append((start, s["sfx"]))
         captions += video.caption_events(s["narration"], v_start, dur, min(end, v_start + dur + 0.25))
-        plan_shots.append({"id": s["id"], "start": start if i else 0.0, "end": end, "motion": s.get("motion", "push_in")})
+        plan_shots.append({"id": s["id"], "start": start if i else 0.0, "end": end, "motion": s.get("motion", "push_in"),
+                           "caption_y": s.get("caption_y", video.CAPTION_Y)})
         t = end
     total = t
     print(f"   length {total:.1f}s, {len(shots)} shots")
@@ -75,7 +76,7 @@ def main():
 
     # 4. video
     print("4/4 rendering video")
-    plan = {"shots": plan_shots, "captions": captions, "total": total,
+    plan = {"shots": plan_shots, "badge": story.get("badge"), "captions": captions, "total": total,
             "images": {k: str(v) for k, v in img_paths.items()}}
     video.render(plan, wav, out, workers=args.workers)
     print(f"done -> {out}")

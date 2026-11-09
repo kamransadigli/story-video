@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#2b1c12"/>
+  <!-- corridor in perspective -->
+  <path d="M0 0 L1080 0 L700 700 L380 700 Z" fill="#3a271a"/>
+  <path d="M0 1920 L1080 1920 L700 1180 L380 1180 Z" fill="#2e1d14"/>
+  <path d="M0 0 L380 700 L380 1180 L0 1920 Z" fill="#5a3a22"/>
+  <path d="M1080 0 L700 700 L700 1180 L1080 1920 Z" fill="#1d2f3d"/>
+  <!-- windows on right wall -->
+  <g fill="url(#night)" class="thin"><path d="M1060 300 L760 760 L760 980 L1060 1300 Z"/></g>
+  <g stroke="#ffd58a" stroke-width="4" opacity="0.5"><line x1="1040" y1="900" x2="800" y2="880"/></g>
+  <!-- compartment doors on left -->
+  <g fill="#6b4426" class="thin"><path d="M60 300 L300 650 L300 1180 L60 1560 Z"/></g>
+  <path d="M90 420 L270 680 L270 900 L90 1000 Z" fill="#ffd58a" opacity="0.35"/>
+  <rect x="380" y="700" width="320" height="480" fill="#120c08"/>
+  <rect x="440" y="760" width="200" height="300" rx="10" fill="#ffd58a" opacity="0.3"/>
+  <!-- ceiling lights -->
+  <g fill="#fff3c4" filter="url(#glow)"><rect x="470" y="120" width="140" height="20" rx="10"/><rect x="505" y="420" width="70" height="12" rx="6"/></g>
+  <!-- emergency handle -->
+  <g filter="url(#shadowSm)"><rect x="830" y="560" width="150" height="90" rx="10" fill="#c8102e" class="ink"/>
+    <text x="905" y="618" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="30" fill="#fff">ALARM</text>
+    <path d="M905 650 L905 760" stroke="#15141f" stroke-width="10"/><rect x="870" y="760" width="70" height="26" rx="8" fill="#c8102e" class="thin"/></g>
+  <!-- man shouting (silhouette) -->
+  <g filter="url(#shadow)">
+    <path d="M300 1920 C290 1650 330 1420 420 1350 L660 1350 C750 1420 790 1650 780 1920 Z" fill="#232733" class="ink"/>
+    <path d="M500 1350 L540 1500 L580 1350 Z" fill="#e8e4da" class="thin"/>
+    <path d="M530 1380 L550 1380 L560 1560 L540 1590 L520 1560 Z" fill="#8c2a2a"/>
+    <ellipse cx="540" cy="1190" rx="120" ry="150" fill="#b77b55" class="ink"/>
+    <path d="M420 1150 C420 1040 480 1010 540 1010 C610 1010 665 1040 662 1150 C640 1100 600 1090 540 1095 C480 1090 440 1110 420 1150 Z" fill="#2b221c" class="ink"/>
+    <!-- eyes wide, mouth open -->
+    <ellipse cx="495" cy="1170" rx="20" ry="24" fill="#fff" class="thin"/><ellipse cx="585" cy="1170" rx="20" ry="24" fill="#fff" class="thin"/>
+    <circle cx="497" cy="1174" r="8" fill="#15141f"/><circle cx="583" cy="1174" r="8" fill="#15141f"/>
+    <path d="M465 1125 L520 1140 M615 1125 L560 1140" stroke="#15141f" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="540" cy="1260" rx="38" ry="42" fill="#3a1414" class="thin"/>
+    <!-- arms raised -->
+    <path d="M420 1380 C340 1300 300 1180 300 1080" fill="none" stroke="#232733" stroke-width="70" stroke-linecap="round"/>
+    <path d="M660 1380 C740 1300 780 1180 780 1080" fill="none" stroke="#232733" stroke-width="70" stroke-linecap="round"/>
+    <circle cx="300" cy="1060" r="42" fill="#b77b55" class="ink"/><circle cx="780" cy="1060" r="42" fill="#b77b55" class="ink"/>
+  </g>
+  <!-- shout lines -->
+  <g stroke="#fff3c4" stroke-width="8" stroke-linecap="round" opacity="0.85">
+    <line x1="400" y1="960" x2="340" y2="880"/><line x1="540" y1="930" x2="540" y2="840"/><line x1="680" y1="960" x2="740" y2="880"/>
+  </g>
+  <text x="540" y="560" text-anchor="middle" font-family="Marker" font-size="110" fill="#fff3c4" transform="rotate(-4 540 560)">HELP!!</text>
+  <rect width="1080" height="1920" fill="#c8102e" opacity="0.08"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

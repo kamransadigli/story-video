@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <filter id="fog" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="4"/>
+      <feColorMatrix values="0 0 0 0 0.85  0 0 0 0 0.92  0 0 0 0 0.96  0 0 0 0.9 -0.05"/>
+    </filter>
+    <mask id="wipe"><rect width="1080" height="1920" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M250 640 L250 1100 M250 870 L470 870 M470 640 L470 1100"/>
+        <path d="M800 640 L620 640 L620 1100 L800 1100 M620 870 L760 870"/>
+      </g>
+    </mask>
+  </defs>
+  <rect width="1080" height="1920" fill="#3b2618"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="240" width="1000" height="1360" rx="70" fill="#c9a24a" class="ink"/>
+    <rect x="80" y="280" width="920" height="1280" rx="54" fill="url(#night)"/>
+    <circle cx="820" cy="460" r="46" fill="#eef7ff" opacity="0.9"/>
+    <g stroke="#ffd58a" stroke-width="6" opacity="0.6" stroke-linecap="round"><line x1="140" y1="1300" x2="420" y2="1300"/><line x1="560" y1="1380" x2="900" y2="1380"/></g>
+    <!-- fog with finger-written letters wiped out -->
+    <rect x="80" y="280" width="920" height="1280" rx="54" filter="url(#fog)" mask="url(#wipe)" opacity="0.85"/>
+    <!-- drips -->
+    <g stroke="#dcecf2" stroke-width="10" stroke-linecap="round" opacity="0.8">
+      <line x1="250" y1="1110" x2="250" y2="1190"/><line x1="470" y1="1110" x2="470" y2="1160"/><line x1="660" y1="1110" x2="660" y2="1220"/><line x1="780" y1="1110" x2="780" y2="1170"/>
+    </g>
+  </g>
+  <!-- seat back -->
+  <rect x="0" y="1640" width="1080" height="280" fill="#4f1420"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -130,8 +130,20 @@ def camera_box(img_w, img_h, motion, p, since_cut):
 _G = {}
 
 
+def badge_image(text):
+    font = ImageFont.truetype(str(FONT), 40)
+    b = font.getbbox(text)
+    w, h = b[2] - b[0] + 56, 76
+    img = Image.new("RGBA", (w + 20, h + 20), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((10, 10, 10 + w, 10 + h), radius=38, fill=(200, 16, 46, 235))
+    d.text((10 + 28 - b[0], 10 + (h - (b[3] - b[1])) / 2 - b[1]), text, font=font, fill=(255, 255, 255))
+    return img
+
+
 def _init(plan):
     _G["plan"] = plan
+    _G["badge"] = badge_image(plan["badge"]) if plan.get("badge") else None
     _G["imgs"] = {sid: Image.open(p).convert("RGB") for sid, p in plan["images"].items()}
     # vignette
     yy, xx = np.mgrid[0:H, 0:W]
@@ -163,6 +175,10 @@ def _frame(i):
     frame.alpha_composite(_G["grain"][(i // 2) % len(_G["grain"])])
     frame.alpha_composite(_G["vig"])
 
+    if _G["badge"] is not None:
+        frame.alpha_composite(_G["badge"], (40, 90))
+
+    cap_y = s.get("caption_y", CAPTION_Y)
     for t0, t1, words, active, chunk_t0 in plan["captions"]:
         if t0 <= t < t1:
             cap = caption_image(words, active)
@@ -172,7 +188,7 @@ def _frame(i):
                 sc = 0.7 + 0.3 * (1 + 2.2 * (k - 1) ** 3 + 1.2 * (k - 1) ** 2)
                 cw, ch = max(1, int(cap.width * sc)), max(1, int(cap.height * sc))
                 cap = cap.resize((cw, ch), Image.BILINEAR)
-            frame.alpha_composite(cap, (int((W - cap.width) / 2), int(CAPTION_Y - cap.height / 2)))
+            frame.alpha_composite(cap, (int((W - cap.width) / 2), int(cap_y - cap.height / 2)))
             break
 
     # fade in / out

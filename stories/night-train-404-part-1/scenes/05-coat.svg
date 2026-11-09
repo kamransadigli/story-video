@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs><linearGradient id="seatRed" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8e2a3b"/><stop offset="1" stop-color="#4f1420"/></linearGradient></defs>
+  <rect width="1080" height="1920" fill="url(#seatRed)"/>
+  <g stroke="#3e0f19" stroke-width="8" fill="none" opacity="0.8"><path d="M200 0 L180 1920"/><path d="M540 0 L540 1920"/><path d="M880 0 L900 1920"/></g>
+  <g fill="#3e0f19" opacity="0.6"><circle cx="360" cy="300" r="10"/><circle cx="720" cy="300" r="10"/><circle cx="360" cy="800" r="10"/><circle cx="720" cy="800" r="10"/></g>
+  <!-- coat close-up -->
+  <g filter="url(#shadow)">
+    <path d="M120 360 C260 280 520 300 640 380 C700 700 720 1100 820 1500 C620 1640 300 1640 100 1560 C150 1180 60 700 120 360 Z" fill="#c69a5a" class="ink"/>
+    <path d="M380 330 L470 620 L330 760" fill="#b0874c" class="ink"/>
+    <path d="M640 380 C760 520 860 900 980 1100 C940 1170 860 1200 780 1180" fill="#b0874c" class="ink"/>
+    <g fill="#5a3a1c" class="thin"><circle cx="470" cy="900" r="22"/><circle cx="490" cy="1080" r="22"/><circle cx="510" cy="1260" r="22"/></g>
+    <path d="M110 1000 L700 1000" stroke="#9b7340" stroke-width="40"/>
+    <path d="M200 500 C220 700 230 900 220 1100" fill="none" stroke="#e0b878" stroke-width="10" opacity="0.6" stroke-linecap="round"/>
+    <!-- scarf -->
+    <path d="M300 400 C360 600 340 800 400 1000 L450 990 C400 800 420 600 360 390 Z" fill="#c8102e" class="thin"/>
+  </g>
+  <!-- warmth -->
+  <g fill="none" stroke="#ffb35c" stroke-width="10" stroke-linecap="round" opacity="0.75" filter="url(#glow)">
+    <path d="M260 300 C230 250 290 210 260 150"/><path d="M380 270 C350 220 410 180 380 110"/><path d="M500 300 C470 250 530 210 500 150"/>
+  </g>
+  <!-- tea cup on window ledge -->
+  <g transform="translate(760 1580)" filter="url(#shadow)">
+    <ellipse cx="110" cy="190" rx="170" ry="40" fill="#e8e4da" class="ink"/>
+    <path d="M10 20 L30 170 Q35 195 60 195 L160 195 Q185 195 190 170 L210 20 Z" fill="#f4f1ea" class="ink"/>
+    <ellipse cx="110" cy="22" rx="100" ry="20" fill="#9a5a2a" class="ink"/>
+    <path d="M206 60 C270 60 270 140 196 140" fill="none" stroke="#15141f" stroke-width="16"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="7" opacity="0.4" stroke-linecap="round"><path d="M840 1540 C820 1500 860 1470 840 1420"/><path d="M890 1530 C870 1490 910 1460 890 1400"/></g>
+  <ellipse cx="420" cy="900" rx="700" ry="800" fill="url(#lamp)" opacity="0.4"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

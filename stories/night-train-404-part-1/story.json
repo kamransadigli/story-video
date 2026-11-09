@@ -1,0 +1,113 @@
+{
+  "title": "Night Train 404 — Part 1",
+  "badge": "PART 1 / 3",
+  "voice": "am_michael",
+  "speed": 1.05,
+  "music": "noir",
+  "tail": 2.6,
+  "style": "stylized 3D cartoon detective story, soft cel shading, cinematic noir lighting, night train interior, deep blue shadows and warm amber lamps, muted palette, vertical 9:16, no text",
+  "shots": [
+    {
+      "id": "01",
+      "narration": "She got on the train. She never got off.",
+      "svg": "scenes/01-seat.svg",
+      "prompt": "empty train seat at night, a woman's coat left on it, suitcase on the floor, dark window with passing lights",
+      "motion": "push_in",
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "narration": "Night train 404. No stops for two hours.",
+      "say": "Night train four oh four. No stops for two hours.",
+      "svg": "scenes/02-train.svg",
+      "prompt": "night train crossing a stone bridge over a valley under a full moon, lit windows",
+      "motion": "pan_right",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "narration": "At 23:40, Clara Weiss took seat 15.",
+      "say": "At eleven forty, Clara Weiss took seat fifteen.",
+      "svg": "scenes/03-ticket.svg",
+      "prompt": "close-up of a train ticket and a pocket watch on a fold-down table",
+      "motion": "pull_out",
+      "sfx": "click"
+    },
+    {
+      "id": "04",
+      "narration": "At midnight, her husband started screaming for help.",
+      "svg": "scenes/04-husband.svg",
+      "prompt": "man in a suit shouting in a narrow train corridor, emergency handle, harsh light",
+      "motion": "push_in",
+      "sfx": "hit",
+      "caption_y": 1640
+    },
+    {
+      "id": "05",
+      "narration": "Her seat was empty. Her coat was still warm.",
+      "svg": "scenes/05-coat.svg",
+      "prompt": "close-up of a coat on a train seat with a steaming cup of tea beside it",
+      "motion": "pan_down",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "narration": "Every door was locked. Every window, sealed.",
+      "svg": "scenes/06-door.svg",
+      "prompt": "locked train door with a red lock light, rain on the window",
+      "motion": "pull_out",
+      "sfx": "click"
+    },
+    {
+      "id": "07",
+      "narration": "Then the conductor said something strange.",
+      "svg": "scenes/07-conductor.svg",
+      "prompt": "train conductor in a peaked cap holding a lantern in a dark corridor, face in shadow",
+      "motion": "push_in",
+      "sfx": "riser"
+    },
+    {
+      "id": "08",
+      "narration": "She never boarded this train.",
+      "svg": "scenes/08-list.svg",
+      "prompt": "passenger list on a clipboard, seat 15 circled in red",
+      "motion": "pan_up",
+      "sfx": "hit",
+      "caption_y": 1560
+    },
+    {
+      "id": "09",
+      "narration": "But her suitcase was still here.",
+      "svg": "scenes/09-suitcase.svg",
+      "prompt": "old leather suitcase alone in a train aisle under a flashlight beam",
+      "motion": "pull_out",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "10",
+      "narration": "And it was ticking.",
+      "svg": "scenes/10-ticking.svg",
+      "prompt": "close-up of a leather suitcase, red glow, sense of a ticking sound",
+      "motion": "push_in",
+      "sfx": "tick"
+    },
+    {
+      "id": "11",
+      "narration": "And on the foggy window, someone had written two letters.",
+      "svg": "scenes/11-window.svg",
+      "prompt": "fogged train window with the letters HE written by a finger, rain outside",
+      "motion": "pan_left",
+      "sfx": "glass",
+      "caption_y": 1420
+    },
+    {
+      "id": "12",
+      "narration": "Detective, you decide. Open the suitcase, or question the conductor? Comment A or B.",
+      "svg": "scenes/12-choice.svg",
+      "prompt": "split screen: a suitcase on top, a conductor's cap below",
+      "motion": "still",
+      "sfx": "end",
+      "caption_y": 1560
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#desk)"/>
+  <ellipse cx="540" cy="900" rx="760" ry="900" fill="url(#lamp)" opacity="0.5"/>
+  <g transform="rotate(3 540 960)" filter="url(#shadow)">
+    <rect x="130" y="200" width="820" height="1500" rx="30" fill="#7a5233" class="ink"/>
+    <rect x="180" y="300" width="720" height="1360" fill="url(#paper)" class="thin"/>
+    <rect x="400" y="170" width="280" height="110" rx="20" fill="#9aa3a8" class="ink"/>
+    <text x="540" y="420" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="62" fill="#15141f">PASSENGER LIST</text>
+    <text x="540" y="480" text-anchor="middle" class="type" font-size="32">NIGHT TRAIN 404 · CARRIAGE 3</text>
+    <rect x="220" y="510" width="640" height="4" fill="#15141f"/>
+    <g class="type" font-size="40">
+      <text x="230" y="610">SEAT 11</text><text x="470" y="610">H. BRANDT</text>
+      <text x="230" y="710">SEAT 12</text><text x="470" y="710">E. NOVAK</text>
+      <text x="230" y="810">SEAT 13</text><text x="470" y="810">M. KRAUSE</text>
+      <text x="230" y="910">SEAT 14</text><text x="470" y="910">J. WEISS</text>
+      <text x="230" y="1010">SEAT 15</text><text x="470" y="1010">— — — — —</text>
+      <text x="230" y="1110">SEAT 16</text><text x="470" y="1110">A. FISCHER</text>
+      <text x="230" y="1210">SEAT 17</text><text x="470" y="1210">P. LANG</text>
+    </g>
+    <g stroke="#2a8c5a" stroke-width="8" fill="none" stroke-linecap="round">
+      <path d="M800 590 L820 610 L860 570"/><path d="M800 690 L820 710 L860 670"/><path d="M800 790 L820 810 L860 770"/><path d="M800 890 L820 910 L860 870"/><path d="M800 1090 L820 1110 L860 1070"/><path d="M800 1190 L820 1210 L860 1170"/>
+    </g>
+    <ellipse cx="540" cy="995" rx="350" ry="70" fill="none" stroke="#d0142f" stroke-width="10"/>
+    <text x="540" y="1340" text-anchor="middle" font-family="Marker" font-size="80" fill="#d0142f" transform="rotate(-5 540 1340)">NOT BOARDED</text>
+    <rect x="230" y="1420" width="620" height="200" fill="url(#lines)"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

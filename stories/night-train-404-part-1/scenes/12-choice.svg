@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#0d0a08"/>
+  <!-- A panel -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="230" width="960" height="600" rx="40" fill="#2a1b12" class="ink"/>
+    <ellipse cx="640" cy="560" rx="380" ry="300" fill="url(#lamp)" opacity="0.7"/>
+    <circle cx="190" cy="360" r="90" fill="#f2d21b" class="ink"/>
+    <text x="190" y="400" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="120" fill="#15141f">A</text>
+    <g transform="translate(470 380)">
+      <rect x="110" y="-56" width="140" height="70" rx="26" fill="none" stroke="#3b2414" stroke-width="20"/>
+      <rect width="360" height="300" rx="24" fill="#8a5530" class="ink"/>
+      <rect x="70" y="0" width="36" height="300" fill="#5e3820"/><rect x="254" y="0" width="36" height="300" fill="#5e3820"/>
+      <rect x="150" y="40" width="60" height="40" rx="6" fill="#d9b24a" class="thin"/>
+    </g>
+    <text x="120" y="780" font-family="Oswald" font-weight="700" font-size="64" fill="#fff3c4">OPEN THE SUITCASE</text>
+  </g>
+  <!-- divider -->
+  <g>
+    <line x1="60" y1="870" x2="1020" y2="870" stroke="#c8102e" stroke-width="6" stroke-dasharray="24 14"/>
+    <circle cx="540" cy="870" r="60" fill="#c8102e" class="ink"/>
+    <text x="540" y="905" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="90" fill="#fff">?</text>
+  </g>
+  <!-- B panel -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="910" width="960" height="600" rx="40" fill="#141f29" class="ink"/>
+    <ellipse cx="640" cy="1240" rx="380" ry="300" fill="url(#lamp)" opacity="0.5"/>
+    <circle cx="190" cy="1040" r="90" fill="#f2d21b" class="ink"/>
+    <text x="190" y="1080" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="120" fill="#15141f">B</text>
+    <g transform="translate(650 1190)">
+      <path d="M-170 40 C-170 -90 -90 -150 0 -150 C90 -150 170 -90 170 40 Z" fill="#1f2a3a" class="ink"/>
+      <path d="M-210 40 L210 40 C240 70 220 100 180 100 L-180 100 C-220 100 -240 70 -210 40 Z" fill="#111" class="ink"/>
+      <rect x="-60" y="-80" width="120" height="70" rx="10" fill="#c9a24a" class="thin"/>
+      <text x="0" y="-30" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#15141f">404</text>
+    </g>
+    <text x="120" y="1460" font-family="Oswald" font-weight="700" font-size="64" fill="#fff3c4">QUESTION THE CONDUCTOR</text>
+  </g>
+  <text x="540" y="1800" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="58" fill="#c8102e" letter-spacing="4">PART 2 FOLLOWS YOUR VOTE</text>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
