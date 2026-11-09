@@ -72,7 +72,7 @@ def main():
     # 3. audio
     print("3/4 mixing music + sound effects")
     wav = build / "mix.wav"
-    sf.write(wav, audio.mix(total, clips, sfx_events, story.get("music", "noir")), audio.SR)
+    sf.write(wav, audio.mix(total, clips, sfx_events, story.get("music", "noir"), story.get("music_volume", 0.8)), audio.SR)
 
     # 4. video
     print("4/4 rendering video")

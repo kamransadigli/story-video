@@ -27,7 +27,7 @@ The repo's example is `stories/phantom-of-heilbronn/`. Read its `story.json` and
 ## 3. Write `stories/<slug>/story.json`
 ```json
 {
-  "title": "...", "voice": "am_michael", "speed": 1.05, "music": "noir",
+  "title": "...", "voice": "am_michael", "speed": 1.05, "music": "noir", "music_volume": 0.8,
   "style": "one style line appended to every AI image prompt",
   "shots": [
     {"id": "01", "narration": "Caption + spoken text.", "say": "optional spoken override (numbers, names)",

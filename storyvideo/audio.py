@@ -191,7 +191,7 @@ def resample(x, sr):
     return signal.resample_poly(x, SR // g, sr // g)
 
 
-def mix(total, voice_clips, sfx_events, music="noir"):
+def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8):
     """voice_clips: [(start_s, samples, sr)]; sfx_events: [(start_s, name)]. Returns stereo float32."""
     n = int(total * SR) + SR
     voice = np.zeros(n)
@@ -216,9 +216,9 @@ def mix(total, voice_clips, sfx_events, music="noir"):
         # duck the music under the voice
         env = _lp(np.abs(voice), 8)
         env = np.clip(env / (np.max(env) or 1) * 4, 0, 1)
-        bed *= 1 - 0.45 * env
+        bed *= 1 - 0.35 * env
 
-    mono = voice + fx + bed * 0.55
+    mono = voice + fx + bed * music_volume
     left = mono + 0.04 * np.roll(bed, 480)
     right = mono + 0.04 * np.roll(bed, -480)
     st = np.stack([left, right], axis=1)
