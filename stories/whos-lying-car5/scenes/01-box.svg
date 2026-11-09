@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <!-- bright tufted red velvet seat -->
+  <rect width="1080" height="1920" fill="url(#velvet)"/>
+  <g stroke="#a3132a" stroke-width="6" opacity="0.9" fill="none">
+    <path d="M-60 300 L300 -60 M-60 700 L700 -60 M-60 1100 L1100 -60 M-60 1500 L1140 300 M-60 1900 L1140 700 M300 1980 L1140 1100 M700 1980 L1140 1500"/>
+    <path d="M-60 -60 L1140 1140 M-60 340 L1140 1540 M-60 740 L1140 1940 M340 -60 L1140 740 M740 -60 L1140 340 M-60 1140 L780 1980"/>
+  </g>
+  <g fill="#7a0d1e" stroke="#4a0712" stroke-width="3">
+    <circle cx="200" cy="200" r="14"/><circle cx="600" cy="200" r="14"/><circle cx="1000" cy="200" r="14"/><circle cx="400" cy="400" r="14"/><circle cx="800" cy="400" r="14"/>
+    <circle cx="200" cy="600" r="14"/><circle cx="1000" cy="600" r="14"/><circle cx="200" cy="1400" r="14"/><circle cx="1000" cy="1400" r="14"/>
+    <circle cx="400" cy="1600" r="14"/><circle cx="800" cy="1600" r="14"/><circle cx="600" cy="1800" r="14"/><circle cx="200" cy="1800" r="14"/><circle cx="1000" cy="1800" r="14"/>
+  </g>
+  <!-- warm spotlight -->
+  <ellipse cx="490" cy="1050" rx="640" ry="700" fill="#ffe7a8" opacity="0.28" filter="url(#blur)"/>
+  <ellipse cx="490" cy="1050" rx="480" ry="520" fill="url(#lamp)" opacity="0.9"/>
+  <!-- open jewellery box -->
+  <g transform="translate(490 1110) scale(1.12)" filter="url(#shadow)">
+    <!-- lid (open, tilted back) -->
+    <path d="M-330 -60 L330 -60 L300 -420 L-300 -420 Z" fill="#1b1d2e" stroke="#15141f" stroke-width="6"/>
+    <path d="M-290 -90 L290 -90 L266 -392 L-266 -392 Z" fill="#fbf7ef" stroke="#c9a24a" stroke-width="8"/>
+    <path d="M-240 -120 C-120 -150 120 -150 240 -120" fill="none" stroke="#e6ddcc" stroke-width="6"/>
+    <path d="M-200 -360 C-80 -330 80 -330 200 -360" fill="none" stroke="#e6ddcc" stroke-width="6"/>
+    <!-- base -->
+    <path d="M-360 -60 L360 -60 L380 200 L-380 200 Z" fill="#1b1d2e" stroke="#15141f" stroke-width="6"/>
+    <path d="M-330 -40 L330 -40 L344 150 L-344 150 Z" fill="#fbf7ef" stroke="#c9a24a" stroke-width="8"/>
+    <rect x="-380" y="170" width="760" height="22" fill="#c9a24a"/>
+    <!-- EMPTY necklace groove -->
+    <path d="M-220 -10 C-200 120 200 120 220 -10" fill="none" stroke="#d8ccb6" stroke-width="30" stroke-linecap="round"/>
+    <path d="M-220 -10 C-200 120 200 120 220 -10" fill="none" stroke="#c4b69c" stroke-width="12" stroke-linecap="round"/>
+    <path d="M-30 96 L0 140 L30 96 Z" fill="#d8ccb6" stroke="#c4b69c" stroke-width="4"/>
+    <!-- gold clasp -->
+    <rect x="-34" y="180" width="68" height="34" rx="6" fill="#e3b04b" stroke="#15141f" stroke-width="4"/>
+  </g>
+  <!-- sparkles where the diamonds were -->
+  <g fill="#ffffff" filter="url(#glow)">
+    <path d="M490 1210 l10 -30 l10 30 l30 10 l-30 10 l-10 30 l-10 -30 l-30 -10 Z" transform="translate(-10 0)"/>
+    <path d="M320 1090 l7 -20 l7 20 l20 7 l-20 7 l-7 20 l-7 -20 l-20 -7 Z"/>
+    <path d="M650 1090 l7 -20 l7 20 l20 7 l-20 7 l-7 20 l-7 -20 l-20 -7 Z"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

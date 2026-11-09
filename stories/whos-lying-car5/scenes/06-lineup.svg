@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#carriage" width="1080" height="1920"/>
+  <ellipse cx="480" cy="1000" rx="520" ry="600" fill="#fff3c4" opacity="0.16" filter="url(#blur)"/>
+  <use href="#suspB" x="224" y="500" width="492" height="902"/>
+  <use href="#suspA" x="-61" y="500" width="492" height="902"/>
+  <use href="#suspC" x="509" y="500" width="492" height="902"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

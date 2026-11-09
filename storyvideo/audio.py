@@ -110,8 +110,56 @@ def sfx_tick(dur=2.4, rate=2.0):
     return _norm(out, 0.7)
 
 
+def sfx_tick1(dur=0.3):
+    t = _t(dur)
+    c = _hp(rng.standard_normal(len(t)), 2500) * np.exp(-t * 200)
+    tone = np.sin(2 * np.pi * 2200 * t) * np.exp(-t * 60) * 0.6
+    return _norm(c + tone, 0.8)
+
+
+def sfx_thunder(dur=3.2):
+    """Close lightning: sharp crack then a long rolling rumble."""
+    t = _t(dur)
+    crack = _hp(rng.standard_normal(len(t)), 1200) * np.exp(-t * 22)
+    rumble_env = np.exp(-t * 1.1) * (0.6 + 0.4 * np.abs(np.sin(2 * np.pi * 1.7 * t + rng.uniform(0, 3))))
+    rumble = _lp(rng.standard_normal(len(t)), 180, 4) * rumble_env * 3.0
+    boom = np.sin(2 * np.pi * np.cumsum(38 + 40 * np.exp(-t * 8)) / SR) * np.exp(-t * 2.2) * 0.7
+    att = np.minimum(1, t / 0.004)
+    return _norm((crack * 0.8 + rumble + boom) * att, 0.95)
+
+
+def ambience_rain_train(dur):
+    """Rain on the windows + a train rolling on rails (rumble and clickety-clack)."""
+    t = _t(dur)
+    n = len(t)
+    rain = _bp(rng.standard_normal(n), 900, 7000) * (0.8 + 0.2 * np.sin(2 * np.pi * 0.23 * t))
+    drops = np.zeros(n)
+    for _ in range(int(dur * 25)):
+        a = int(rng.uniform(0, dur) * SR)
+        ln = int(0.012 * SR)
+        if a + ln < n:
+            drops[a:a + ln] += rng.standard_normal(ln) * np.exp(-np.arange(ln) / (0.002 * SR)) * rng.uniform(0.2, 0.6)
+    rain = rain * 0.25 + _hp(drops, 2000) * 0.5
+    rumble = _lp(rng.standard_normal(n), 120, 4) * 2.2 * (1 + 0.15 * np.sin(2 * np.pi * 0.9 * t))
+    clack = np.zeros(n)
+    cl = int(0.05 * SR)
+    ct = np.arange(cl) / SR
+    hit = _bp(rng.standard_normal(cl), 150, 1500) * np.exp(-ct * 60)
+    period = 1.05
+    k = 0
+    while k * period < dur:
+        for off, g in ((0.0, 1.0), (0.13, 0.8)):
+            a = int((k * period + off) * SR)
+            if a + cl < n:
+                clack[a:a + cl] += hit * g
+        k += 1
+    return _norm(rain + rumble + clack * 0.9, 1.0)
+
+
 SFX = {
     "tick": (sfx_tick, 0.5),
+    "tick1": (sfx_tick1, 0.45),
+    "thunder": (sfx_thunder, 0.85),
     "whoosh": (sfx_whoosh, 0.35),
     "hit": (sfx_hit, 0.55),
     "glass": (sfx_glass, 0.55),
@@ -191,14 +239,15 @@ def resample(x, sr):
     return signal.resample_poly(x, SR // g, sr // g)
 
 
-def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8):
+def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience=None, fades=True):
     """voice_clips: [(start_s, samples, sr)]; sfx_events: [(start_s, name)]. Returns stereo float32."""
-    n = int(total * SR) + SR
+    n = int(total * SR)
     voice = np.zeros(n)
     for start, x, sr in voice_clips:
-        y = resample(x, sr)
+        y = _norm(resample(x, sr), 0.9)  # level-match different voices
         a = int(start * SR)
-        voice[a: a + len(y)] += y[: n - a]
+        b = min(n, a + len(y))
+        voice[a:b] += y[: b - a]
     voice = _norm(voice, 0.9)
 
     fx = np.zeros(n)
@@ -206,20 +255,30 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8):
         fn, gain = SFX[name]
         y = fn()
         a = int(start * SR)
+        if a >= n:
+            continue
         b = min(n, a + len(y))
         fx[a:b] += y[: b - a] * gain
 
+    env = _lp(np.abs(voice), 8)
+    env = np.clip(env / (np.max(env) or 1) * 4, 0, 1)
     bed = np.zeros(n)
     if music:
         m = music_noir(total + 0.5)
-        bed[: len(m)] = _norm(m, 0.5)
-        # duck the music under the voice
-        env = _lp(np.abs(voice), 8)
-        env = np.clip(env / (np.max(env) or 1) * 4, 0, 1)
+        if not fades:  # looping video: no fade-in/out, just a tiny edge ramp
+            m = music_noir(total + 3.0)[int(1.5 * SR):]
+        bed[:] = _norm(m, 0.5)[:n]
         bed *= 1 - 0.35 * env
+    amb = np.zeros(n)
+    if ambience == "rain_train":
+        amb = ambience_rain_train(total) * 0.16 * (1 - 0.3 * env)
 
-    mono = voice + fx + bed * music_volume
-    left = mono + 0.04 * np.roll(bed, 480)
-    right = mono + 0.04 * np.roll(bed, -480)
+    mono = voice + fx + bed * music_volume + amb
+    left = mono + 0.04 * np.roll(bed, 480) + 0.03 * np.roll(amb, 240)
+    right = mono + 0.04 * np.roll(bed, -480) - 0.03 * np.roll(amb, 240)
     st = np.stack([left, right], axis=1)
+    if not fades:
+        edge = int(0.01 * SR)
+        st[:edge] *= np.linspace(0, 1, edge)[:, None]
+        st[-edge:] *= np.linspace(1, 0, edge)[:, None]
     return (_norm(st, 0.95)).astype(np.float32)

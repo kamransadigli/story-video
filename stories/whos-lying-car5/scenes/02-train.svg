@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#storm)"/>
+  <!-- storm clouds -->
+  <g fill="#0f1a2c" opacity="0.9"><ellipse cx="200" cy="200" rx="360" ry="160"/><ellipse cx="760" cy="160" rx="420" ry="170"/><ellipse cx="520" cy="320" rx="400" ry="130"/></g>
+  <!-- big lightning bolt -->
+  <g filter="url(#glow)">
+    <path d="M700 300 L610 620 L690 620 L560 1000 L780 560 L700 560 L790 300 Z" fill="#ffffff"/>
+    <path d="M610 620 L520 760" stroke="#ffffff" stroke-width="10"/>
+  </g>
+  <ellipse cx="660" cy="620" rx="380" ry="420" fill="#bfe0ff" opacity="0.18" filter="url(#blur)"/>
+  <!-- hills -->
+  <path d="M0 1150 L200 1000 L380 1100 L600 960 L820 1090 L1080 990 L1080 1400 L0 1400 Z" fill="#0b1522"/>
+  <rect x="0" y="1380" width="1080" height="540" fill="#070d15"/>
+  <!-- track -->
+  <rect x="0" y="1340" width="1080" height="18" fill="#3a4651"/>
+  <!-- train -->
+  <g filter="url(#shadow)">
+    <path d="M700 1340 L700 1150 C700 1110 730 1090 770 1090 L960 1090 C1030 1090 1080 1150 1080 1230 L1080 1340 Z" fill="#283f56" stroke="#15141f" stroke-width="5"/>
+    <rect x="-20" y="1100" width="700" height="240" rx="18" fill="#7a1424" stroke="#15141f" stroke-width="5"/>
+    <rect x="-20" y="1120" width="700" height="14" fill="#c9a24a"/>
+    <g fill="#ffd58a" filter="url(#glow)">
+      <rect x="30" y="1160" width="90" height="80" rx="10"/><rect x="150" y="1160" width="90" height="80" rx="10"/><rect x="270" y="1160" width="90" height="80" rx="10"/>
+      <rect x="390" y="1160" width="90" height="80" rx="10"/><rect x="510" y="1160" width="90" height="80" rx="10"/>
+      <rect x="760" y="1130" width="110" height="80" rx="10"/>
+    </g>
+    <circle cx="560" cy="1290" r="34" fill="#c9a24a" stroke="#15141f" stroke-width="4"/>
+    <text x="560" y="1306" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="46" fill="#15141f">5</text>
+    <g fill="#15141f"><circle cx="80" cy="1345" r="30"/><circle cx="560" cy="1345" r="30"/><circle cx="800" cy="1345" r="34"/><circle cx="980" cy="1345" r="34"/></g>
+    <circle cx="1060" cy="1250" r="22" fill="#fff6dc" filter="url(#glow)"/>
+  </g>
+  <!-- static rain streaks -->
+  <g stroke="#cfe6ff" stroke-width="4" opacity="0.4" stroke-linecap="round">
+    <line x1="100" y1="400" x2="130" y2="500"/><line x1="300" y1="700" x2="330" y2="800"/><line x1="480" y1="1300" x2="510" y2="1400"/>
+    <line x1="900" y1="800" x2="930" y2="900"/><line x1="200" y1="1500" x2="230" y2="1600"/><line x1="850" y1="1550" x2="880" y2="1650"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

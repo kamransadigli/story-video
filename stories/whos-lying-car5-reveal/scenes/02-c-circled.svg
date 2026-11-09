@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#carriage" width="1080" height="1920"/>
+  <ellipse cx="490" cy="900" rx="430" ry="620" fill="#fff3c4" opacity="0.14" filter="url(#blur)"/>
+  <use href="#suspC" x="160" y="250" width="660" height="1210"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+  <g fill="none" stroke="#ff1e3c" stroke-linecap="round" filter="url(#shadowSm)">
+    <ellipse cx="490" cy="470" rx="330" ry="170" stroke-width="14" transform="rotate(-3 490 470)"/>
+    <ellipse cx="490" cy="740" rx="350" ry="110" stroke-width="12" transform="rotate(2 490 740)"/>
+    <ellipse cx="490" cy="1418" rx="300" ry="90" stroke-width="14" transform="rotate(-2 490 1418)"/>
+  </g>
+</svg>

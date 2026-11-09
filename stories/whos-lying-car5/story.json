@@ -1,0 +1,295 @@
+{
+  "title": "Who's Lying? — Night Train 404 · Car 5",
+  "voice": "am_michael",
+  "speed": 1.12,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "fade": false,
+  "vignette": 120,
+  "lead_in": 0.08,
+  "pre_voice": 0.08,
+  "gap": 0.22,
+  "tail": 0.25,
+  "layout": {
+    "cx": 490,
+    "max_w": 820
+  },
+  "style": "1940s vintage night train interior, noir cartoon, deep shadows with one bright focal point (red velvet, warm lamp light, white lightning), high contrast, vertical 9:16, no text",
+  "shots": [
+    {
+      "id": "01",
+      "narration": "One of these three is lying. Can you spot who?",
+      "svg": "scenes/01-box.svg",
+      "prompt": "open empty diamond necklace box on bright red tufted velvet seat, white lightning flash",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.14,
+        "c0": [
+          0.46,
+          0.5
+        ],
+        "c1": [
+          0.46,
+          0.56
+        ],
+        "ease": "out"
+      },
+      "punch": false,
+      "flashes": [
+        {
+          "at": 0,
+          "peak": 0.38,
+          "decay": 0.45
+        }
+      ],
+      "overlays": [
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 290,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "caption_y": 1450,
+      "sfx": "thunder"
+    },
+    {
+      "id": "02",
+      "narration": "A diamond necklace was stolen tonight. All three suspects say they never left Car 5.",
+      "say": "A diamond necklace was stolen tonight. All three suspects say they never left car five.",
+      "svg": "scenes/02-train.svg",
+      "prompt": "1940s night train racing through a thunderstorm, rain, lightning, lit windows",
+      "motion": "pan_right",
+      "fx": [
+        "rain"
+      ],
+      "overlays": [
+        {
+          "text": "Night Train 404",
+          "y": 270,
+          "size": 84
+        },
+        {
+          "text": "CAR 5",
+          "y": 385,
+          "size": 110,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 0.25
+        }
+      ],
+      "caption_y": 1440,
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "narration": "I was right here, reading. Never moved.",
+      "voice": "am_puck",
+      "speed": 1.15,
+      "svg": "scenes/03-suspA.svg",
+      "prompt": "nervous man in a grey suit holding a closed dry umbrella",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.08,
+        "c0": [
+          0.46,
+          0.45
+        ],
+        "c1": [
+          0.46,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "A",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "caption_y": 1440,
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "narration": "I was drinking my coffee the whole time.",
+      "voice": "af_heart",
+      "speed": 1.05,
+      "svg": "scenes/04-suspB.svg",
+      "prompt": "elegant woman in red holding a steaming coffee cup, calm smile",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.08,
+        "c0": [
+          0.46,
+          0.45
+        ],
+        "c1": [
+          0.46,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "B",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "caption_y": 1440,
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "narration": "I haven't left my seat since the last station.",
+      "voice": "bm_george",
+      "speed": 1.1,
+      "svg": "scenes/05-suspC.svg",
+      "prompt": "man in a fedora and long coat, water dripping from hat brim, wet shoulders, puddle at his shoes",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.08,
+        "c0": [
+          0.46,
+          0.45
+        ],
+        "c1": [
+          0.46,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "C",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "caption_y": 1120,
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "narration": "The clue is right in front of you.",
+      "min_duration": 3.7,
+      "svg": "scenes/06-lineup.svg",
+      "prompt": "the three suspects side by side",
+      "motion": "slow_zoom",
+      "punch": false,
+      "overlays": [
+        {
+          "text": "LOOK CLOSELY 👀",
+          "y": 215,
+          "size": 72,
+          "x": 560
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 185,
+          "y": 400,
+          "size": 120
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 470,
+          "y": 400,
+          "size": 120
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 755,
+          "y": 400,
+          "size": 120
+        }
+      ],
+      "countdown": {
+        "at": 0.6,
+        "from": 3,
+        "step": 1.0,
+        "x": 120,
+        "y": 215
+      },
+      "caption_y": 1470,
+      "sfx": "hit"
+    },
+    {
+      "id": "07",
+      "narration": "Comment A, B, or C. Answer tomorrow.",
+      "image_of": "01",
+      "motion": "push_in",
+      "punch": false,
+      "flashes": [
+        {
+          "at": 0,
+          "peak": 0.7,
+          "decay": 0.5
+        }
+      ],
+      "overlays": [
+        {
+          "text": "A, B or C? 👇",
+          "y": 300,
+          "size": 120
+        }
+      ],
+      "caption_y": 1450,
+      "sfx": "thunder"
+    },
+    {
+      "id": "08",
+      "duration": 1.9,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.08,
+        "z1": 1.0,
+        "c0": [
+          0.46,
+          0.5
+        ],
+        "c1": [
+          0.46,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "flashes": [
+        {
+          "at": "end",
+          "attack": 0.3,
+          "peak": 0.38
+        }
+      ],
+      "overlays": [
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 290,
+          "size": 100,
+          "pop": false
+        }
+      ]
+    }
+  ]
+}

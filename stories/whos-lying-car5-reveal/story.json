@@ -1,0 +1,117 @@
+{
+  "title": "Who's Lying? — Car 5 · Reveal",
+  "voice": "am_michael",
+  "speed": 1.1,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "fade": false,
+  "vignette": 130,
+  "lead_in": 0.1,
+  "pre_voice": 0.1,
+  "gap": 0.25,
+  "tail": 2.0,
+  "layout": {
+    "cx": 490,
+    "max_w": 820
+  },
+  "shots": [
+    {
+      "id": "01",
+      "narration": "It was C.",
+      "svg": "scenes/01-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.454,
+          0.45
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ]
+      },
+      "punch": false,
+      "flashes": [
+        {
+          "at": 0,
+          "peak": 0.45,
+          "decay": 0.4
+        }
+      ],
+      "overlays": [
+        {
+          "text": "IT WAS C",
+          "y": 290,
+          "size": 120,
+          "color": [
+            255,
+            214,
+            64
+          ]
+        }
+      ],
+      "caption_y": 1120,
+      "sfx": "thunder"
+    },
+    {
+      "id": "02",
+      "narration": "Look closer. He's soaking wet.",
+      "svg": "scenes/02-c-circled.svg",
+      "motion": {
+        "z0": 1.05,
+        "z1": 1.9,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.27
+        ],
+        "ease": "out"
+      },
+      "punch": false,
+      "caption_y": 1420,
+      "sfx": "hit"
+    },
+    {
+      "id": "03",
+      "narration": "On a moving train in a storm, the only way to get wet is to go outside.",
+      "image_of": "02",
+      "motion": {
+        "z0": 1.7,
+        "z1": 1.7,
+        "c0": [
+          0.454,
+          0.38
+        ],
+        "c1": [
+          0.454,
+          0.7
+        ]
+      },
+      "punch": false,
+      "caption_y": 1450,
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "narration": "He was never in his seat.",
+      "svg": "scenes/03-lineup-c.svg",
+      "motion": "slow_zoom",
+      "punch": false,
+      "overlays": [
+        {
+          "text": "Did you get it? 👇",
+          "y": 290,
+          "size": 104,
+          "start": 1.6
+        }
+      ],
+      "caption_y": 1470,
+      "sfx": "end"
+    }
+  ]
+}

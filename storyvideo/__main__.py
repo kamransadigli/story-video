@@ -36,48 +36,79 @@ def main():
     out = args.out or (story_dir / "output" / "video.mp4")
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    # 1. images
+    # 1. images (a shot can reuse another shot's picture with "image_of")
+    own = [s for s in shots if "image_of" not in s]
     if args.images == "fal":
-        est = images.fal_estimate(shots, args.fal_model)
-        print(f"fal.ai estimate: {len(shots)} images x {args.fal_model} ~= ${est:.2f}")
+        est = images.fal_estimate(own, args.fal_model)
+        print(f"fal.ai estimate: {len(own)} images x {args.fal_model} ~= ${est:.2f}")
         if est > args.max_cost:
             sys.exit(f"Estimated cost ${est:.2f} is above --max-cost ${args.max_cost:.2f}. Stopping.")
-        img_paths = images.render_fal(story, shots, build / "images-fal", args.fal_model)
+        img_paths = images.render_fal(story, own, build / "images-fal", args.fal_model)
     else:
         print("1/4 drawing scenes (SVG)")
-        img_paths = images.render_svg(story_dir, shots, build / "images-svg")
+        img_paths = images.render_svg(story_dir, own, build / "images-svg")
+    for s in shots:
+        if "image_of" in s:
+            img_paths[s["id"]] = img_paths[s["image_of"]]
 
     # 2. voice + timeline
     print("2/4 recording narration (Kokoro)")
     voice = args.voice or story.get("voice", "am_michael")
     speed = story.get("speed", 1.0)
-    t = LEAD_IN
+    pre_voice = story.get("pre_voice", PRE_VOICE)
+    gap = story.get("gap", GAP)
+    t = story.get("lead_in", LEAD_IN)
     plan_shots, clips, sfx_events, captions = [], [], [], []
     for i, s in enumerate(shots):
-        x, sr = tts.speak(s.get("say", s["narration"]), voice, speed, build / "voice")
-        dur = len(x) / sr
-        start = t
-        v_start = start + PRE_VOICE
-        end = v_start + dur + GAP + (story.get("tail", TAIL) if i == len(shots) - 1 else 0)
-        clips.append((v_start, x, sr))
-        if s.get("sfx"):
-            sfx_events.append((start, s["sfx"]))
-        captions += video.caption_events(s["narration"], v_start, dur, min(end, v_start + dur + 0.25))
-        plan_shots.append({"id": s["id"], "start": start if i else 0.0, "end": end, "motion": s.get("motion", "push_in"),
-                           "caption_y": s.get("caption_y", video.CAPTION_Y)})
+        start = 0.0 if i == 0 else t
+        last = i == len(shots) - 1
+        text = s.get("narration")
+        if text:
+            x, sr = tts.speak(s.get("say", text), s.get("voice", voice), s.get("speed", speed), build / "voice")
+            dur = len(x) / sr
+            v_start = (t if i else story.get("lead_in", LEAD_IN)) + s.get("pre_voice", pre_voice)
+            end = v_start + dur + s.get("gap", gap) + (story.get("tail", TAIL) if last else 0)
+            clips.append((v_start, x, sr))
+            captions += video.caption_events(text, v_start, dur, min(end, v_start + dur + 0.25),
+                                             samples=x, sr=sr, caption_y=s.get("caption_y"))
+        else:
+            end = t + s.get("duration", 2.0)
+        end = max(end, start + s.get("min_duration", 0))
+        if "duration" in s and text is None:
+            end = start + s["duration"]
+        end = round(end * video.FPS) / video.FPS  # cuts land exactly on frames
+        sfx = s.get("sfx")
+        if isinstance(sfx, str):
+            sfx_events.append((start, sfx))
+        elif isinstance(sfx, list):
+            for e in sfx:
+                sfx_events.append((start + e.get("at", 0), e["name"]))
+        cd = s.get("countdown")
+        if cd:
+            for k in range(cd.get("from", 3)):
+                sfx_events.append((start + cd["at"] + k * cd.get("step", 1.0), "tick1"))
+        ps = {k: v for k, v in s.items() if k in ("id", "fx", "flashes", "overlays", "countdown",
+                                                  "caption_y", "punch", "rain_box")}
+        ps.update({"id": s["id"], "start": start, "end": end, "motion": s.get("motion", "push_in")})
+        plan_shots.append(ps)
         t = end
     total = t
-    print(f"   length {total:.1f}s, {len(shots)} shots")
+    print(f"   length {total:.2f}s, {len(shots)} shots")
 
     # 3. audio
     print("3/4 mixing music + sound effects")
     wav = build / "mix.wav"
-    sf.write(wav, audio.mix(total, clips, sfx_events, story.get("music", "noir"), story.get("music_volume", 0.8)), audio.SR)
+    sf.write(wav, audio.mix(total, clips, sfx_events, story.get("music", "noir"),
+                            story.get("music_volume", 0.8), story.get("ambience"),
+                            fades=story.get("fade", True)), audio.SR)
 
     # 4. video
     print("4/4 rendering video")
     plan = {"shots": plan_shots, "badge": story.get("badge"), "captions": captions, "total": total,
+            "fade": story.get("fade", True), "layout": story.get("layout", {}),
+            "vignette": story.get("vignette", 200),
             "images": {k: str(v) for k, v in img_paths.items()}}
+    (build / "plan.json").write_text(json.dumps(plan, indent=1))
     video.render(plan, wav, out, workers=args.workers)
     print(f"done -> {out}")
 

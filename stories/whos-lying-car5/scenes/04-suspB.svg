@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#carriage" width="1080" height="1920"/>
+  <ellipse cx="490" cy="900" rx="430" ry="620" fill="#fff3c4" opacity="0.14" filter="url(#blur)"/>
+  <use href="#suspB" x="160" y="250" width="660" height="1210"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
