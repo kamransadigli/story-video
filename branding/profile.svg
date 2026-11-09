@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#2a5866"/><stop offset="1" stop-color="#08141b"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="1080" fill="url(#bgGlow)"/>
+  <!-- big red question mark behind -->
+  <text x="540" y="760" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="820" fill="#c8102e" opacity="0.95" filter="url(#glow)">?</text>
+  <!-- spotlight -->
+  <ellipse cx="540" cy="520" rx="420" ry="420" fill="url(#lamp)" opacity="0.35"/>
+  <!-- detective silhouette -->
+  <g filter="url(#shadow)">
+    <!-- coat / shoulders with raised collar -->
+    <path d="M190 1080 C200 900 280 800 400 770 L680 770 C800 800 880 900 890 1080 Z" fill="#141a22" stroke="#05080b" stroke-width="6"/>
+    <path d="M400 770 L470 900 L540 800 L610 900 L680 770 L620 740 L540 780 L460 740 Z" fill="#1e2632" stroke="#05080b" stroke-width="6"/>
+    <!-- head in shadow -->
+    <ellipse cx="540" cy="620" rx="130" ry="150" fill="#1b222c" stroke="#05080b" stroke-width="6"/>
+    <!-- glinting eyes -->
+    <ellipse cx="490" cy="625" rx="22" ry="8" fill="#ffd58a"/><ellipse cx="590" cy="625" rx="22" ry="8" fill="#ffd58a"/>
+    <!-- fedora -->
+    <path d="M405 520 C410 400 470 360 540 360 C610 360 670 400 675 520 Z" fill="#232b36" stroke="#05080b" stroke-width="6"/>
+    <path d="M500 380 C520 400 560 400 580 380" fill="none" stroke="#05080b" stroke-width="6"/>
+    <rect x="405" y="482" width="270" height="40" fill="#7a1f1f"/>
+    <path d="M300 535 C380 500 700 500 780 535 C770 575 310 575 300 535 Z" fill="#1a2029" stroke="#05080b" stroke-width="6"/>
+  </g>
+  <rect width="1080" height="1080" filter="url(#grit)"/>
+</svg>
