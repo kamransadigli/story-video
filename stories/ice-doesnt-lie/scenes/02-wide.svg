@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#diner" width="1080" height="1920"/>
+  <!-- three separate tables receding -->
+  <g>
+    <use href="#bustC" x="660" y="840" width="260" height="329"/>
+    <rect x="620" y="1080" width="360" height="90" fill="url(#cloth)" stroke="#15141f" stroke-width="5"/>
+    <use href="#glassIce" x="840" y="990" width="70" height="111"/>
+    <use href="#tlamp" x="650" y="1010" width="50" height="83"/>
+  </g>
+  <g>
+    <use href="#bustB" x="330" y="900" width="320" height="405"/>
+    <rect x="270" y="1200" width="440" height="110" fill="url(#cloth)" stroke="#15141f" stroke-width="5"/>
+    <use href="#glassMelted" x="560" y="1090" width="90" height="142"/>
+    <use href="#tlamp" x="300" y="1120" width="60" height="100"/>
+  </g>
+  <g>
+    <use href="#bustA" x="-40" y="980" width="420" height="532"/>
+    <rect x="-40" y="1360" width="560" height="160" fill="url(#cloth)" stroke="#15141f" stroke-width="5"/>
+    <use href="#glassEmpty" x="330" y="1220" width="120" height="190"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

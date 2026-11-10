@@ -1,0 +1,292 @@
+{
+  "title": "The Ice Doesn't Lie",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "fade": false,
+  "vignette": 120,
+  "layout": {
+    "cx": 490,
+    "max_w": 820
+  },
+  "lines": [
+    {
+      "at": 0.06,
+      "text": "One of them is lying. You have ten seconds.",
+      "caption_y": 1450
+    },
+    {
+      "at": 2.5,
+      "text": "A wallet was stolen. All three say they've been sitting here for two hours.",
+      "caption_y": 1450
+    },
+    {
+      "at": 10.25,
+      "text": "Find the clue.",
+      "caption_y": 1450
+    },
+    {
+      "at": 13.75,
+      "text": "Comment A, B, or C. And send this to the friend who thinks they're a detective.",
+      "caption_y": 1450
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.4,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.454,
+          0.47
+        ],
+        "c1": [
+          0.454,
+          0.47
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 290,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "duration": 1.6,
+      "svg": "scenes/02-wide.svg",
+      "motion": "pan_right",
+      "fx": [
+        "rain",
+        "sway"
+      ],
+      "rain_box": [
+        150,
+        260,
+        930,
+        840
+      ],
+      "overlays": [
+        {
+          "text": "“Here for 2 hours”",
+          "y": 270,
+          "size": 64
+        },
+        {
+          "text": "— all 3",
+          "y": 370,
+          "size": 66,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 0.2
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "duration": 2.0,
+      "svg": "scenes/03-a.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.52,
+          0.52
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "A",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": [
+        {
+          "name": "clink",
+          "at": 0.1
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-b.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.52,
+          0.52
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "B",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": [
+        {
+          "name": "clink",
+          "at": 0.1
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "duration": 2.0,
+      "svg": "scenes/05-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.52,
+          0.52
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "C",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": [
+        {
+          "name": "clink",
+          "at": 0.1
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "duration": 3.6,
+      "svg": "scenes/06-lineup.svg",
+      "motion": "slow_zoom",
+      "punch": false,
+      "overlays": [
+        {
+          "text": "FIND THE CLUE 👀",
+          "x": 565,
+          "y": 215,
+          "size": 74
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 185,
+          "y": 440,
+          "size": 110
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 470,
+          "y": 440,
+          "size": 110
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 755,
+          "y": 440,
+          "size": 110
+        }
+      ],
+      "countdown": {
+        "at": 0.5,
+        "from": 3,
+        "step": 1.0,
+        "x": 120,
+        "y": 215
+      },
+      "sfx": "hit"
+    },
+    {
+      "id": "07",
+      "duration": 5.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.06,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.47
+        ],
+        "c1": [
+          0.454,
+          0.47
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "A, B or C? 👇",
+          "y": 270,
+          "size": 110,
+          "end": 4.65
+        },
+        {
+          "text": "🔍 Send this to a friend who thinks they're a detective",
+          "y": 480,
+          "size": 58,
+          "start": 0.35,
+          "end": 4.65
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 290,
+          "size": 100,
+          "pop": false,
+          "start": 4.65
+        }
+      ],
+      "sfx": "whoosh"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#diner" width="1080" height="1920"/>
+  <use href="#bustA" x="20" y="500" width="330" height="418"/>
+  <use href="#bustB" x="305" y="500" width="330" height="418"/>
+  <use href="#bustC" x="590" y="500" width="330" height="418"/>
+  <use href="#table" x="0" y="880" width="1080" height="1040"/>
+  <ellipse cx="490" cy="1150" rx="540" ry="320" fill="#fff3c4" opacity="0.18" filter="url(#blur)"/>
+  <use href="#glassEmpty" x="55" y="920" width="260" height="412"/>
+  <use href="#glassMelted" x="340" y="920" width="260" height="412"/>
+  <use href="#glassIce" x="625" y="920" width="260" height="412"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

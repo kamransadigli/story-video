@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#1a0f0a"/>
+  <circle cx="120" cy="1500" r="260" fill="url(#redLamp)" opacity="0.8"/>
+  <circle cx="980" cy="560" r="200" fill="url(#redLamp)" opacity="0.5"/>
+  <circle cx="860" cy="1650" r="160" fill="#ffd58a" opacity="0.12" filter="url(#blur)"/>
+  <use href="#bustC" x="-410" y="200" width="1800" height="2280"/>
+  <!-- warm key light from the lamp, cool rim on the other side -->
+  <ellipse cx="360" cy="900" rx="560" ry="640" fill="url(#lamp)" opacity="0.55"/>
+  <path d="M900 600 C960 800 960 1100 880 1300" fill="none" stroke="#9fd3ff" stroke-width="14" opacity="0.25" filter="url(#blurSm)"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

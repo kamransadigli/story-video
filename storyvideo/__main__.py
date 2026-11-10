@@ -27,6 +27,7 @@ def main():
     ap.add_argument("--voice", help="override the Kokoro voice, e.g. am_michael, bm_george")
     ap.add_argument("--out", type=Path)
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--timing-only", action="store_true", help="print the timeline and stop")
     args = ap.parse_args()
 
     story_dir = args.story.resolve()
@@ -93,7 +94,20 @@ def main():
         plan_shots.append(ps)
         t = end
     total = t
+
+    # Narration on its own timeline (story["lines"]), so a sentence can run across cuts.
+    for ln in story.get("lines", []):
+        x, sr = tts.speak(ln.get("say", ln["text"]), ln.get("voice", voice), ln.get("speed", speed), build / "voice")
+        dur = len(x) / sr
+        clips.append((ln["at"], x, sr))
+        captions += video.caption_events(ln["text"], ln["at"], dur, ln["at"] + dur + 0.25,
+                                         samples=x, sr=sr, caption_y=ln.get("caption_y"))
+        print(f"   line {ln['at']:.2f}-{ln['at'] + dur:.2f}s  {ln['text'][:50]}")
+        if ln["at"] + dur > total:
+            print(f"   WARNING: line ends after the video ({total:.2f}s)")
     print(f"   length {total:.2f}s, {len(shots)} shots")
+    if args.timing_only:
+        return
 
     # 3. audio
     print("3/4 mixing music + sound effects")

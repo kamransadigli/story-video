@@ -156,7 +156,21 @@ def ambience_rain_train(dur):
     return _norm(rain + rumble + clack * 0.9, 1.0)
 
 
+def sfx_clink(dur=0.9):
+    """Two glasses touching: bright inharmonic partials with a fast decay."""
+    t = _t(dur)
+    out = np.zeros(len(t))
+    for start, g in ((0.0, 1.0), (0.11, 0.55)):
+        tt = np.clip(t - start, 0, None)
+        on = t >= start
+        for f, d in ((2240, 7), (3190, 9), (4630, 12), (5870, 15), (7350, 18)):
+            out += on * np.sin(2 * np.pi * f * tt) * np.exp(-tt * d) * g / (1 + f / 4000)
+        out += on * _hp(rng.standard_normal(len(t)), 4000) * np.exp(-tt * 300) * 0.3 * g
+    return _norm(out, 0.7)
+
+
 SFX = {
+    "clink": (sfx_clink, 0.4),
     "tick": (sfx_tick, 0.5),
     "tick1": (sfx_tick1, 0.45),
     "thunder": (sfx_thunder, 0.85),
