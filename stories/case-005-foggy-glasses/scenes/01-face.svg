@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#1a100a"/>
+  <circle cx="110" cy="1450" r="300" fill="url(#heaterGlow)" opacity="0.8"/>
+  <circle cx="980" cy="560" r="200" fill="url(#redLamp)" opacity="0.45"/>
+  <use href="#manA" x="-260" y="70" width="1500" height="1900"/>
+  <ellipse cx="380" cy="700" rx="560" ry="640" fill="url(#lamp)" opacity="0.5"/>
+  <path d="M900 600 C960 800 960 1100 880 1300" fill="none" stroke="#9fd3ff" stroke-width="14" opacity="0.22" filter="url(#blurSm)"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

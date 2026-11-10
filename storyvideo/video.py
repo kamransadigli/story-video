@@ -346,6 +346,21 @@ def _rain_layer():
     return tall
 
 
+def _snow_layer():
+    rng = np.random.default_rng(9)
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    for _ in range(520):
+        x, y = rng.uniform(0, W), rng.uniform(0, H)
+        r = rng.choice([2, 3, 3, 4, 5, 6])
+        a = int(rng.uniform(150, 240))
+        d.ellipse((x - r, y - r, x + r, y + r), fill=(255, 255, 255, a))
+    tall = Image.new("RGBA", (W, 2 * H), (0, 0, 0, 0))
+    tall.alpha_composite(img, (0, 0))
+    tall.alpha_composite(img, (0, H))
+    return tall
+
+
 def _init(plan):
     _G["plan"] = plan
     LAYOUT.update(plan.get("layout", {}))
@@ -367,6 +382,8 @@ def _init(plan):
     _G["grain"] = grains
     if any("rain" in s.get("fx", []) for s in plan["shots"]):
         _G["rain"] = _rain_layer()
+    if any("snow" in s.get("fx", []) for s in plan["shots"]):
+        _G["snow"] = _snow_layer()
 
 
 def _flash_value(flashes, st):
@@ -406,6 +423,16 @@ def _frame(i):
         box = (box[0] + dx, box[1] + dy, box[2] + dx, box[3] + dy)
         if box[0] < 0 or box[2] > img.width or box[1] < 0 or box[3] > img.height:
             box = (box[0] - dx, box[1] - dy, box[2] - dx, box[3] - dy)
+    if "snow" in fx and s.get("snow_box"):
+        # snow is drawn in picture space so it stays inside the window while the camera moves
+        x0, y0, x1, y1 = s["snow_box"]
+        k = img.width / W
+        off = int((t * 130) % H)
+        drift = int(25 * math.sin(t * 0.9))
+        layer = _G["snow"].crop((-drift, H - off + y0, -drift + (x1 - x0), H - off + y1))
+        layer = layer.resize((int((x1 - x0) * k), int((y1 - y0) * k)), Image.BILINEAR)
+        img = img.copy()
+        img.paste(layer, (int(x0 * k), int(y0 * k)), layer)
     frame = img.resize((W, H), Image.BILINEAR, box=box).convert("RGBA")
 
     if "rain" in fx:
@@ -457,8 +484,11 @@ def _frame(i):
 
     for t0, t1, words, active, chunk_t0, cap_y in plan["captions"]:
         if t0 <= t < t1:
-            cap = _pop(caption_image(words, active), t - chunk_t0, 0.14)
-            _place(frame, cap, cx, cap_y or s.get("caption_y", CAPTION_Y))
+            full = caption_image(words, active)
+            cap = _pop(full, t - chunk_t0, 0.14)
+            cy = cap_y or s.get("caption_y", CAPTION_Y)
+            cy -= (full.height - 190) / 2  # two-line captions grow upward, never into the bottom zone
+            _place(frame, cap, cx, cy)
             break
 
     out = frame.convert("RGB")

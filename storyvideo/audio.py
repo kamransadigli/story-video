@@ -169,6 +169,19 @@ def sfx_clink(dur=0.9):
     return _norm(out, 0.7)
 
 
+def ambience_station_cold(dur):
+    """Train idling at a frozen station: engine idle, muffled cold wind outside, heater hum inside."""
+    t = _t(dur)
+    n = len(t)
+    idle = sum(np.sin(2 * np.pi * f * t + ph) * g for f, g, ph in ((41, 1.0, 0), (82, 0.5, 1.1), (123, 0.25, 2.3)))
+    idle *= 1 + 0.08 * np.sin(2 * np.pi * 3.1 * t)
+    idle = idle * 0.5 + _lp(rng.standard_normal(n), 140, 4) * 1.2
+    gust = np.clip(0.5 + 0.5 * np.sin(2 * np.pi * 0.17 * t + 0.6) + 0.25 * np.sin(2 * np.pi * 0.41 * t), 0.15, 1.2)
+    wind = _lp(_bp(rng.standard_normal(n), 150, 1400), 600, 2) * gust * 2.2
+    heater = np.sin(2 * np.pi * 120 * t) * 0.12 + _bp(rng.standard_normal(n), 300, 2200) * 0.12
+    return _norm(idle + wind + heater, 1.0)
+
+
 SFX = {
     "clink": (sfx_clink, 0.4),
     "tick": (sfx_tick, 0.5),
@@ -313,6 +326,8 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     amb = np.zeros(n)
     if ambience == "rain_train":
         amb = ambience_rain_train(total) * 0.16 * (1 - 0.3 * env)
+    elif ambience == "station_cold":
+        amb = ambience_station_cold(total) * 0.16 * (1 - 0.3 * env)
 
     if babble is not None:
         amb = amb + babble[:n] * babble_volume * (1 - 0.4 * env)
