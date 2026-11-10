@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#cabin" width="1080" height="1920"/>
+  <!-- bunk with pillow -->
+  <rect x="-20" y="900" width="1120" height="420" rx="20" fill="url(#bunkBlue)" stroke="#15141f" stroke-width="6"/>
+  <path d="M60 820 C60 760 120 740 200 744 L560 750 C620 752 650 780 646 840 C640 900 600 920 540 916 L160 910 C90 908 60 880 60 820 Z" fill="#fbf7ef" stroke="#15141f" stroke-width="6"/>
+  <path d="M120 790 C240 770 440 772 580 790" fill="none" stroke="#e2d8c4" stroke-width="6"/>
+  <use href="#jewelBox" x="230" y="660" width="250" height="227"/>
+  <use href="#dogSit" x="640" y="760" width="300" height="420"/>
+  <ellipse cx="420" cy="860" rx="420" ry="300" fill="url(#lamp)" opacity="0.35"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -127,7 +127,8 @@ def main():
     sf.write(wav, audio.mix(total, clips, sfx_events, story.get("music", "noir"),
                             story.get("music_volume", 0.8), story.get("ambience"),
                             fades=story.get("fade", True), babble=babble,
-                            babble_volume=story.get("chatter_volume", 0.05)), audio.SR)
+                            babble_volume=story.get("chatter_volume", 0.05),
+                            ambience_volume=story.get("ambience_volume", 0.16)), audio.SR)
 
     # 4. video
     print("4/4 rendering video")

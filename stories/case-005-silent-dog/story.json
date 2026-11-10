@@ -1,0 +1,375 @@
+{
+  "title": "Case #005: The Silent Dog",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "ambience_volume": 0.11,
+  "fade": false,
+  "vignette": 120,
+  "layout": {
+    "cx": 490,
+    "max_w": 900
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "The dog saw the thief… and didn't make a sound.",
+      "say": "The dog saw the thief... and didn't make a sound.",
+      "caption_y": 1480
+    },
+    {
+      "at": 2.6,
+      "text": "This dog barks at every stranger. Last night, a necklace was stolen, and it stayed silent.",
+      "caption_y": 1470
+    },
+    {
+      "at": 11.05,
+      "text": "Who's lying? Comment your answer and I'll send you a free detective kit. Follow, tomorrow's case is harder.",
+      "caption_y": 1480
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.5,
+      "svg": "scenes/01-dogface.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.454,
+          0.5
+        ],
+        "c1": [
+          0.454,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #005",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "THE DOG SAW",
+          "y": 270,
+          "size": 104,
+          "pop": false
+        },
+        {
+          "text": "THE THIEF",
+          "y": 385,
+          "size": 104,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "duration": 2.5,
+      "svg": "scenes/02-cabin.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.08,
+        "c0": [
+          0.45,
+          0.48
+        ],
+        "c1": [
+          0.5,
+          0.46
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "It barks at",
+          "y": 250,
+          "size": 78
+        },
+        {
+          "text": "every stranger",
+          "y": 345,
+          "size": 78,
+          "color": [
+            255,
+            214,
+            64
+          ]
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "duration": 2.0,
+      "svg": "scenes/03-a.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.47,
+          0.47
+        ],
+        "c1": [
+          0.49,
+          0.45
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "A",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": [
+        {
+          "name": "growl",
+          "at": 0.0
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-b.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.47,
+          0.47
+        ],
+        "c1": [
+          0.49,
+          0.45
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "B",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "duration": 2.0,
+      "svg": "scenes/05-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.47,
+          0.47
+        ],
+        "c1": [
+          0.49,
+          0.45
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "C",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": [
+        {
+          "name": "bark",
+          "at": 0.0
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "duration": 2.0,
+      "svg": "scenes/06-lineup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "Who's lying?",
+          "y": 215,
+          "size": 84,
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "y": 315,
+          "size": 96,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 185,
+          "y": 440,
+          "size": 100
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 470,
+          "y": 440,
+          "size": 100
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 755,
+          "y": 440,
+          "size": 100
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "07",
+      "duration": 4.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.06,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.5
+        ],
+        "c1": [
+          0.454,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #005",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "🔍 FREE DETECTIVE KIT",
+          "y": 235,
+          "size": 62,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 3.7
+        },
+        {
+          "text": "comment your answer 👇",
+          "y": 318,
+          "size": 60,
+          "end": 3.7,
+          "start": 0.25
+        },
+        {
+          "text": "Follow: tomorrow's",
+          "y": 425,
+          "size": 60,
+          "end": 3.7,
+          "start": 1.6
+        },
+        {
+          "text": "case is harder",
+          "y": 500,
+          "size": 60,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 3.7,
+          "start": 1.6
+        },
+        {
+          "text": "THE DOG SAW",
+          "y": 270,
+          "size": 104,
+          "pop": false,
+          "start": 3.7
+        },
+        {
+          "text": "THE THIEF",
+          "y": 385,
+          "size": 104,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false,
+          "start": 3.7
+        }
+      ],
+      "sfx": "whoosh"
+    }
+  ]
+}

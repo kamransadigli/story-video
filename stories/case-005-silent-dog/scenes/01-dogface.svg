@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#1f130b"/>
+  <circle cx="160" cy="1500" r="300" fill="url(#redLamp)" opacity="0.7"/>
+  <circle cx="960" cy="520" r="220" fill="url(#lamp)" opacity="0.6"/>
+  <ellipse cx="490" cy="1050" rx="620" ry="700" fill="url(#lamp)" opacity="0.55"/>
+  <rect x="-40" y="1360" width="1160" height="600" fill="#2a4c7a" opacity="0.9"/>
+  <use href="#dogHead" x="-80" y="520" width="1140" height="969"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

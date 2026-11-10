@@ -182,7 +182,43 @@ def ambience_station_cold(dur):
     return _norm(idle + wind + heater, 1.0)
 
 
+def _harmonic(f_curve, n_harm=12, tilt=1.0):
+    ph = 2 * np.pi * np.cumsum(f_curve) / SR
+    return sum(np.sin(k * ph) / (k ** tilt) for k in range(1, n_harm + 1))
+
+
+def sfx_growl(dur=1.5):
+    """Small dog growl: low buzzy voice with rough amplitude flutter."""
+    t = _t(dur)
+    f = 95 + 12 * np.sin(2 * np.pi * 1.3 * t) + rng.normal(0, 4, len(t))
+    f = _lp(f, 20)
+    voice = _harmonic(f, 20, 0.8)
+    rough = 0.55 + 0.45 * np.abs(np.sin(2 * np.pi * 23 * t + 0.3 * np.sin(2 * np.pi * 3 * t)))
+    breath = _bp(rng.standard_normal(len(t)), 300, 2500) * 0.35
+    y = _bp(voice * rough + breath, 120, 1600)
+    env = np.minimum(1, t / 0.15) * np.minimum(1, (dur - t) / 0.25)
+    return _norm(y * env, 0.8)
+
+
+def sfx_bark(dur=0.75):
+    """Two short yaps from a small terrier."""
+    t = _t(dur)
+    out = np.zeros(len(t))
+    for start, g in ((0.0, 1.0), (0.32, 0.85)):
+        tt = t - start
+        on = (tt >= 0) & (tt < 0.2)
+        tc = np.clip(tt, 0, 0.2)
+        f = 620 - 900 * tc + 120 * np.exp(-tc * 60)
+        y = _harmonic(f, 10, 1.1) + rng.standard_normal(len(t)) * 0.25 * np.exp(-tc * 25)
+        env = np.minimum(1, tc / 0.008) * np.exp(-tc * 14)
+        out += np.where(on, y * env * g, 0)
+    out = _bp(out, 450, 3200)
+    return _norm(out, 0.85)
+
+
 SFX = {
+    "growl": (sfx_growl, 0.55),
+    "bark": (sfx_bark, 0.6),
     "clink": (sfx_clink, 0.4),
     "tick": (sfx_tick, 0.5),
     "tick1": (sfx_tick1, 0.45),
@@ -293,7 +329,7 @@ def make_babble(clips, total, seed=11):
 
 
 def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience=None, fades=True,
-        babble=None, babble_volume=0.05):
+        babble=None, babble_volume=0.05, ambience_volume=0.16):
     """voice_clips: [(start_s, samples, sr)]; sfx_events: [(start_s, name)]. Returns stereo float32."""
     n = int(total * SR)
     voice = np.zeros(n)
@@ -325,9 +361,9 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
         bed *= 1 - 0.35 * env
     amb = np.zeros(n)
     if ambience == "rain_train":
-        amb = ambience_rain_train(total) * 0.16 * (1 - 0.3 * env)
+        amb = ambience_rain_train(total) * ambience_volume * (1 - 0.3 * env)
     elif ambience == "station_cold":
-        amb = ambience_station_cold(total) * 0.16 * (1 - 0.3 * env)
+        amb = ambience_station_cold(total) * ambience_volume * (1 - 0.3 * env)
 
     if babble is not None:
         amb = amb + babble[:n] * babble_volume * (1 - 0.4 * env)

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#cabin" width="1080" height="1920"/>
+  <use href="#manSuit" x="20" y="480" width="330" height="418"/>
+  <use href="#maidB" x="305" y="480" width="330" height="418"/>
+  <use href="#youngC" x="590" y="480" width="330" height="418"/>
+  <rect x="-20" y="880" width="1120" height="1060" fill="#3a2214" stroke="#15141f" stroke-width="6"/>
+  <path d="M140 1920 L940 1920 L820 880 L260 880 Z" fill="#7a1424" opacity="0.85"/>
+  <ellipse cx="490" cy="1100" rx="420" ry="280" fill="url(#lamp)" opacity="0.4"/>
+  <use href="#dogSit" x="370" y="930" width="240" height="336"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

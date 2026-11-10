@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#cabin" width="1080" height="1920"/>
+  <ellipse cx="400" cy="900" rx="420" ry="560" fill="#fff3c4" opacity="0.12" filter="url(#blur)"/>
+  <use href="#manSuit" x="-30" y="300" width="820" height="1039"/>
+  <rect x="-20" y="1240" width="1120" height="40" rx="10" fill="#c8102e" stroke="#15141f" stroke-width="5"/>
+  <rect x="-20" y="1270" width="1120" height="90" fill="#7a0d1e" stroke="#15141f" stroke-width="5"/>
+  <ellipse cx="690.0" cy="1100" rx="300" ry="260" fill="url(#lamp)" opacity="0.45"/>
+  <use href="#dogGrowl" x="470" y="666" width="440" height="616"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
