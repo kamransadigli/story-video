@@ -253,7 +253,34 @@ def resample(x, sr):
     return signal.resample_poly(x, SR // g, sr // g)
 
 
-def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience=None, fades=True):
+def make_babble(clips, total, seed=11):
+    """Crowd murmur from TTS sentences: overlapped, muffled and smeared so no words are clear."""
+    r = np.random.default_rng(seed)
+    n = int(total * SR)
+    out = np.zeros(n)
+    pos = 0.0
+    k = 0
+    while pos < total:  # keep 3 overlapping talkers going for the whole video
+        for lane in range(3):
+            x, sr = clips[(k + lane) % len(clips)]
+            y = resample(x, sr) * r.uniform(0.5, 1.0)
+            a = int((pos + r.uniform(0, 1.2)) * SR) - int(r.uniform(0, 0.8) * len(y))
+            a = max(a, 0)
+            b = min(n, a + len(y))
+            if b > a:
+                out[a:b] += y[: b - a]
+        pos += 1.6
+        k += 3
+    out = _lp(out, 1300, 4)
+    out = _hp(out, 180)
+    ir_t = np.arange(int(0.25 * SR)) / SR
+    ir = r.standard_normal(len(ir_t)) * np.exp(-ir_t * 14)
+    out = signal.fftconvolve(out, ir)[:n]
+    return _norm(out, 1.0)
+
+
+def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience=None, fades=True,
+        babble=None, babble_volume=0.05):
     """voice_clips: [(start_s, samples, sr)]; sfx_events: [(start_s, name)]. Returns stereo float32."""
     n = int(total * SR)
     voice = np.zeros(n)
@@ -287,6 +314,8 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     if ambience == "rain_train":
         amb = ambience_rain_train(total) * 0.16 * (1 - 0.3 * env)
 
+    if babble is not None:
+        amb = amb + babble[:n] * babble_volume * (1 - 0.4 * env)
     mono = voice + fx + bed * music_volume + amb
     left = mono + 0.04 * np.roll(bed, 480) + 0.03 * np.roll(amb, 240)
     right = mono + 0.04 * np.roll(bed, -480) - 0.03 * np.roll(amb, 240)

@@ -112,9 +112,22 @@ def main():
     # 3. audio
     print("3/4 mixing music + sound effects")
     wav = build / "mix.wav"
+    babble = None
+    if story.get("chatter"):
+        chat_lines = ["Could you pass the salt, please?", "We arrive in the morning, I think.",
+                      "This soup is still very hot.", "Did you see the storm outside?",
+                      "I'll have another coffee, thank you.", "My brother lives in the city.",
+                      "The train is quite late tonight.", "Oh, that is a lovely story.",
+                      "Shall we play cards after dinner?", "I never sleep well on trains.",
+                      "Waiter, could we have the bill?", "Yes, yes, I remember him."]
+        chat_voices = ["af_bella", "bm_daniel", "af_sarah", "am_eric", "bf_isabella", "am_liam"]
+        chat = [tts.speak(t_, chat_voices[k % len(chat_voices)], 1.0, build / "voice")
+                for k, t_ in enumerate(chat_lines)]
+        babble = audio.make_babble(chat, total)
     sf.write(wav, audio.mix(total, clips, sfx_events, story.get("music", "noir"),
                             story.get("music_volume", 0.8), story.get("ambience"),
-                            fades=story.get("fade", True)), audio.SR)
+                            fades=story.get("fade", True), babble=babble,
+                            babble_volume=story.get("chatter_volume", 0.05)), audio.SR)
 
     # 4. video
     print("4/4 rendering video")

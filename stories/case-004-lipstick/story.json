@@ -1,0 +1,308 @@
+{
+  "title": "Case #004: The Lipstick",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "chatter": true,
+  "chatter_volume": 0.05,
+  "fade": false,
+  "vignette": 120,
+  "layout": {
+    "cx": 490,
+    "max_w": 900
+  },
+  "lines": [
+    {
+      "at": 0.06,
+      "text": "One of them is lying. And this one is harder.",
+      "caption_y": 1410
+    },
+    {
+      "at": 2.55,
+      "text": "A diamond ring vanished. The thief left two clues on this table.",
+      "caption_y": 1410
+    },
+    {
+      "at": 11.1,
+      "text": "Who did it? Comment A, B, or C. Follow for tomorrow's case.",
+      "caption_y": 1410
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.4,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.454,
+          0.45
+        ],
+        "c1": [
+          0.454,
+          0.45
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #004",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 300,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 0
+        },
+        {
+          "name": "clink",
+          "at": 2.0
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "duration": 2.6,
+      "svg": "scenes/02-table.svg",
+      "motion": {
+        "z0": 1.02,
+        "z1": 1.1,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.53,
+          0.5
+        ]
+      },
+      "fx": [
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "The thief left 2 clues",
+          "y": 260,
+          "size": 66
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "duration": 2.0,
+      "svg": "scenes/03-a.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.47,
+          0.45
+        ],
+        "c1": [
+          0.47,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "A",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-b.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.47,
+          0.45
+        ],
+        "c1": [
+          0.47,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "B",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "duration": 2.0,
+      "svg": "scenes/05-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.47,
+          0.45
+        ],
+        "c1": [
+          0.47,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "type": "label",
+          "text": "C",
+          "x": 170,
+          "y": 330
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "duration": 2.0,
+      "svg": "scenes/06-lineup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "A, B or C? 👇",
+          "y": 250,
+          "size": 110,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 185,
+          "y": 420,
+          "size": 100
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 470,
+          "y": 420,
+          "size": 100
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 755,
+          "y": 420,
+          "size": 100
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "07",
+      "duration": 3.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.06,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.45
+        ],
+        "c1": [
+          0.454,
+          0.45
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #004",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "🔍 Follow for",
+          "y": 265,
+          "size": 76,
+          "end": 2.7
+        },
+        {
+          "text": "tomorrow's case",
+          "y": 360,
+          "size": 76,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 2.7
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 300,
+          "size": 100,
+          "pop": false,
+          "start": 2.7
+        }
+      ],
+      "sfx": "whoosh"
+    }
+  ]
+}

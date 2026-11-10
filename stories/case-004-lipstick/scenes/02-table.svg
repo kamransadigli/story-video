@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#redCloth)"/>
+  <g stroke="#3a0812" stroke-width="5" opacity="0.6" fill="none"><path d="M0 700 C300 690 700 720 1080 700"/><path d="M0 1500 C400 1480 700 1520 1080 1505"/></g>
+  <ellipse cx="560" cy="900" rx="560" ry="640" fill="url(#lamp)" opacity="0.75"/>
+  <!-- small plate + fork for context -->
+  <ellipse cx="200" cy="560" rx="170" ry="70" fill="#efe6d6" stroke="#15141f" stroke-width="5"/>
+  <ellipse cx="200" cy="556" rx="120" ry="45" fill="#e2d6c0"/>
+  <use href="#ringbox" x="140" y="760" width="300" height="277"/>
+  <use href="#flute" x="560" y="380" width="300" height="775"/>
+  <!-- the hair: lower left, off the spotlight centre -->
+  <use href="#hair1" x="110" y="1150" width="520" height="136"/>
+  <use href="#tlamp" x="880" y="1000" width="110" height="183"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
