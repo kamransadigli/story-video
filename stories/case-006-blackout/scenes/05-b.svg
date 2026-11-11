@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#diner" width="1080" height="1920"/>
+  <ellipse cx="560" cy="900" rx="420" ry="560" fill="#fff3c4" opacity="0.12" filter="url(#blur)"/>
+  <use href="#ladyB" x="170" y="360" width="820" height="1039"/>
+  <rect x="-20" y="1250" width="1120" height="700" fill="url(#cloth)" stroke="#15141f" stroke-width="6"/>
+  <ellipse cx="560" cy="1290" rx="520" ry="150" fill="url(#lamp)" opacity="0.35"/>
+  <use href="#candleNew" x="70" y="880" width="190" height="499"/>
+  <use href="#knitting" x="440" y="1140" width="360" height="240"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

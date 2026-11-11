@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#diner" width="1080" height="1920"/>
+  <rect x="-20" y="1000" width="1120" height="940" fill="url(#cloth)" stroke="#15141f" stroke-width="6"/>
+  <ellipse cx="490" cy="1080" rx="500" ry="320" fill="url(#lamp)" opacity="0.7"/>
+  <use href="#tlamp" x="760" y="830" width="130" height="217"/>
+  <use href="#velvetBox" x="260" y="900" width="460" height="368"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+<rect width="1080" height="1920" fill="#02040a" opacity="0.94"/><ellipse cx="820" cy="900" rx="120" ry="90" fill="#6a8ab0" opacity="0.10" filter="url(#blur)"/>
+</svg>

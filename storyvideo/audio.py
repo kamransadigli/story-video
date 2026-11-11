@@ -216,7 +216,30 @@ def sfx_bark(dur=0.75):
     return _norm(out, 0.85)
 
 
+def sfx_crackle(dur=0.6):
+    """Lights failing: sharp electrical pops over a dying mains buzz."""
+    t = _t(dur)
+    buzz = (np.sin(2 * np.pi * 120 * t) + 0.5 * np.sin(2 * np.pi * 240 * t)) * np.exp(-t * 5) * 0.5
+    pops = np.zeros(len(t))
+    for _ in range(9):
+        a = int(rng.uniform(0, dur * 0.7) * SR)
+        ln = int(rng.uniform(0.004, 0.02) * SR)
+        if a + ln < len(t):
+            pops[a:a + ln] += rng.standard_normal(ln) * rng.uniform(0.5, 1.0)
+    return _norm(buzz + _hp(pops, 1500), 0.8)
+
+
+def sfx_hum_on(dur=0.9):
+    """Lights coming back: relay click then a rising fluorescent hum."""
+    t = _t(dur)
+    click = _hp(rng.standard_normal(len(t)), 2000) * np.exp(-t * 150)
+    hum = (np.sin(2 * np.pi * 120 * t) + 0.4 * np.sin(2 * np.pi * 360 * t)) * np.minimum(1, t / 0.15) * np.exp(-t * 2.5) * 0.4
+    return _norm(click + hum, 0.7)
+
+
 SFX = {
+    "crackle": (sfx_crackle, 0.5),
+    "hum_on": (sfx_hum_on, 0.4),
     "growl": (sfx_growl, 0.55),
     "bark": (sfx_bark, 0.6),
     "clink": (sfx_clink, 0.4),

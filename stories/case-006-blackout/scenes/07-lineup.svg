@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#diner" width="1080" height="1920"/>
+  <use href="#calmA" x="20" y="470" width="330" height="418"/>
+  <use href="#ladyB" x="305" y="470" width="330" height="418"/>
+  <use href="#nervousC" x="590" y="470" width="330" height="418"/>
+  <rect x="-20" y="860" width="1120" height="1080" fill="url(#cloth)" stroke="#15141f" stroke-width="6"/>
+  <ellipse cx="490" cy="1050" rx="520" ry="300" fill="url(#lamp)" opacity="0.4"/>
+  <use href="#candleBurnt" x="105" y="880" width="160" height="420"/>
+  <use href="#candleNew" x="390" y="880" width="160" height="420"/>
+  <use href="#candleNew" x="675" y="880" width="160" height="420"/>
+  <use href="#matchbox" x="740" y="1150" width="160" height="126"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#storm)"/>
+  <circle cx="820" cy="300" r="60" fill="#f1f8ff"/><circle cx="820" cy="300" r="160" fill="url(#moonGlow)" opacity="0.6"/>
+  <path d="M-40 1500 L-40 700 C100 560 300 520 540 520 C780 520 980 560 1120 700 L1120 1500 Z" fill="#2c3a2c" stroke="#15141f" stroke-width="6"/>
+  <g fill="#3a4a3a"><ellipse cx="200" cy="700" rx="90" ry="40"/><ellipse cx="860" cy="720" rx="110" ry="44"/><ellipse cx="540" cy="600" rx="80" ry="30"/></g>
+  <!-- tunnel portal -->
+  <path d="M200 1500 L200 1000 C200 820 340 720 540 720 C740 720 880 820 880 1000 L880 1500 Z" fill="#6a6058" stroke="#15141f" stroke-width="6"/>
+  <path d="M260 1500 L260 1010 C260 870 380 780 540 780 C700 780 820 870 820 1010 L820 1500 Z" fill="#050505"/>
+  <g stroke="#4a4038" stroke-width="5" fill="none"><path d="M230 900 L290 900 M800 900 L860 900 M240 1100 L260 1100 M820 1100 L850 1100"/></g>
+  <!-- train going in -->
+  <g>
+    <path d="M330 1500 L330 1150 C330 1080 400 1040 540 1040 C680 1040 750 1080 750 1150 L750 1500 Z" fill="#7a1424" stroke="#15141f" stroke-width="6"/>
+    <rect x="380" y="1110" width="320" height="110" rx="16" fill="#ffd58a" stroke="#15141f" stroke-width="5"/>
+    <circle cx="540" cy="1290" r="40" fill="#fff6dc" filter="url(#glow)"/>
+    <rect x="470" y="1350" width="140" height="56" rx="6" fill="#15141f"/>
+    <text x="540" y="1392" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="44" fill="#ffd58a">404</text>
+  </g>
+  <path d="M540 1290 L80 1700 L1000 1700 Z" fill="#fff6dc" opacity="0.12"/>
+  <rect x="-40" y="1500" width="1160" height="460" fill="#1a1a1a"/>
+  <g stroke="#9aa3a8" stroke-width="10"><line x1="430" y1="1500" x2="200" y2="1920"/><line x1="650" y1="1500" x2="880" y2="1920"/></g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

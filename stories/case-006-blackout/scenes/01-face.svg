@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#1a100a"/>
+  <circle cx="120" cy="1500" r="280" fill="url(#redLamp)" opacity="0.75"/>
+  <circle cx="980" cy="560" r="200" fill="url(#lamp)" opacity="0.5"/>
+  <use href="#nervousC" x="-260" y="90" width="1500" height="1900"/>
+  <ellipse cx="380" cy="760" rx="560" ry="640" fill="url(#lamp)" opacity="0.5"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
