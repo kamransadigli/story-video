@@ -1,0 +1,400 @@
+{
+  "title": "Case #007: The Top Shelf",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "ambience_volume": 0.1,
+  "fade": false,
+  "vignette": 90,
+  "layout": {
+    "cx": 490,
+    "max_w": 900,
+    "cap_chars": 14
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "One of them is lying. Most people pick the wrong one.",
+      "caption_y": 1480
+    },
+    {
+      "at": 2.8,
+      "text": "A jewelry box was stolen from the top shelf. All three say they never touched it.",
+      "caption_y": 1470
+    },
+    {
+      "at": 9.6,
+      "text": "Who did it? Comment A, B, or C. Follow, tomorrow's case is harder.",
+      "caption_y": 1480
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.0,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 300,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "duration": 1.5,
+      "svg": "scenes/02-rack.svg",
+      "motion": {
+        "z0": 1.3,
+        "z1": 1.22,
+        "c0": [
+          0.42,
+          0.33
+        ],
+        "c1": [
+          0.42,
+          0.35
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "fx": [
+        "sway"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Stolen from",
+          "y": 560,
+          "size": 84
+        },
+        {
+          "text": "the top shelf",
+          "y": 660,
+          "size": 84,
+          "color": [
+            255,
+            214,
+            64
+          ]
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "duration": 2.0,
+      "svg": "scenes/03-a.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.5,
+          0.44
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 170,
+          "y": 470
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-b.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.5,
+          0.44
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 170,
+          "y": 470
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "duration": 2.0,
+      "svg": "scenes/05-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.5,
+          0.44
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 170,
+          "y": 470
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "duration": 2.5,
+      "svg": "scenes/06-lineup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.04,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "text": "Who's lying? 👇",
+          "y": 255,
+          "size": 84,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 150,
+          "y": 990,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 560,
+          "y": 990,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 810,
+          "y": 990,
+          "size": 90
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "07",
+      "duration": 2.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.05,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #007",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Follow: tomorrow's",
+          "y": 260,
+          "size": 74,
+          "end": 1.7
+        },
+        {
+          "text": "case is harder 🔍",
+          "y": 350,
+          "size": 74,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 1.7
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 300,
+          "size": 100,
+          "pop": false,
+          "start": 1.7
+        }
+      ],
+      "sfx": "whoosh"
+    }
+  ]
+}
