@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lounge" width="1080" height="1920"/>
+  <ellipse cx="490" cy="900" rx="440" ry="600" fill="#fff3c4" opacity="0.16" filter="url(#blur)"/>
+  <use href="#suspC" x="80" y="240" width="820" height="1039"/>
+  <rect x="-20" y="1275" width="1120" height="680" fill="#5a2e14" stroke="#15141f" stroke-width="6"/>
+  <rect x="-20" y="1275" width="1120" height="30" fill="#8a5a2a"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

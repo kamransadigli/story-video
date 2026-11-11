@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lounge" width="1080" height="1920"/>
+  <rect x="0" y="900" width="1080" height="1020" fill="url(#carpet)"/>
+  <path d="M0 900 L1080 900" stroke="#15141f" stroke-width="6"/>
+  <ellipse cx="490" cy="1120" rx="520" ry="380" fill="url(#lamp)" opacity="0.8"/>
+  <use href="#safe" x="140" y="640" width="420" height="397"/>
+  <use href="#droppedGlove" x="420" y="1060" width="420" height="238"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

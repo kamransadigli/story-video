@@ -35,8 +35,9 @@ LAYOUT = {"cx": W / 2, "max_w": W - 120}
 
 
 # ----------------------------------------------------------------- captions
-def chunk_words(text, max_words=3, max_chars=16):
+def chunk_words(text, max_words=3, max_chars=None):
     """Split narration into 1-3 word chunks; returns list of lists of (word, weight)."""
+    max_chars = max_chars or LAYOUT.get("cap_chars", 16)
     words = text.split()
     chunks, cur = [], []
     for w in words:

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lounge" width="1080" height="1920"/>
+  <use href="#suspA" x="20" y="430" width="330" height="418"/>
+  <use href="#suspB" x="305" y="430" width="330" height="418"/>
+  <use href="#suspC" x="590" y="430" width="330" height="418"/>
+  <rect x="-20" y="840" width="1120" height="1100" fill="url(#carpet)" stroke="#15141f" stroke-width="6"/>
+  <ellipse cx="490" cy="1080" rx="460" ry="260" fill="url(#lamp)" opacity="0.6"/>
+  <use href="#droppedGlove" x="320" y="960" width="340" height="193"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

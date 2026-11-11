@@ -52,6 +52,8 @@ def main():
         if "image_of" in s:
             img_paths[s["id"]] = img_paths[s["image_of"]]
 
+    video.LAYOUT.update(story.get("layout", {}))  # caption chunking uses it too
+
     # 2. voice + timeline
     print("2/4 recording narration (Kokoro)")
     voice = args.voice or story.get("voice", "am_michael")
@@ -100,7 +102,10 @@ def main():
         x, sr = tts.speak(ln.get("say", ln["text"]), ln.get("voice", voice), ln.get("speed", speed), build / "voice")
         dur = len(x) / sr
         clips.append((ln["at"], x, sr))
-        captions += video.caption_events(ln["text"], ln["at"], dur, ln["at"] + dur + 0.25,
+        cap_end = ln["at"] + dur + 0.25
+        if not story.get("fade", True):  # looping video: clear captions before the final frames
+            cap_end = min(cap_end, total - 0.3)
+        captions += video.caption_events(ln["text"], ln["at"], dur, cap_end,
                                          samples=x, sr=sr, caption_y=ln.get("caption_y"))
         print(f"   line {ln['at']:.2f}-{ln['at'] + dur:.2f}s  {ln['text'][:50]}")
         if ln["at"] + dur > total:

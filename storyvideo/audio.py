@@ -237,7 +237,17 @@ def sfx_hum_on(dur=0.9):
     return _norm(click + hum, 0.7)
 
 
+def sfx_clunk(dur=0.7):
+    """Heavy little safe door: low metallic thud with a short ring."""
+    t = _t(dur)
+    thud = np.sin(2 * np.pi * np.cumsum(70 + 90 * np.exp(-t * 30)) / SR) * np.exp(-t * 12)
+    ring = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * d) for f, d in ((523, 9), (811, 12), (1290, 16))) * 0.25
+    click = _hp(rng.standard_normal(len(t)), 1800) * np.exp(-t * 120) * 0.6
+    return _norm(thud + ring + click, 0.85)
+
+
 SFX = {
+    "clunk": (sfx_clunk, 0.55),
     "crackle": (sfx_crackle, 0.5),
     "hum_on": (sfx_hum_on, 0.4),
     "growl": (sfx_growl, 0.55),
