@@ -246,7 +246,20 @@ def sfx_clunk(dur=0.7):
     return _norm(thud + ring + click, 0.85)
 
 
+def sfx_bell(dur=1.6):
+    """Small station bell: two strikes, inharmonic bell partials."""
+    t = _t(dur)
+    out = np.zeros(len(t))
+    for start, g in ((0.0, 1.0), (0.32, 0.8)):
+        tt = np.clip(t - start, 0, None)
+        on = t >= start
+        for ratio, d, a in ((1.0, 2.5, 1.0), (2.4, 3.5, 0.5), (3.9, 5.0, 0.3), (5.4, 7.0, 0.2)):
+            out += on * np.sin(2 * np.pi * 880 * ratio * tt) * np.exp(-tt * d) * a * g
+    return _norm(out, 0.7)
+
+
 SFX = {
+    "bell": (sfx_bell, 0.35),
     "clunk": (sfx_clunk, 0.55),
     "crackle": (sfx_crackle, 0.5),
     "hum_on": (sfx_hum_on, 0.4),

@@ -1,0 +1,452 @@
+{
+  "title": "Case #008: Red Rock Station",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "ambience_volume": 0.1,
+  "fade": false,
+  "vignette": 90,
+  "layout": {
+    "cx": 490,
+    "max_w": 900,
+    "cap_chars": 14
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "One of them is lying. Most people get this wrong.",
+      "caption_y": 1480
+    },
+    {
+      "at": 2.65,
+      "text": "The thief got on at Red Rock station. All three say they've been on this train for hours.",
+      "caption_y": 1470
+    },
+    {
+      "at": 9.1,
+      "text": "Who's lying? Send this to someone who'll get it wrong. Answer in my Story tomorrow.",
+      "caption_y": 1480
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.0,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 300,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "sfx": [
+        {
+          "name": "hit",
+          "at": 0
+        },
+        {
+          "name": "bell",
+          "at": 1.95
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "duration": 1.0,
+      "svg": "scenes/02-station.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.12,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.48,
+          0.52
+        ],
+        "ease": "out"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "The thief",
+          "y": 280,
+          "size": 96
+        },
+        {
+          "text": "got on here",
+          "y": 385,
+          "size": 96,
+          "color": [
+            255,
+            214,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "duration": 2.0,
+      "svg": "scenes/03-a.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.5,
+          0.44
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "text": "🏆 Case #007 solved by @username",
+          "y": 200,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 170,
+          "y": 470
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-b.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.5,
+          0.44
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "text": "🏆 Case #007 solved by @username",
+          "y": 200,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 170,
+          "y": 470
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "duration": 2.0,
+      "svg": "scenes/05-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.5,
+          0.44
+        ]
+      },
+      "fx": [
+        "sway",
+        "flicker"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "text": "🏆 Case #007 solved by @username",
+          "y": 200,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 170,
+          "y": 470
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "duration": 2.0,
+      "svg": "scenes/06-lineup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.04,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 590,
+          "y": 125,
+          "size": 56,
+          "pop": false
+        },
+        {
+          "text": "Who's lying? 👇",
+          "y": 255,
+          "size": 84,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 185,
+          "y": 990,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 480,
+          "y": 990,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 770,
+          "y": 990,
+          "size": 90
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "07",
+      "duration": 3.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.05,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #008",
+          "x": 175,
+          "y": 120,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Send this to someone",
+          "y": 250,
+          "size": 70,
+          "end": 2.7
+        },
+        {
+          "text": "who'll get it wrong 😈",
+          "y": 335,
+          "size": 70,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 2.7
+        },
+        {
+          "text": "✅ Answer in my Story",
+          "y": 440,
+          "size": 60,
+          "start": 0.6,
+          "end": 2.7
+        },
+        {
+          "text": "tomorrow",
+          "y": 515,
+          "size": 60,
+          "start": 0.6,
+          "end": 2.7
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 300,
+          "size": 100,
+          "pop": false,
+          "start": 2.7
+        }
+      ],
+      "sfx": "whoosh"
+    }
+  ]
+}

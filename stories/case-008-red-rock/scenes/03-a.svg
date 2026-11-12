@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#compartment" width="1080" height="1920"/>
+  <ellipse cx="727" cy="900" rx="320" ry="600" fill="#fff3c4" opacity="0.16" filter="url(#blur)"/>
+  <use href="#figA8" x="560" y="355" width="333" height="1000"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

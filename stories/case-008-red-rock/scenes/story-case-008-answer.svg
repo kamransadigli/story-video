@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#3a2214"/>
+  <ellipse cx="540" cy="800" rx="700" ry="800" fill="url(#lamp)" opacity="0.6"/>
+  <text x="540" y="345" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="96" fill="#ffffff" stroke="#15141f" stroke-width="10" paint-order="stroke">CASE #008 ANSWER ✅</text>
+  <rect x="80" y="400" width="920" height="740" rx="36" fill="#15141f"/>
+  <svg x="90" y="410" width="450" height="720" viewBox="540 1880 330 528" preserveAspectRatio="xMidYMid slice">
+    <use href="#compartment" x="0" y="900" width="1080" height="1920"/>
+    <use href="#figB8" x="520" y="1200" width="400" height="1200"/>
+    <ellipse cx="720" cy="2300" rx="105" ry="56" fill="none" stroke="#ff1e3c" stroke-width="7"/>
+  </svg>
+  <svg x="540" y="410" width="450" height="720" viewBox="520 530 520 832" preserveAspectRatio="xMidYMid slice">
+    <use href="#station" width="1080" height="1920"/>
+  </svg>
+  <rect x="535" y="400" width="10" height="740" fill="#ffd640"/>
+  <text x="315" y="1110" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#ffffff" stroke="#15141f" stroke-width="6" paint-order="stroke">B's cuffs</text>
+  <text x="765" y="1110" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#ffffff" stroke="#15141f" stroke-width="6" paint-order="stroke">Red Rock clay</text>
+  <rect x="80" y="400" width="920" height="740" rx="36" fill="none" stroke="#ffd640" stroke-width="8"/>
+  <text x="540" y="1235" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="92" fill="#ffd640" stroke="#15141f" stroke-width="10" paint-order="stroke">B 🚉</text><text x="540" y="1318" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke">Red Rock clay is RED. A's mud is</text><text x="540" y="1384" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke">brown, from somewhere else.</text><text x="540" y="1450" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke">B has red dust on his cuffs.</text>
+  <text x="540" y="1600" text-anchor="middle" font-family="Oswald" font-weight="400" font-size="42" fill="#f6e2b8">New case every day 🔍</text>
+</svg>

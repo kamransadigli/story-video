@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#3a2214"/>
+  <ellipse cx="540" cy="800" rx="700" ry="800" fill="url(#lamp)" opacity="0.6"/>
+  <text x="540" y="345" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="96" fill="#ffffff" stroke="#15141f" stroke-width="10" paint-order="stroke">CASE #007 ANSWER ✅</text>
+  <rect x="80" y="400" width="920" height="740" rx="36" fill="#15141f"/>
+  <svg x="90" y="410" width="900" height="720" viewBox="200 760 620 496" preserveAspectRatio="xMidYMid slice">
+    <use href="#compartment" width="1080" height="1920"/>
+    <use href="#figC" x="560" y="312" width="287" height="860"/>
+    <g fill="none" stroke="#ff1e3c" stroke-width="7" stroke-linecap="round">
+      <ellipse cx="382" cy="1020" rx="70" ry="38" transform="rotate(-4 382 1020)"/>
+      <ellipse cx="703" cy="1142" rx="62" ry="40" transform="rotate(3 703 1142)"/>
+    </g>
+  </svg>
+  <rect x="80" y="400" width="920" height="740" rx="36" fill="none" stroke="#ffd640" stroke-width="8"/>
+  <text x="540" y="1235" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="92" fill="#ffd640" stroke="#15141f" stroke-width="10" paint-order="stroke">C 👠</text><text x="540" y="1318" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke">She stood on the seat to reach</text><text x="540" y="1384" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke">the top shelf. A was tall enough,</text><text x="540" y="1450" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke">he didn't need to. B wears flats.</text>
+  <text x="540" y="1600" text-anchor="middle" font-family="Oswald" font-weight="400" font-size="42" fill="#f6e2b8">New case every day 🔍</text>
+</svg>

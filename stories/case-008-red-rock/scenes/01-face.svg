@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#wallCream)"/>
+  <circle cx="960" cy="420" r="300" fill="url(#lamp)" opacity="0.9"/>
+  <use href="#headA8" x="-430" y="80" width="1940" height="2037"/>
+  <ellipse cx="400" cy="760" rx="560" ry="640" fill="url(#lamp)" opacity="0.4"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
