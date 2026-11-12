@@ -1,0 +1,49 @@
+
+  <linearGradient id="brick" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8743e"/><stop offset="1" stop-color="#9a5228"/></linearGradient>
+  <pattern id="bricks" width="120" height="60" patternUnits="userSpaceOnUse">
+    <rect width="120" height="60" fill="url(#brick)"/><path d="M0 0 L120 0 M0 30 L120 30 M60 0 L60 30 M0 30 L0 60 M120 30 L120 60" stroke="#7a3e1c" stroke-width="4"/>
+  </pattern>
+  <linearGradient id="daySky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd3f0"/><stop offset="1" stop-color="#e8f4fa"/></linearGradient>
+  <symbol id="alley" viewBox="0 0 1080 1920">
+    <rect width="1080" height="1920" fill="url(#daySky)"/>
+    <path d="M0 0 L300 0 L360 1100 L0 1300 Z" fill="url(#bricks)" stroke="#15141f" stroke-width="5"/>
+    <path d="M1080 0 L780 0 L720 1100 L1080 1300 Z" fill="url(#bricks)" stroke="#15141f" stroke-width="5"/>
+    <path d="M360 1100 L720 1100 L1080 1300 L1080 1920 L0 1920 L0 1300 Z" fill="#9a958c"/>
+    <path d="M300 0 L780 0 L720 1100 L360 1100 Z" fill="#f6e2b8" opacity="0.5"/>
+    <rect x="360" y="700" width="360" height="400" fill="#d8c4a0" opacity="0.6"/>
+    <ellipse cx="540" cy="900" rx="500" ry="600" fill="#fff6dc" opacity="0.25" filter="url(#blur)"/>
+  </symbol>
+  <symbol id="chalk" viewBox="0 0 520 300" overflow="visible">
+    <path d="M60 150 C60 120 90 108 110 116 C120 90 150 86 160 100 L250 120 L330 80 C344 72 360 84 350 98 L290 140 L380 150 L470 120 C486 116 496 132 482 142 L390 186 L300 190 L330 250 C336 266 318 274 308 262 L260 200 L200 210 L150 270 C140 284 120 278 128 262 L170 200 L120 186 C90 196 60 180 60 150 Z" fill="none" stroke="#ffffff" stroke-width="9" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="officer" viewBox="0 0 200 520" overflow="visible">
+    <ellipse cx="100" cy="510" rx="70" ry="10" fill="#000" opacity="0.25"/>
+    <path d="M40 160 C40 130 70 118 100 118 C130 118 160 130 160 160 L170 380 L30 380 Z" fill="#1f2f4a" stroke="#15141f" stroke-width="4"/>
+    <rect x="50" y="370" width="40" height="140" fill="#18243a" stroke="#15141f" stroke-width="4"/><rect x="110" y="370" width="40" height="140" fill="#18243a" stroke="#15141f" stroke-width="4"/>
+    <circle cx="100" cy="80" r="44" fill="#d6a07a" stroke="#15141f" stroke-width="4"/>
+    <path d="M52 64 C56 30 144 30 148 64 Z" fill="#1f2f4a" stroke="#15141f" stroke-width="4"/><rect x="46" y="60" width="108" height="12" fill="#111" />
+    <circle cx="100" cy="46" r="8" fill="#e3b04b"/>
+  </symbol>
+  <symbol id="evBag" viewBox="0 0 300 380" overflow="visible">
+    <rect x="10" y="10" width="280" height="360" rx="14" fill="#e8f2f8" fill-opacity="0.85" stroke="#15141f" stroke-width="6"/>
+    <rect x="10" y="10" width="280" height="56" rx="10" fill="#c8102e" stroke="#15141f" stroke-width="5"/>
+    <text x="150" y="50" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="32" fill="#fff">EVIDENCE</text>
+    <rect x="40" y="300" width="220" height="44" fill="#fff" stroke="#15141f" stroke-width="3"/>
+    <g fill="#9aa3a8"><rect x="54" y="312" width="140" height="6"/><rect x="54" y="326" width="100" height="6"/></g>
+    <!-- gold cufflink -->
+    <circle cx="150" cy="180" r="56" fill="#e3b04b" stroke="#15141f" stroke-width="6"/>
+    <circle cx="150" cy="180" r="34" fill="#f6d27a" stroke="#a87a1a" stroke-width="4"/>
+    <path d="M136 166 C146 158 158 158 166 166" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <rect x="140" y="232" width="20" height="40" rx="6" fill="#c9a24a" stroke="#15141f" stroke-width="4"/>
+    <path d="M30 80 L270 80" stroke="#fff" stroke-width="6" opacity="0.6"/>
+  </symbol>
+  <symbol id="streetcam" viewBox="0 0 420 300" overflow="visible">
+    <rect x="300" y="40" width="40" height="160" fill="#5a5f66" stroke="#15141f" stroke-width="5"/>
+    <rect x="200" y="60" width="140" height="30" fill="#5a5f66" stroke="#15141f" stroke-width="5"/>
+    <g transform="rotate(18 140 120)">
+      <rect x="20" y="70" width="230" height="100" rx="16" fill="#e8e8ea" stroke="#15141f" stroke-width="6"/>
+      <rect x="0" y="80" width="40" height="80" rx="10" fill="#2a2a30" stroke="#15141f" stroke-width="5"/>
+      <circle cx="18" cy="120" r="22" fill="#1a3a5a" stroke="#15141f" stroke-width="4"/><circle cx="12" cy="114" r="6" fill="#9fd3f0"/>
+      <circle cx="220" cy="96" r="12" fill="#7a0d1e" stroke="#15141f" stroke-width="3"/>
+    </g>
+  </symbol>

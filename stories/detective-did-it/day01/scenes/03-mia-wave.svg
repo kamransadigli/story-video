@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#alley" width="1080" height="1920"/>
+  <use href="#chalk" x="250" y="1360" width="560" height="323"/>
+  <g transform="rotate(-8 540 1240)"><rect x="-100" y="1200" width="1300" height="64" fill="#ffd34a" stroke="#15141f" stroke-width="4"/>
+  <text x="540" y="1246" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#15141f" letter-spacing="6">POLICE LINE · DO NOT CROSS · POLICE LINE</text></g>
+  <use href="#officer" x="700" y="740" width="160" height="416" opacity="0.9"/>
+  <use href="#mia" x="40" y="360" width="820" height="1039"/>
+  <!-- waving hand + notebook -->
+  <path d="M640 760 C700 680 720 600 700 520" fill="none" stroke="#15141f" stroke-width="70" stroke-linecap="round"/>
+  <path d="M640 760 C700 680 720 600 700 520" fill="none" stroke="#c9a676" stroke-width="58" stroke-linecap="round"/>
+  <circle cx="700" cy="490" r="44" fill="#e0b08a" stroke="#15141f" stroke-width="5"/>
+  <g stroke="#15141f" stroke-width="5" stroke-linecap="round"><path d="M676 450 L670 420 M698 446 L698 412 M720 450 L726 420"/></g>
+  <g transform="rotate(-10 260 1000)"><rect x="170" y="900" width="200" height="250" rx="10" fill="#f4f1ea" stroke="#15141f" stroke-width="5"/><rect x="170" y="900" width="200" height="40" fill="#2a5c8c" stroke="#15141f" stroke-width="4"/>
+  <g fill="#b7aa8e"><rect x="190" y="970" width="150" height="8"/><rect x="190" y="995" width="120" height="8"/><rect x="190" y="1020" width="150" height="8"/></g></g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -1,0 +1,395 @@
+{
+  "title": "The Detective Did It — Day 1",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "ambience_volume": 0.08,
+  "fade": false,
+  "vignette": 90,
+  "layout": {
+    "cx": 459,
+    "max_w": 820,
+    "cap_chars": 14
+  },
+  "stakes": {
+    "y": 228,
+    "show_from": 6.2,
+    "start": {
+      "suspicion": 0,
+      "evidence": 3,
+      "trust": 100
+    },
+    "changes": [
+      {
+        "at": 13.15,
+        "pulse": "evidence"
+      },
+      {
+        "at": 15.4,
+        "pulse": "suspicion"
+      },
+      {
+        "at": 19.0,
+        "suspicion": 10
+      }
+    ],
+    "width": 880
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "I'm a detective. Last night… I killed a man.",
+      "say": "I'm a detective. Last night... I killed a man.",
+      "caption_y": 1240
+    },
+    {
+      "at": 2.9,
+      "text": "It was an accident. This morning, they gave me the case.",
+      "caption_y": 1150
+    },
+    {
+      "at": 6.3,
+      "text": "My partner Mia is the best rookie in the city. If anyone catches me… it's her.",
+      "say": "My partner Mia is the best rookie in the city. If anyone catches me... it's her.",
+      "caption_y": 1150
+    },
+    {
+      "at": 11.4,
+      "text": "She just found a cufflink. Mine.",
+      "caption_y": 1150
+    },
+    {
+      "at": 15.2,
+      "text": "And that camera… saw everything.",
+      "say": "And that camera... saw everything.",
+      "caption_y": 1150
+    },
+    {
+      "at": 18.7,
+      "text": "Partner? You look pale.",
+      "voice": "af_bella",
+      "speed": 1.0,
+      "caption_y": 1150
+    },
+    {
+      "at": 22.3,
+      "text": "A: steal the evidence. B: blame Sal, the bartender. Comment A or B. Send this to the friend who'd help you hide it.",
+      "caption_y": 1110
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.8,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.45,
+          0.42
+        ],
+        "c1": [
+          0.45,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "DAY 1",
+          "y": 255,
+          "size": 72,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "I'M THE DETECTIVE.",
+          "y": 360,
+          "size": 64,
+          "pop": false
+        },
+        {
+          "text": "I DID IT.",
+          "y": 470,
+          "size": 112,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "pop": false
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "duration": 3.4,
+      "svg": "scenes/02-alley.svg",
+      "motion": "push_in",
+      "sfx": "whoosh"
+    },
+    {
+      "id": "03",
+      "duration": 5.1,
+      "svg": "scenes/03-mia-wave.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.45,
+          0.45
+        ],
+        "c1": [
+          0.45,
+          0.43
+        ]
+      },
+      "fx": [
+        "sway"
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "duration": 1.8,
+      "svg": "scenes/04-bag.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.12,
+        "c0": [
+          0.5,
+          0.45
+        ],
+        "c1": [
+          0.52,
+          0.42
+        ],
+        "ease": "out"
+      },
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "duration": 1.9,
+      "svg": "scenes/05-cuff.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.1,
+        "c0": [
+          0.45,
+          0.45
+        ],
+        "c1": [
+          0.55,
+          0.42
+        ],
+        "ease": "out"
+      },
+      "sfx": "hit"
+    },
+    {
+      "id": "06",
+      "duration": 3.4,
+      "svg": "scenes/06-camera.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.04,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.5,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "🔴",
+          "x": 535,
+          "y": 616,
+          "size": 40,
+          "pop": false,
+          "start": 0.0,
+          "end": 0.35
+        },
+        {
+          "text": "🔴",
+          "x": 535,
+          "y": 616,
+          "size": 40,
+          "pop": false,
+          "start": 0.7,
+          "end": 1.0499999999999998
+        },
+        {
+          "text": "🔴",
+          "x": 535,
+          "y": 616,
+          "size": 40,
+          "pop": false,
+          "start": 1.4,
+          "end": 1.75
+        },
+        {
+          "text": "🔴",
+          "x": 535,
+          "y": 616,
+          "size": 40,
+          "pop": false,
+          "start": 2.1,
+          "end": 2.45
+        },
+        {
+          "text": "🔴",
+          "x": 535,
+          "y": 616,
+          "size": 40,
+          "pop": false,
+          "start": 2.8,
+          "end": 3.15
+        }
+      ],
+      "sfx": "static"
+    },
+    {
+      "id": "07",
+      "duration": 3.6,
+      "svg": "scenes/07-mia-close.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.45,
+          0.42
+        ],
+        "c1": [
+          0.45,
+          0.42
+        ]
+      },
+      "sfx": "whoosh"
+    },
+    {
+      "id": "08",
+      "duration": 10.0,
+      "svg": "scenes/08-choice.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.03,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.5,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "type": "label",
+          "text": "A",
+          "x": 110,
+          "y": 420,
+          "size": 120
+        },
+        {
+          "text": "STEAL THE CUFFLINK",
+          "x": 455,
+          "y": 400,
+          "size": 46,
+          "max_w": 600,
+          "start": 0.3
+        },
+        {
+          "text": "FROM EVIDENCE",
+          "x": 455,
+          "y": 462,
+          "size": 46,
+          "max_w": 600,
+          "start": 0.3
+        },
+        {
+          "text": "🚨 +15%",
+          "x": 455,
+          "y": 570,
+          "size": 62,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "start": 0.6
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 110,
+          "y": 800,
+          "size": 120
+        },
+        {
+          "text": "BLAME SAL,",
+          "x": 455,
+          "y": 780,
+          "size": 50,
+          "max_w": 600,
+          "start": 1.6
+        },
+        {
+          "text": "THE BARTENDER",
+          "x": 455,
+          "y": 845,
+          "size": 50,
+          "max_w": 600,
+          "start": 1.6
+        },
+        {
+          "text": "🤝 safe… but an innocent man goes to jail",
+          "x": 455,
+          "y": 955,
+          "size": 34,
+          "max_w": 560,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 1.9
+        },
+        {
+          "text": "Comment WITNESS",
+          "y": 1225,
+          "size": 56,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 5.0
+        },
+        {
+          "text": "to appear in tomorrow's episode 👀",
+          "y": 1292,
+          "size": 40,
+          "start": 5.0
+        }
+      ],
+      "sfx": "hit"
+    }
+  ]
+}

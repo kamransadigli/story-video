@@ -365,6 +365,11 @@ def _snow_layer():
 def _init(plan):
     _G["plan"] = plan
     LAYOUT.update(plan.get("layout", {}))
+    _G["stakes"] = None
+    if plan.get("stakes"):
+        from .stakes import StakesBar
+        _G["stakes"] = StakesBar(plan["stakes"], FONT, _emoji_glyph, cx=LAYOUT["cx"],
+                                 max_w=plan["stakes"].get("width", 880))
     _G["badge"] = badge_image(plan["badge"]) if plan.get("badge") else None
     _G["imgs"] = {sid: Image.open(p).convert("RGB") for sid, p in plan["images"].items()}
     yy, xx = np.mgrid[0:H, 0:W]
@@ -482,6 +487,9 @@ def _frame(i):
             num = cd.get("from", 3) - k
             age = st - cd["at"] - k * cd.get("step", 1.0)
             _place(frame, _pop(countdown_image(num), age, 0.12), cd.get("x", 150), cd.get("y", 330))
+
+    if _G.get("stakes") is not None:
+        _G["stakes"].draw(frame, t)
 
     for t0, t1, words, active, chunk_t0, cap_y in plan["captions"]:
         if t0 <= t < t1:

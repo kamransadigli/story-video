@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <!-- bright rainy window behind -->
+  <rect x="520" y="120" width="560" height="900" fill="url(#daySky)" stroke="#15141f" stroke-width="6"/>
+  <rect x="790" y="120" width="16" height="900" fill="#c9a24a"/><rect x="520" y="560" width="560" height="16" fill="#c9a24a"/>
+  <g stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <line x1="580" y1="200" x2="590" y2="250"/><line x1="680" y1="320" x2="690" y2="370"/><line x1="900" y1="230" x2="910" y2="280"/><line x1="980" y1="420" x2="990" y2="470"/><line x1="620" y1="640" x2="630" y2="690"/><line x1="860" y1="760" x2="870" y2="810"/><line x1="1000" y1="880" x2="1010" y2="930"/>
+  </g>
+  <g fill="#ffffff" opacity="0.8"><circle cx="640" cy="460" r="8"/><circle cx="950" cy="620" r="9"/><circle cx="720" cy="880" r="7"/></g>
+  <circle cx="120" cy="1300" r="360" fill="url(#lamp)" opacity="0.8"/>
+  <use href="#detective" x="-420" y="150" width="1720" height="2179"/>
+  <ellipse cx="380" cy="860" rx="560" ry="640" fill="url(#lamp)" opacity="0.4"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

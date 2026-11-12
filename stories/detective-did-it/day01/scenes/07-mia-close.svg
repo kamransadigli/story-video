@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#alley" width="1080" height="1920"/>
+  <use href="#chalk" x="250" y="1360" width="560" height="323"/>
+  <g transform="rotate(-8 540 1240)"><rect x="-100" y="1200" width="1300" height="64" fill="#ffd34a" stroke="#15141f" stroke-width="4"/>
+  <text x="540" y="1246" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#15141f" letter-spacing="6">POLICE LINE · DO NOT CROSS · POLICE LINE</text></g>
+  <rect width="1080" height="1920" fill="#f6e2b8" opacity="0.35"/>
+  <use href="#miaWorried" x="-420" y="290" width="1720" height="2179"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="url(#daySky)"/>
+  <rect x="0" y="0" width="1080" height="1920" fill="url(#bricks)"/>
+  <rect x="0" y="0" width="1080" height="1920" fill="#fff6dc" opacity="0.18"/>
+  <use href="#streetcam" x="160" y="420" width="700" height="500"/>
+  <circle cx="530" cy="560" r="300" fill="url(#lamp)" opacity="0.35"/>
+  <circle cx="532" cy="623" r="60" fill="url(#redGlow)"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

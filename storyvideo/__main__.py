@@ -114,6 +114,10 @@ def main():
     if args.timing_only:
         return
 
+    if story.get("stakes"):
+        from .stakes import tick_times
+        sfx_events += [(tt, "tick1") for tt in tick_times(story["stakes"])]
+
     # 3. audio
     print("3/4 mixing music + sound effects")
     wav = build / "mix.wav"
@@ -139,7 +143,7 @@ def main():
     print("4/4 rendering video")
     plan = {"shots": plan_shots, "badge": story.get("badge"), "captions": captions, "total": total,
             "fade": story.get("fade", True), "layout": story.get("layout", {}),
-            "vignette": story.get("vignette", 200),
+            "vignette": story.get("vignette", 200), "stakes": story.get("stakes"),
             "images": {k: str(v) for k, v in img_paths.items()}}
     (build / "plan.json").write_text(json.dumps(plan, indent=1))
     video.render(plan, wav, out, workers=args.workers)

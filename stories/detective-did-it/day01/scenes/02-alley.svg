@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#alley" width="1080" height="1920"/>
+  <use href="#chalk" x="250" y="1360" width="560" height="323"/>
+  <g transform="rotate(-8 540 1240)"><rect x="-100" y="1200" width="1300" height="64" fill="#ffd34a" stroke="#15141f" stroke-width="4"/>
+  <text x="540" y="1246" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#15141f" letter-spacing="6">POLICE LINE · DO NOT CROSS · POLICE LINE</text></g>
+  <use href="#officer" x="120" y="760" width="180" height="468"/>
+  <use href="#officer" x="660" y="720" width="190" height="494"/>
+  <g fill="#ffd34a" stroke="#15141f" stroke-width="3"><path d="M430 1560 L470 1560 L460 1520 L440 1520 Z"/><path d="M640 1460 L680 1460 L670 1420 L650 1420 Z"/></g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

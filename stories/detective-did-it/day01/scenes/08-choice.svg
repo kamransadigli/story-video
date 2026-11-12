@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <ellipse cx="460" cy="700" rx="600" ry="600" fill="url(#lamp)" opacity="0.4"/>
+  <clipPath id="pA"><rect x="20" y="320" width="878" height="350" rx="30"/></clipPath>
+  <clipPath id="pB"><rect x="20" y="700" width="878" height="350" rx="30"/></clipPath>
+  <rect x="20" y="320" width="878" height="350" rx="30" fill="#f6c1a8"/>
+  <g clip-path="url(#pA)"><g transform="rotate(8 780 500)"><use href="#evBag" x="725" y="350" width="170" height="216"/></g></g>
+  <rect x="20" y="320" width="878" height="350" rx="30" fill="none" stroke="#15141f" stroke-width="6"/>
+  <rect x="20" y="700" width="878" height="350" rx="30" fill="#bcd6ea"/>
+  <g clip-path="url(#pB)"><use href="#sal" x="680" y="720" width="230" height="291"/></g>
+  <rect x="20" y="700" width="878" height="350" rx="30" fill="none" stroke="#15141f" stroke-width="6"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

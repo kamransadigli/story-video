@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#e6c08a"/>
+  <rect x="0" y="1180" width="1080" height="740" fill="#8a5a2a"/>
+  <ellipse cx="460" cy="820" rx="560" ry="560" fill="url(#lamp)" opacity="0.6"/>
+  <!-- both forearms rise from the bottom; LEFT cuff has its gold cufflink -->
+  <g transform="rotate(8 270 1100)">
+    <rect x="170" y="860" width="200" height="1100" rx="20" fill="#6e737c" stroke="#15141f" stroke-width="6"/>
+    <rect x="160" y="740" width="220" height="140" rx="14" fill="#f4f1ea" stroke="#15141f" stroke-width="6"/>
+    <circle cx="300" cy="810" r="30" fill="#e3b04b" stroke="#15141f" stroke-width="5"/><circle cx="300" cy="810" r="15" fill="#f6d27a"/>
+    <path d="M178 750 C170 690 200 620 270 610 C340 620 370 690 362 750 Z" fill="#d6a07a" stroke="#15141f" stroke-width="6"/>
+  </g>
+  <!-- RIGHT cuff hangs OPEN: cufflink MISSING, empty holes -->
+  <g transform="rotate(-8 640 1100)">
+    <rect x="540" y="860" width="200" height="1100" rx="20" fill="#6e737c" stroke="#15141f" stroke-width="6"/>
+    <path d="M520 740 L760 740 L780 880 L540 900 Z" fill="#f4f1ea" stroke="#15141f" stroke-width="6"/>
+    <path d="M740 760 L800 790 L790 900 L760 880 Z" fill="#e8e2d4" stroke="#15141f" stroke-width="5"/>
+    <circle cx="680" cy="810" r="11" fill="#9a8a6a" stroke="#15141f" stroke-width="3"/><circle cx="772" cy="830" r="10" fill="#9a8a6a" stroke="#15141f" stroke-width="3"/>
+    <path d="M548 750 C540 690 570 620 640 610 C710 620 740 690 732 750 Z" fill="#d6a07a" stroke="#15141f" stroke-width="6"/>
+  </g>
+  <text x="640" y="660" font-family="Marker" font-size="80" fill="#c8102e" transform="rotate(-8 640 660)">?!</text>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
