@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#e8eef0"/>
+  <rect x="0" y="0" width="1080" height="120" fill="#c8d2d6"/>
+  <g fill="#ffffff" filter="url(#glow)"><rect x="120" y="40" width="340" height="30" rx="10"/><rect x="620" y="40" width="340" height="30" rx="10"/></g>
+  <rect x="40" y="380" width="560" height="660" fill="#7a848e" stroke="#15141f" stroke-width="6"/>
+  <g stroke="#15141f" stroke-width="6"><line x1="40" y1="540" x2="600" y2="540"/><line x1="40" y1="740" x2="600" y2="740"/><line x1="40" y1="940" x2="600" y2="940"/></g>
+  <rect x="60" y="420" width="150" height="110" rx="6" fill="#c9a676" stroke="#15141f" stroke-width="4"/><rect x="100" y="460" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="230" y="420" width="150" height="110" rx="6" fill="#b8955e" stroke="#15141f" stroke-width="4"/><rect x="270" y="460" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="400" y="420" width="150" height="110" rx="6" fill="#d4b483" stroke="#15141f" stroke-width="4"/><rect x="440" y="460" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="60" y="620" width="150" height="110" rx="6" fill="#b8955e" stroke="#15141f" stroke-width="4"/><rect x="100" y="660" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="230" y="620" width="150" height="110" rx="6" fill="#c9a676" stroke="#15141f" stroke-width="4"/><rect x="270" y="660" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="400" y="620" width="150" height="110" rx="6" fill="#d4b483" stroke="#15141f" stroke-width="4"/><rect x="440" y="660" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="60" y="820" width="150" height="110" rx="6" fill="#c9a676" stroke="#15141f" stroke-width="4"/><rect x="100" y="860" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/><rect x="230" y="820" width="150" height="110" rx="6" fill="#b8955e" stroke="#15141f" stroke-width="4"/><rect x="270" y="860" width="70" height="28" fill="#fbf7ef" stroke="#15141f" stroke-width="2"/>
+  <use href="#wallclock" x="660" y="360" width="230" height="230"/><line x1="775.0" y1="475.0" x2="821" y2="449" stroke="#15141f" stroke-width="14" stroke-linecap="round"/><line x1="775.0" y1="475.0" x2="775" y2="394" stroke="#15141f" stroke-width="8" stroke-linecap="round"/><circle cx="775.0" cy="475.0" r="9" fill="#c8102e"/>
+  <text x="775" y="640" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#c8102e">2:00 AM</text>
+  <rect x="0" y="1060" width="1080" height="860" fill="#b9c3c8"/>
+  <!-- coat with pocket, hand sliding the evidence bag in -->
+  <path d="M120 1920 L180 1100 C300 1040 700 1040 820 1100 L880 1920 Z" fill="#6e737c" stroke="#15141f" stroke-width="6"/>
+  <path d="M300 1250 L640 1250 L620 1420 L320 1420 Z" fill="#5c6068" stroke="#15141f" stroke-width="6"/>
+  <g transform="rotate(-14 470 1180)"><use href="#evBag" x="370" y="930" width="220" height="279"/></g>
+  <path d="M296 1252 L644 1252" stroke="#15141f" stroke-width="9"/>
+  <path d="M560 1090 C640 1060 700 1080 720 1130 C700 1170 640 1180 590 1160 Z" fill="#d6a07a" stroke="#15141f" stroke-width="5"/>
+  <path d="M700 1100 L900 960" stroke="#15141f" stroke-width="80" stroke-linecap="round"/><path d="M700 1100 L900 960" stroke="#6e737c" stroke-width="66" stroke-linecap="round"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

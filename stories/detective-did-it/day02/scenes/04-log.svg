@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f4e6c8"/>
+  <rect x="80" y="300" width="900" height="560" fill="url(#daySky)" stroke="#15141f" stroke-width="6"/>
+  <rect x="520" y="300" width="16" height="560" fill="#c9a24a"/>
+  <circle cx="820" cy="420" r="70" fill="#fff6c4"/>
+  <ellipse cx="540" cy="700" rx="700" ry="700" fill="#fff6dc" opacity="0.4" filter="url(#blur)"/>
+  <rect x="0" y="1240" width="1080" height="680" fill="#a8743e"/>
+  <use href="#mia" x="-250" y="200" width="700" height="887"/>
+  <g transform="rotate(-2 510 820)">
+    <rect x="120" y="480" width="780" height="660" rx="10" fill="#ffffff" stroke="#15141f" stroke-width="6" filter="url(#shadow)"/>
+    <text x="510" y="560" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="46" fill="#15141f">DOOR LOG · EVIDENCE ROOM</text>
+    <rect x="160" y="580" width="700" height="4" fill="#15141f"/>
+    <text x="190" y="700" font-family="Typewriter" font-size="44" fill="#4a4a52">21:47   BADGE SWIPE</text><text x="190" y="820" font-family="Typewriter" font-size="44" fill="#4a4a52">23:02   BADGE SWIPE</text><rect x="150" y="878" width="720" height="92" rx="8" fill="#ffe14a" opacity="0.95"/><text x="510" y="940" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="64" fill="#c8102e">BADGE SWIPE — 2:13 AM</text><text x="190" y="1060" font-family="Typewriter" font-size="44" fill="#4a4a52">06:30   BADGE SWIPE</text>
+  </g>
+  <!-- Mia's pointing hand -->
+  <path d="M-20 1200 C20 1080 60 980 90 930" stroke="#15141f" stroke-width="66" stroke-linecap="round"/><path d="M-20 1200 C20 1080 60 980 90 930" stroke="#c9a676" stroke-width="54" stroke-linecap="round"/>
+  <path d="M90 900 L150 905 C166 906 166 926 150 928 L96 932 Z" fill="#e0b08a" stroke="#15141f" stroke-width="5"/>
+  <circle cx="92" cy="925" r="32" fill="#e0b08a" stroke="#15141f" stroke-width="5"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

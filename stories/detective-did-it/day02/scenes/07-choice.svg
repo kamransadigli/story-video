@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <ellipse cx="460" cy="700" rx="600" ry="600" fill="url(#lamp)" opacity="0.4"/>
+  <clipPath id="pA"><rect x="20" y="320" width="878" height="350" rx="30"/></clipPath>
+  <clipPath id="pB"><rect x="20" y="700" width="878" height="350" rx="30"/></clipPath>
+  <rect x="20" y="320" width="878" height="350" rx="30" fill="#f6c1a8"/>
+  <g clip-path="url(#pA)" transform="rotate(6 800 500)">
+    <rect x="720" y="360" width="160" height="210" fill="#fff" stroke="#15141f" stroke-width="4"/>
+    <g fill="#9aa3a8"><rect x="736" y="390" width="128" height="8"/><rect x="736" y="420" width="128" height="8"/><rect x="736" y="480" width="128" height="8"/></g>
+    <rect x="732" y="440" width="136" height="24" fill="#ffe14a"/>
+    <path d="M720 360 L880 570 M880 360 L720 570" stroke="#c8102e" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <rect x="20" y="320" width="878" height="350" rx="30" fill="none" stroke="#15141f" stroke-width="6"/>
+  <rect x="20" y="700" width="878" height="350" rx="30" fill="#bcd6ea"/>
+  <g clip-path="url(#pB)"><use href="#mia" x="680" y="720" width="230" height="291"/></g>
+  <rect x="20" y="700" width="878" height="350" rx="30" fill="none" stroke="#15141f" stroke-width="6"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

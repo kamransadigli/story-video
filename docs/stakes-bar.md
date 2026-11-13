@@ -31,7 +31,7 @@ story has a `"stakes"` block, and tick sounds are added automatically.
 | `width` | Bar width; 880 keeps it out of the right 15%. |
 | `show_from` / `hide_from` | When the bar slides in / out (seconds). `hide_from` is optional. |
 | `start` | Values at the start of the episode. Day N should start where Day N-1 ended, after the vote. |
-| `changes` | Each change counts up/down over 0.6s with a pulse and tick sounds. `{"pulse": "evidence"}` pulses a value without changing it. |
+| `changes` | Each change counts up/down over 0.6s with a pulse and tick sounds. `{"pulse": "evidence"}` pulses a value without changing it. Add `"flash": [255, 60, 60]` to a change to show the value in that colour while it pulses. |
 
 ## Carrying values between days
 Keep a running log in `stories/detective-did-it/STATE.md`: the values at the end of

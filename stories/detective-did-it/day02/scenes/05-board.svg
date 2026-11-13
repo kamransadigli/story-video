@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f4e6c8"/>
+  <rect x="40" y="380" width="880" height="900" rx="12" fill="url(#wood)" stroke="#15141f" stroke-width="6"/>
+  <rect x="66" y="406" width="828" height="848" fill="url(#cork)"/>
+  <ellipse cx="470" cy="800" rx="560" ry="600" fill="url(#lamp)" opacity="0.5"/>
+  <g stroke="#d0142f" stroke-width="5"><line x1="300" y1="520" x2="640" y2="580"/><line x1="300" y1="520" x2="470" y2="830"/></g>
+  <g transform="rotate(-4 300 700)" filter="url(#shadowSm)">
+      <rect x="130" y="520" width="340" height="360" fill="#fbf7ef" stroke="#15141f" stroke-width="5"/>
+      <rect x="160" y="550" width="280" height="210" fill="#9aa3a8"/>
+      <circle cx="300" cy="625" r="50" fill="#2b2833"/><path d="M210 760 C210 690 390 690 390 760 Z" fill="#2b2833"/>
+      <text x="300" y="640" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="80" fill="#ffd640">?</text>
+      <text x="300" y="808" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#c8102e">WITNESS:</text>
+      <text x="300" y="860" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="56" fill="#15141f">@witness1</text>
+    </g><use href="#pin" x="280" y="495" width="40" height="46"/><g transform="rotate(5 640 760)" filter="url(#shadowSm)">
+      <rect x="470" y="580" width="340" height="360" fill="#fbf7ef" stroke="#15141f" stroke-width="5"/>
+      <rect x="500" y="610" width="280" height="210" fill="#9aa3a8"/>
+      <circle cx="640" cy="685" r="50" fill="#2b2833"/><path d="M550 820 C550 750 730 750 730 820 Z" fill="#2b2833"/>
+      <text x="640" y="700" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="80" fill="#ffd640">?</text>
+      <text x="640" y="868" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="40" fill="#c8102e">WITNESS:</text>
+      <text x="640" y="920" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="56" fill="#15141f">@witness2</text>
+    </g><use href="#pin" x="620" y="555" width="40" height="46"/>
+  <rect x="0" y="1290" width="1080" height="630" fill="#a8743e"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

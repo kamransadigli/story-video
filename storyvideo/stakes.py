@@ -11,7 +11,8 @@ Configure it in story.json under "stakes" (see docs/stakes-bar.md):
       "start": {"suspicion": 0, "evidence": 3, "trust": 100},
       "changes": [                    # values animate (count up/down + pulse + tick sound)
         {"at": 19.0, "suspicion": 10},
-        {"at": 13.0, "pulse": "evidence"}   # pulse without changing the value
+        {"at": 13.0, "pulse": "evidence"},  # pulse without changing the value
+        {"at": 15.0, "evidence": 3, "flash": [255, 60, 60]}  # optional colour while it pulses
       ]
     }
 """
@@ -38,6 +39,7 @@ def values_at(cfg, t):
     """Displayed value for each field at time t, plus how 'fresh' each change is (0..1 pulse)."""
     vals = dict(cfg.get("start", {}))
     pulse = {k: 0.0 for k, *_ in FIELDS}
+    flash = {}
     for ch in sorted(cfg.get("changes", []), key=lambda c: c["at"]):
         if t < ch["at"]:
             break
@@ -48,9 +50,11 @@ def values_at(cfg, t):
                 vals[k] = old + (new - old) * _ease(age / COUNT_TIME)
                 if age < PULSE_TIME + COUNT_TIME:
                     pulse[k] = max(pulse[k], 1 - max(0, age - COUNT_TIME * 0.5) / PULSE_TIME)
+                    if ch.get("flash"):
+                        flash[k] = tuple(ch["flash"])
         if ch.get("pulse") and age < PULSE_TIME * 2:
             pulse[ch["pulse"]] = max(pulse[ch["pulse"]], 1 - age / (PULSE_TIME * 2))
-    return vals, pulse
+    return vals, pulse, flash
 
 
 def tick_times(cfg):
@@ -74,7 +78,7 @@ class StakesBar:
 
     def _cell(self, key, emoji, label, suffix, colour, value, pulse):
         txt = f"{int(round(value))}{suffix}"
-        ck = (key, txt, round(pulse, 2))
+        ck = (key, txt, round(pulse, 2), colour)
         if ck in self._cache:
             return self._cache[ck]
         w, h = 290, 140
@@ -107,9 +111,9 @@ class StakesBar:
         ImageDraw.Draw(panel).rounded_rectangle((0, 0, bar_w - 1, bar_h - 1), radius=30,
                                                 fill=(20, 16, 24, 205), outline=(255, 214, 64, 230), width=4)
         frame.alpha_composite(panel, (x0, y_now - bar_h // 2))
-        vals, pulse = values_at(cfg, t)
+        vals, pulse, flash = values_at(cfg, t)
         cell_w = bar_w / 3
         for i, (key, emoji, label, suffix, colour) in enumerate(FIELDS):
-            cell = self._cell(key, emoji, label, suffix, colour, vals.get(key, 0), pulse[key])
+            cell = self._cell(key, emoji, label, suffix, flash.get(key, colour), vals.get(key, 0), pulse[key])
             cx = x0 + cell_w * i + cell_w / 2 + 6
             frame.alpha_composite(cell, (int(cx - cell.width / 2), int(y_now - cell.height / 2)))

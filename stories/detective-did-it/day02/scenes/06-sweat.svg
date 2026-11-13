@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <use href="#wallclock" x="640" y="330" width="260" height="260"/><line x1="770.0" y1="460.0" x2="711" y2="452" stroke="#15141f" stroke-width="16" stroke-linecap="round"/><line x1="770.0" y1="460.0" x2="861" y2="460" stroke="#15141f" stroke-width="9" stroke-linecap="round"/><circle cx="770.0" cy="460.0" r="10" fill="#c8102e"/>
+  <circle cx="120" cy="1300" r="360" fill="url(#lamp)" opacity="0.8"/>
+  <use href="#detectiveSweat" x="-300" y="300" width="1400" height="1773"/>
+  <ellipse cx="380" cy="860" rx="560" ry="640" fill="url(#lamp)" opacity="0.35"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
