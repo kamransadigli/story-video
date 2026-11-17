@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <circle cx="120" cy="1300" r="360" fill="url(#lamp)" opacity="0.8"/>
+  <rect x="0" y="1240" width="1080" height="680" fill="#a8743e"/>
+  <use href="#detective" x="-420" y="150" width="1720" height="2179"/>
+  <ellipse cx="1080" cy="820" rx="260" ry="700" fill="#bfe3ff" opacity="0.3" filter="url(#blur)"/>
+  <ellipse cx="300" cy="860" rx="500" ry="600" fill="url(#lamp)" opacity="0.3"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

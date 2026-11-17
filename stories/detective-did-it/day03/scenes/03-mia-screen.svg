@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f4e6c8"/>
+  <rect x="80" y="300" width="900" height="520" fill="url(#daySky)" stroke="#15141f" stroke-width="6"/>
+  <rect x="520" y="300" width="16" height="520" fill="#c9a24a"/>
+  <ellipse cx="540" cy="700" rx="700" ry="700" fill="#fff6dc" opacity="0.4" filter="url(#blur)"/>
+  <rect x="0" y="1240" width="1080" height="680" fill="#a8743e"/>
+  <use href="#miaWorried" x="-80" y="380" width="760" height="963"/>
+  <g transform="rotate(4 820 860)"><use href="#monitor" x="580" y="700" width="420" height="312"/></g>
+  <text x="790" y="860" text-anchor="middle" font-family="Typewriter" font-size="30" fill="#c8102e" transform="rotate(4 820 860)">2:13 — DELETED</text>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

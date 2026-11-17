@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#e9eef0"/>
+  <rect x="0" y="0" width="1080" height="130" fill="#2a4c7a"/>
+  <text x="459" y="95" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="64" fill="#fff" letter-spacing="10">POLICE</text>
+  <g fill="#ffffff" filter="url(#glow)"><rect x="140" y="160" width="300" height="22" rx="10"/><rect x="560" y="160" width="300" height="22" rx="10"/></g>
+  <rect x="640" y="300" width="300" height="760" fill="url(#daySky)" stroke="#15141f" stroke-width="6"/>
+  <rect x="784" y="300" width="12" height="760" fill="#9aa3a8"/>
+  <rect x="0" y="1060" width="1080" height="860" fill="#c9b48a"/>
+  <rect x="40" y="980" width="520" height="160" fill="#7a5a3a" stroke="#15141f" stroke-width="6"/>
+  <use href="#marckyy" x="180" y="420" width="700" height="887"/>
+  <!-- visitor badge, big and readable -->
+  <g transform="rotate(-4 460 1020)">
+    <rect x="300" y="940" width="330" height="170" rx="16" fill="#ffffff" stroke="#15141f" stroke-width="6"/>
+    <rect x="300" y="940" width="330" height="54" rx="12" fill="#ffd640" stroke="#15141f" stroke-width="5"/>
+    <text x="465" y="980" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="36" fill="#15141f">WITNESS:</text>
+    <text x="465" y="1062" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="54" fill="#c8102e">@marckyy</text>
+    <path d="M465 900 L465 940" stroke="#15141f" stroke-width="6"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <ellipse cx="460" cy="700" rx="600" ry="600" fill="url(#lamp)" opacity="0.4"/>
+  <clipPath id="pA"><rect x="20" y="320" width="878" height="350" rx="30"/></clipPath>
+  <clipPath id="pB"><rect x="20" y="700" width="878" height="350" rx="30"/></clipPath>
+  <rect x="20" y="320" width="878" height="350" rx="30" fill="#f6c1a8"/>
+  <g clip-path="url(#pA)"><use href="#clockFace" x="730" y="380" width="150" height="150"/><line x1="805.0" y1="455.0" x2="796" y2="422" stroke="#15141f" stroke-width="9" stroke-linecap="round"/><line x1="805.0" y1="455.0" x2="805" y2="508" stroke="#15141f" stroke-width="5" stroke-linecap="round"/><circle cx="805.0" cy="455.0" r="6" fill="#c8102e"/><text x="805" y="590" text-anchor="middle" font-family="Marker" font-size="64" fill="#c8102e">?</text></g>
+  <rect x="20" y="320" width="878" height="350" rx="30" fill="none" stroke="#15141f" stroke-width="6"/>
+  <rect x="20" y="700" width="878" height="350" rx="30" fill="#bcd6ea"/>
+  <g clip-path="url(#pB)" transform="rotate(6 800 880)">
+    <rect x="720" y="740" width="160" height="210" fill="#fff" stroke="#15141f" stroke-width="4"/>
+    <text x="800" y="780" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="22" fill="#15141f">STATEMENT</text>
+    <g fill="#9aa3a8"><rect x="736" y="800" width="128" height="8"/><rect x="736" y="825" width="128" height="8"/><rect x="736" y="850" width="100" height="8"/></g>
+    <path d="M720 740 L880 950 M880 740 L720 950" stroke="#c8102e" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <rect x="20" y="700" width="878" height="350" rx="30" fill="none" stroke="#15141f" stroke-width="6"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

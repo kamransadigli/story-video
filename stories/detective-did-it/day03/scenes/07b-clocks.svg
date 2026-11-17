@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#f2d6a8"/>
+  <ellipse cx="459" cy="860" rx="620" ry="620" fill="url(#lamp)" opacity="0.5"/>
+  <use href="#clockFace" x="60" y="560" width="380" height="380"/><line x1="250.0" y1="750.0" x2="227" y2="666" stroke="#15141f" stroke-width="23" stroke-linecap="round"/><line x1="250.0" y1="750.0" x2="250" y2="883" stroke="#15141f" stroke-width="13" stroke-linecap="round"/><circle cx="250.0" cy="750.0" r="15" fill="#c8102e"/>
+  <use href="#clockFace" x="500" y="560" width="380" height="380"/><line x1="690.0" y1="750.0" x2="690" y2="663" stroke="#15141f" stroke-width="23" stroke-linecap="round"/><line x1="690.0" y1="750.0" x2="690" y2="617" stroke="#15141f" stroke-width="13" stroke-linecap="round"/><circle cx="690.0" cy="750.0" r="15" fill="#c8102e"/>
+  <path d="M440 750 L500 750" stroke="#c8102e" stroke-width="10" stroke-dasharray="14 10"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

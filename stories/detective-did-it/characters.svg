@@ -61,3 +61,26 @@
     <path d="M300 258 C292 292 290 306 302 310" fill="none" stroke="#d0987a" stroke-width="5" stroke-linecap="round"/>
     <path d="M226 316 C250 290 286 300 300 312 C314 300 350 290 374 316 C350 336 320 326 300 322 C280 326 250 336 226 316 Z" fill="#4a2a1a" stroke="#15141f" stroke-width="4"/><path d="M270 352 C288 362 312 362 330 352" fill="none" stroke="#15141f" stroke-width="5" stroke-linecap="round"/><ellipse cx="232" cy="300" rx="20" ry="11" fill="#e86a6a" opacity="0.35"/><ellipse cx="368" cy="300" rx="20" ry="11" fill="#e86a6a" opacity="0.35"/>
   </symbol>
+  <symbol id="marckyy" viewBox="0 0 600 760" overflow="visible">
+    <g transform="translate(0 -40)">
+      <path d="M60 1700 L60 800 C60 580 130 490 230 466 L370 466 C470 490 540 580 540 800 L540 1700 Z" fill="#2f8a5a" stroke="#15141f" stroke-width="5"/>
+      <path d="M210 470 C220 560 380 560 390 470" fill="#246e48" stroke="#15141f" stroke-width="5"/>
+      <path d="M268 540 L262 640 M332 540 L338 640" stroke="#f4f1ea" stroke-width="7" stroke-linecap="round"/>
+      <rect x="200" y="700" width="200" height="90" rx="14" fill="#246e48" stroke="#15141f" stroke-width="4"/>
+    </g>
+    <rect x="272" y="380" width="56" height="52" fill="#b98060"/>
+    <ellipse cx="300" cy="256" rx="104" ry="128" fill="#cf9670" stroke="#15141f" stroke-width="5"/>
+    <ellipse cx="196" cy="268" rx="17" ry="30" fill="#cf9670" stroke="#15141f" stroke-width="4"/><ellipse cx="404" cy="268" rx="17" ry="30" fill="#cf9670" stroke="#15141f" stroke-width="4"/>
+    <path d="M200 200 C206 150 250 140 300 140 C350 140 394 150 400 200 L404 212 L196 212 Z" fill="#2a1a12"/>
+    <!-- baseball cap -->
+    <path d="M190 190 C190 110 250 80 300 80 C360 80 412 110 412 190 Z" fill="#d0142f" stroke="#15141f" stroke-width="5"/>
+    <path d="M190 186 C260 176 400 176 470 196 C460 214 380 214 300 206 C250 204 210 204 190 200 Z" fill="#a30d23" stroke="#15141f" stroke-width="5"/>
+    <circle cx="300" cy="84" r="9" fill="#a30d23" stroke="#15141f" stroke-width="3"/>
+    <!-- nervous, helpful eyes -->
+    <ellipse cx="258" cy="258" rx="22" ry="20" fill="#fff" stroke="#15141f" stroke-width="3"/><ellipse cx="342" cy="258" rx="22" ry="20" fill="#fff" stroke="#15141f" stroke-width="3"/>
+    <circle cx="260" cy="260" r="9" fill="#3a2a1a"/><circle cx="344" cy="260" r="9" fill="#3a2a1a"/><circle cx="263" cy="256" r="3" fill="#fff"/><circle cx="347" cy="256" r="3" fill="#fff"/>
+    <path d="M236 230 C248 222 270 222 282 228 M318 228 C330 222 352 222 364 230" fill="none" stroke="#2a1a12" stroke-width="7" stroke-linecap="round"/>
+    <path d="M300 266 C294 290 292 302 302 306" fill="none" stroke="#b07a52" stroke-width="5" stroke-linecap="round"/>
+    <path d="M270 338 C282 330 292 344 302 336 C312 330 322 342 332 334" fill="none" stroke="#15141f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M410 214 C416 228 420 238 412 244 C404 248 398 240 402 230 Z" fill="#9fdcff" stroke="#15141f" stroke-width="2.5"/>
+  </symbol>

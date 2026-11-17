@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#d6a07a"/>
+  <svg x="-200" y="560" width="1480" height="740" viewBox="200 196 200 100" preserveAspectRatio="xMidYMid slice"><use href="#detectiveWide" width="600" height="760"/></svg>
+  <ellipse cx="459" cy="900" rx="700" ry="500" fill="url(#lamp)" opacity="0.25"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

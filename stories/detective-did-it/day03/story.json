@@ -1,0 +1,520 @@
+{
+  "title": "The Detective Did It — Day 3",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "music": "noir",
+  "music_volume": 0.7,
+  "ambience": "rain_train",
+  "ambience_volume": 0.07,
+  "fade": false,
+  "vignette": 90,
+  "layout": {
+    "cx": 459,
+    "max_w": 820,
+    "cap_chars": 14
+  },
+  "stakes": {
+    "y": 228,
+    "width": 880,
+    "show_from": 2.2,
+    "start": {
+      "suspicion": 15,
+      "evidence": 3,
+      "trust": 100
+    },
+    "changes": [
+      {
+        "at": 3.7,
+        "suspicion": 40
+      },
+      {
+        "at": 4.0,
+        "evidence": 2
+      },
+      {
+        "at": 14.9,
+        "suspicion": 60,
+        "flash": [
+          255,
+          60,
+          60
+        ]
+      }
+    ]
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "You told me to break in. So I did.",
+      "speed": 1.1,
+      "caption_y": 1240
+    },
+    {
+      "at": 2.4,
+      "text": "One click. My name… gone.",
+      "say": "One click. My name... gone.",
+      "caption_y": 1160
+    },
+    {
+      "at": 5.2,
+      "text": "Someone deleted the 2:13 entry. Who does that?",
+      "say": "Someone deleted the two thirteen entry. Who does that?",
+      "voice": "af_bella",
+      "speed": 1.0,
+      "caption_y": 1150
+    },
+    {
+      "at": 8.7,
+      "text": "Then the witness walked in. The guy who called it in.",
+      "caption_y": 1290
+    },
+    {
+      "at": 11.7,
+      "text": "I heard a crash at 11:30. Then around midnight, a man in a grey suit showed up.",
+      "say": "I heard a crash at eleven thirty. Then around midnight, a man in a grey suit showed up.",
+      "voice": "am_puck",
+      "caption_y": 1240
+    },
+    {
+      "at": 16.75,
+      "text": "…Kinda like yours.",
+      "say": "Kinda like yours.",
+      "voice": "am_puck",
+      "speed": 1.0,
+      "caption_y": 1240
+    },
+    {
+      "at": 18.2,
+      "text": "11:30? I didn't get there until midnight. So what happened… before me?",
+      "say": "Eleven thirty? I didn't get there until midnight. So what happened... before me?",
+      "speed": 1.1,
+      "caption_y": 1240
+    },
+    {
+      "at": 22.8,
+      "text": "A: find out what happened at 11:30. B: make his statement disappear. Comment A or B. Send this to the friend who notices everything.",
+      "say": "A: find out what happened at eleven thirty. B: make his statement disappear. Comment A or B. Send this to the friend who notices everything.",
+      "speed": 1.1,
+      "caption_y": 1110
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.2,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.45,
+          0.42
+        ],
+        "c1": [
+          0.45,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "DAY 3",
+          "y": 250,
+          "size": 72,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "YOU TOLD ME",
+          "y": 355,
+          "size": 80,
+          "pop": false
+        },
+        {
+          "text": "TO BREAK IN.",
+          "y": 455,
+          "size": 96,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "pop": false
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "duration": 2.8,
+      "svg": "scenes/02-screen.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.02,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.5,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "2:13 AM   DET. R. COLE",
+          "y": 841,
+          "size": 46,
+          "color": [
+            200,
+            16,
+            46
+          ],
+          "pop": false,
+          "end": 1.55
+        },
+        {
+          "text": "✔ DELETED",
+          "y": 841,
+          "size": 46,
+          "color": [
+            120,
+            200,
+            140
+          ],
+          "start": 1.6
+        }
+      ],
+      "sfx": [
+        {
+          "name": "click",
+          "at": 1.5
+        },
+        {
+          "name": "whoosh",
+          "at": 0
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "duration": 3.6,
+      "svg": "scenes/03-mia-screen.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.07,
+        "c0": [
+          0.45,
+          0.45
+        ],
+        "c1": [
+          0.45,
+          0.42
+        ]
+      },
+      "fx": [
+        "sway"
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "duration": 3.0,
+      "svg": "scenes/04-lobby.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.5
+        ]
+      },
+      "sfx": "whoosh"
+    },
+    {
+      "id": "05",
+      "duration": 5.0,
+      "svg": "scenes/05-marc-close.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.04,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.5,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "🕦 11:30",
+          "x": 250,
+          "y": 420,
+          "size": 84,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 1.05
+        },
+        {
+          "text": "🕛 MIDNIGHT",
+          "x": 600,
+          "y": 520,
+          "size": 76,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "start": 2.15
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "duration": 1.4,
+      "svg": "scenes/06-marc-point.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.1,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.58,
+          0.48
+        ],
+        "ease": "out"
+      },
+      "sfx": "hit"
+    },
+    {
+      "id": "07a",
+      "duration": 1.4,
+      "svg": "scenes/07a-eyes.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.15,
+        "c0": [
+          0.5,
+          0.47
+        ],
+        "c1": [
+          0.5,
+          0.47
+        ],
+        "ease": "out"
+      },
+      "punch": false,
+      "flashes": [
+        {
+          "at": 0.0,
+          "peak": 0.35,
+          "decay": 0.25
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "07b",
+      "duration": 3.2,
+      "svg": "scenes/07b-clocks.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.45,
+          0.42
+        ],
+        "c1": [
+          0.45,
+          0.42
+        ]
+      },
+      "overlays": [
+        {
+          "text": "11:30",
+          "x": 250,
+          "y": 1020,
+          "size": 72,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 0.1
+        },
+        {
+          "text": "12:00",
+          "x": 690,
+          "y": 1020,
+          "size": 72,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "start": 0.5
+        }
+      ],
+      "sfx": [
+        {
+          "name": "tick",
+          "at": 0.1
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "duration": 10.4,
+      "svg": "scenes/08-choice.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.03,
+        "c0": [
+          0.5,
+          0.5
+        ],
+        "c1": [
+          0.5,
+          0.5
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "type": "label",
+          "text": "A",
+          "x": 110,
+          "y": 420,
+          "size": 120
+        },
+        {
+          "text": "FIND OUT WHAT",
+          "x": 420,
+          "y": 395,
+          "size": 52,
+          "max_w": 560,
+          "start": 0.3
+        },
+        {
+          "text": "HAPPENED AT 11:30",
+          "x": 420,
+          "y": 458,
+          "size": 52,
+          "max_w": 560,
+          "start": 0.3
+        },
+        {
+          "text": "🚨 +15%",
+          "x": 420,
+          "y": 555,
+          "size": 56,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "start": 0.6
+        },
+        {
+          "text": "Mia might follow you",
+          "x": 420,
+          "y": 625,
+          "size": 36,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 0.6
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 110,
+          "y": 800,
+          "size": 120
+        },
+        {
+          "text": "MAKE THE STATEMENT",
+          "x": 470,
+          "y": 780,
+          "size": 44,
+          "max_w": 600,
+          "start": 2.0
+        },
+        {
+          "text": "DISAPPEAR",
+          "x": 470,
+          "y": 838,
+          "size": 44,
+          "max_w": 600,
+          "start": 2.0
+        },
+        {
+          "text": "🚨 −20% · 🧾 +1",
+          "x": 450,
+          "y": 935,
+          "size": 52,
+          "color": [
+            255,
+            92,
+            92
+          ],
+          "start": 2.3
+        },
+        {
+          "text": "(another crime)",
+          "x": 450,
+          "y": 1000,
+          "size": 36,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 2.3
+        },
+        {
+          "text": "Comment WITNESS",
+          "y": 1225,
+          "size": 56,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 6.0
+        },
+        {
+          "text": "to appear in Day 4 👀",
+          "y": 1292,
+          "size": 42,
+          "start": 6.0
+        }
+      ],
+      "sfx": "hit"
+    }
+  ]
+}

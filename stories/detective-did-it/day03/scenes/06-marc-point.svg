@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#e9eef0"/>
+  <rect x="640" y="300" width="300" height="760" fill="url(#daySky)" stroke="#15141f" stroke-width="6"/>
+  <rect x="0" y="1060" width="1080" height="860" fill="#c9b48a"/>
+  <use href="#marckyy" x="-120" y="380" width="900" height="1140"/>
+  <path d="M600 1080 C700 980 800 900 880 860" stroke="#15141f" stroke-width="76" stroke-linecap="round"/>
+  <path d="M600 1080 C700 980 800 900 880 860" stroke="#2f8a5a" stroke-width="62" stroke-linecap="round"/>
+  <path d="M870 830 L960 800 C978 796 982 818 966 824 L896 870 Z" fill="#cf9670" stroke="#15141f" stroke-width="5"/>
+  <circle cx="880" cy="860" r="34" fill="#cf9670" stroke="#15141f" stroke-width="5"/>
+  <!-- edge of the detective's grey suit, right side -->
+  <path d="M900 700 L1080 640 L1080 1920 L860 1920 Z" fill="#6e737c" stroke="#15141f" stroke-width="6"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

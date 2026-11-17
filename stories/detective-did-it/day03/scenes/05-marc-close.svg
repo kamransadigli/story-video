@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#e9eef0"/>
+  <rect x="640" y="300" width="300" height="760" fill="url(#daySky)" stroke="#15141f" stroke-width="6"/>
+  <rect x="0" y="1060" width="1080" height="860" fill="#c9b48a"/>
+  <ellipse cx="459" cy="900" rx="600" ry="700" fill="url(#lamp)" opacity="0.4"/>
+  <use href="#marckyy" x="-360" y="260" width="1640" height="2077"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
