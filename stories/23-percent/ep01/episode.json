@@ -1,0 +1,118 @@
+{
+  "title": "23% — Episode 1",
+  "duration": 33.0,
+  "contact": "Unknown",
+  "subtitle": "mobile",
+  "clock": "2:47",
+  "ep_label": "EP 1",
+  "fiction_label": "Fiction",
+  "lock": {
+    "until": 2.0,
+    "time": "2:47",
+    "date": "Friday, March 13",
+    "notification": {
+      "from": "Unknown",
+      "text": "please don't call the police"
+    }
+  },
+  "messages": [
+    {
+      "t": 2.35,
+      "from": "her",
+      "text": "is this daniel??"
+    },
+    {
+      "t": 4.1,
+      "from": "you",
+      "text": "wrong number"
+    },
+    {
+      "t": 5.6,
+      "typing": true,
+      "until": 6.5
+    },
+    {
+      "t": 6.5,
+      "from": "her",
+      "text": "no no please"
+    },
+    {
+      "t": 7.4,
+      "from": "her",
+      "text": "he took me. i don't know where i am"
+    },
+    {
+      "t": 9.6,
+      "from": "her",
+      "text": "he's in the next room. he'll hear if i call"
+    },
+    {
+      "t": 12.0,
+      "from": "her",
+      "text": "my battery is 23%"
+    },
+    {
+      "t": 14.0,
+      "typing": true,
+      "until": 15.0
+    },
+    {
+      "t": 15.0,
+      "from": "her",
+      "photo": "assets/photo.png",
+      "open": [
+        15.7,
+        19.6
+      ]
+    },
+    {
+      "t": 20.2,
+      "from": "her",
+      "text": "if police come he'll know. he has a scanner"
+    },
+    {
+      "t": 23.0,
+      "typing": true,
+      "until": 24.4
+    }
+  ],
+  "battery": {
+    "show_from": 12.3,
+    "percent": 23,
+    "label": "HER BATTERY"
+  },
+  "choice": {
+    "t": 25.0,
+    "question": "What do you text back?",
+    "a": "Call 911 anyway",
+    "b": "Stay with her. Tell no one.",
+    "note": "Look at the photo 👀 what do you see?",
+    "send": "📲 Send this to the friend you'd text at 3 AM",
+    "send_at": 4.2
+  },
+  "vo": [
+    {
+      "at": 25.3,
+      "text": "What do I text back? A or B. And look at the photo… what do you see? Send this to the friend you'd text at 3 AM.",
+      "say": "What do I text back? A, or B. And look at the photo... what do you see? Send this to the friend you'd text at three A M.",
+      "voice": "am_michael",
+      "speed": 1.05
+    }
+  ],
+  "sfx": [
+    {
+      "at": 0.05,
+      "name": "buzz"
+    }
+  ],
+  "heartbeat": [
+    6.5,
+    23.0
+  ],
+  "silence": [
+    23.0,
+    25.0
+  ],
+  "music": "drone",
+  "music_volume": 0.6
+}

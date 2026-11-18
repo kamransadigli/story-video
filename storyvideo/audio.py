@@ -258,7 +258,94 @@ def sfx_bell(dur=1.6):
     return _norm(out, 0.7)
 
 
+def sfx_buzz(dur=0.9):
+    """Phone vibrating on a table: two short buzz pulses."""
+    t = _t(dur)
+    on = ((t < 0.32) | ((t > 0.45) & (t < 0.77))).astype(float)
+    on = _lp(on, 60)
+    body = (np.sin(2 * np.pi * 165 * t) + 0.6 * np.sign(np.sin(2 * np.pi * 165 * t)) * 0.4) * on
+    rattle = _bp(rng.standard_normal(len(t)), 300, 1400) * on * 0.3
+    return _norm(body + rattle, 0.8)
+
+
+def sfx_pop(dur=0.18):
+    """Incoming message bubble."""
+    t = _t(dur)
+    f = 900 + 500 * np.exp(-t * 40)
+    y = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 28)
+    return _norm(y, 0.7)
+
+
+def sfx_swoosh(dur=0.32):
+    """Outgoing message: short rising air swoosh."""
+    t = _t(dur)
+    n = rng.standard_normal(len(t))
+    env = np.sin(np.pi * t / dur) ** 2
+    lo, hi = _bp(n, 400, 1500), _bp(n, 1500, 6000)
+    return _norm((lo * (1 - t / dur) + hi * (t / dur)) * env, 0.6)
+
+
+def sfx_beep(dur=0.7):
+    """Low-battery warning: two soft descending beeps."""
+    t = _t(dur)
+    out = np.zeros(len(t))
+    for start, f in ((0.0, 880), (0.28, 660)):
+        tt = np.clip(t - start, 0, None)
+        on = (t >= start) & (tt < 0.2)
+        out += on * np.sin(2 * np.pi * f * tt) * np.minimum(1, tt / 0.01) * np.exp(-tt * 6)
+    return _norm(out, 0.55)
+
+
+def sfx_shutter(dur=0.35):
+    """Camera shutter: two mechanical clicks."""
+    t = _t(dur)
+    c = _bp(rng.standard_normal(len(t)), 1500, 7000)
+    env = np.exp(-t * 90) + 0.8 * np.exp(-np.clip(t - 0.09, 0, None) * 110) * (t > 0.09)
+    return _norm(c * env, 0.7)
+
+
+def heartbeat_track(total, start, stop, bpm=68):
+    """Soft heartbeat (lub-dub) between start and stop seconds."""
+    n = int(total * SR)
+    out = np.zeros(n)
+    beat = 60.0 / bpm
+    kl = int(0.25 * SR)
+    tk = np.arange(kl) / SR
+    thump = np.sin(2 * np.pi * np.cumsum(48 + 30 * np.exp(-tk * 25)) / SR) * np.exp(-tk * 14)
+    t = start
+    while t < stop:
+        for off, g in ((0.0, 1.0), (0.24, 0.65)):
+            a = int((t + off) * SR)
+            if a + kl < n:
+                out[a:a + kl] += thump * g
+        t += beat
+    return out
+
+
+def music_drone(dur, mute=None):
+    """Low tension drone: detuned low tones + filtered air, slowly swelling."""
+    t = _t(dur)
+    out = np.zeros(len(t))
+    for f, g in ((55, 1.0), (55.6, 0.8), (82.4, 0.45), (110.3, 0.25), (164.8, 0.12)):
+        out += np.sin(2 * np.pi * f * t + rng.uniform(0, 6)) * g
+    out *= 0.75 + 0.25 * np.sin(2 * np.pi * 0.08 * t)
+    air = _lp(_hp(rng.standard_normal(len(t)), 200), 900) * 0.25 * (0.6 + 0.4 * np.sin(2 * np.pi * 0.13 * t + 1))
+    out = out + air
+    if mute:
+        a, b = mute
+        env = np.ones(len(t))
+        fade = 0.25
+        env -= np.clip((t - a) / fade, 0, 1) * np.clip((b - t) / fade, 0, 1) * 0.92
+        out *= env
+    return out
+
+
 SFX = {
+    "buzz": (sfx_buzz, 0.5),
+    "pop": (sfx_pop, 0.35),
+    "swoosh": (sfx_swoosh, 0.35),
+    "beep": (sfx_beep, 0.4),
+    "shutter": (sfx_shutter, 0.45),
     "bell": (sfx_bell, 0.35),
     "clunk": (sfx_clunk, 0.55),
     "crackle": (sfx_crackle, 0.5),
@@ -375,7 +462,7 @@ def make_babble(clips, total, seed=11):
 
 
 def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience=None, fades=True,
-        babble=None, babble_volume=0.05, ambience_volume=0.16):
+        babble=None, babble_volume=0.05, ambience_volume=0.16, drone_mute=None, extra=None):
     """voice_clips: [(start_s, samples, sr)]; sfx_events: [(start_s, name)]. Returns stereo float32."""
     n = int(total * SR)
     voice = np.zeros(n)
@@ -399,7 +486,10 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     env = _lp(np.abs(voice), 8)
     env = np.clip(env / (np.max(env) or 1) * 4, 0, 1)
     bed = np.zeros(n)
-    if music:
+    if music == "drone":
+        bed[:] = _norm(music_drone(total, mute=drone_mute), 0.5)[:n]
+        bed *= 1 - 0.45 * env
+    elif music:
         m = music_noir(total + 0.5)
         if not fades:  # looping video: no fade-in/out, just a tiny edge ramp
             m = music_noir(total + 3.0)[int(1.5 * SR):]
@@ -411,6 +501,8 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     elif ambience == "station_cold":
         amb = ambience_station_cold(total) * ambience_volume * (1 - 0.3 * env)
 
+    if extra is not None:  # pre-built tracks (e.g. a heartbeat) mixed in as-is
+        amb = amb + extra[:n]
     if babble is not None:
         amb = amb + babble[:n] * babble_volume * (1 - 0.4 * env)
     mono = voice + fx + bed * music_volume + amb
