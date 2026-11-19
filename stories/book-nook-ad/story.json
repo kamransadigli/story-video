@@ -1,0 +1,24 @@
+{
+  "title": "Book nook kit: product test",
+  "voice": "af_bella",
+  "speed": 1.08,
+  "music": "bright",
+  "music_volume": 0.7,
+  "vignette": 60,
+  "shots": [
+    {"id": "01", "clip": "clips/01-hook-shelf.mp4", "clip_start": 0, "motion": "slow_zoom",
+     "narration": "There's a tiny room hiding on my bookshelf.",
+     "overlays": [{"text": "Hidden between my books 👀", "y": 430, "size": 84}], "sfx": "pop"},
+    {"id": "02", "photo": "photos/02-box-contents.jpg", "fit": "contain", "motion": "push_in",
+     "narration": "It arrives as flat wooden sheets.", "sfx": "whoosh"},
+    {"id": "03", "clip": "clips/03-build-timelapse.mp4", "clip_audio": 0.3,
+     "narration": "You build every piece yourself.", "sfx": "whoosh"},
+    {"id": "04", "clip": "clips/04-details-closeup.mp4", "motion": "push_in",
+     "narration": "Tiny wooden details, everywhere you look.", "sfx": "whoosh"},
+    {"id": "05", "clip": "clips/05-light-on.mp4", "clip_audio": 0.6,
+     "narration": "Then you switch the light on.", "sfx": "riser"},
+    {"id": "06", "clip": "clips/06-final-shelf.mp4", "motion": "pan_right",
+     "narration": "Would you build one? Waitlist link in bio.",
+     "overlays": [{"text": "Waitlist ➜ link in bio", "y": 430, "size": 84}], "sfx": "end"}
+  ]
+}
