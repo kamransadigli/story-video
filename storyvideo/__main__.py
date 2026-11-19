@@ -2,6 +2,8 @@
 
     python -m storyvideo stories/<name>                 # free: SVG scenes + Kokoro voice
     python -m storyvideo stories/<name> --images fal    # AI images from fal.ai (paid)
+
+A shot with "photo": "photos/x.jpg" uses that real photo instead (free, any mode).
 """
 import argparse
 import json
@@ -38,16 +40,21 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
 
     # 1. images (a shot can reuse another shot's picture with "image_of")
-    own = [s for s in shots if "image_of" not in s]
-    if args.images == "fal":
+    own = [s for s in shots if "image_of" not in s and "photo" not in s]
+    photos = [s for s in shots if "image_of" not in s and "photo" in s]
+    img_paths = {}
+    if photos:
+        print(f"   using {len(photos)} photo(s)")
+        img_paths.update(images.render_photo(story_dir, photos, build / "images-photo"))
+    if own and args.images == "fal":
         est = images.fal_estimate(own, args.fal_model)
         print(f"fal.ai estimate: {len(own)} images x {args.fal_model} ~= ${est:.2f}")
         if est > args.max_cost:
             sys.exit(f"Estimated cost ${est:.2f} is above --max-cost ${args.max_cost:.2f}. Stopping.")
-        img_paths = images.render_fal(story, own, build / "images-fal", args.fal_model)
-    else:
+        img_paths.update(images.render_fal(story, own, build / "images-fal", args.fal_model))
+    elif own:
         print("1/4 drawing scenes (SVG)")
-        img_paths = images.render_svg(story_dir, own, build / "images-svg")
+        img_paths.update(images.render_svg(story_dir, own, build / "images-svg"))
     for s in shots:
         if "image_of" in s:
             img_paths[s["id"]] = img_paths[s["image_of"]]

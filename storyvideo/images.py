@@ -1,4 +1,4 @@
-"""Scene images: free SVG illustrations, or AI images from fal.ai.
+"""Scene images: free SVG illustrations, your own photos, or AI images from fal.ai.
 
 Every provider writes one PNG per shot at OUT_W x OUT_H (the 1080x1920 frame
 plus headroom for camera moves) into build/images/<id>.png.
@@ -9,7 +9,7 @@ import subprocess
 import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 ROOT = Path(__file__).resolve().parent.parent
 HEADROOM = 1.2
@@ -44,6 +44,34 @@ def render_svg(story_dir: Path, shots, out_dir: Path):
         for src, dst in todo:
             (tmp / (src.stem + ".png")).replace(dst)
     return {s["id"]: out_dir / f"{s['id']}.png" for s in shots}
+
+
+def render_photo(story_dir: Path, shots, out_dir: Path):
+    """Real photos (JPG/PNG/WebP) as shots. Per-shot keys:
+      photo   path relative to the story folder, e.g. "photos/01-bottle.jpg"
+      fit     "cover" (default): crop to fill 9:16
+              "contain": whole photo on a blurred copy of itself (for wide shots)
+      focus   [x, y] crop centre as image fractions for "cover", default [0.5, 0.5]
+    Phone EXIF rotation is applied, so portrait photos stay upright."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    paths = {}
+    for s in shots:
+        src = story_dir / s["photo"]
+        dst = out_dir / f"{s['id']}.png"
+        paths[s["id"]] = dst
+        if dst.exists() and dst.stat().st_mtime >= max(src.stat().st_mtime, Path(__file__).stat().st_mtime):
+            continue
+        im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+        if s.get("fit", "cover") == "contain":
+            bg = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS)
+            bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(60))).enhance(0.85)
+            fg = ImageOps.contain(im, (OUT_W, OUT_H), Image.LANCZOS)
+            bg.paste(fg, ((OUT_W - fg.width) // 2, (OUT_H - fg.height) // 2))
+            out = bg
+        else:
+            out = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS, centering=tuple(s.get("focus", (0.5, 0.5))))
+        out.save(dst)
+    return paths
 
 
 def fal_estimate(shots, model):

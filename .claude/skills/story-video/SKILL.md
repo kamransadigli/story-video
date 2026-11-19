@@ -55,6 +55,13 @@ The repo's example is `stories/phantom-of-heilbronn/`. Read its `story.json` and
 - Write a strong shared `style` and specific per-shot `prompt`s (subject, setting, lighting, camera angle; no text).
 - Run with `--images fal [--fal-model fal-ai/nano-banana] --max-cost <usd>`. Images are cached in `build/images-fal/`; delete one PNG to regenerate just that shot.
 
+## 4c. Real photos (free: product videos, real objects)
+- Put the user's photos in `stories/<slug>/photos/` and give the shot `"photo": "photos/01-hook.jpg"` instead of `svg`. Photos and SVG scenes can be mixed in one story.
+- `"fit": "cover"` (default) crops to fill 9:16; `"focus": [x, y]` moves the crop centre (image fractions). `"fit": "contain"` shows the whole photo on a blurred copy of itself (use for wide/landscape photos).
+- Phone rotation (EXIF) is fixed automatically. Use photos at least 1080 px wide.
+- For bright product videos set `"vignette": 60` (or `0`) at the top level; the default 200 is a dark noir look.
+- Honesty: every claim in narration/overlays must be visible in a real photo. Never use photos of a product doing something it does not do.
+
 ## 5. Render and review
 ```
 python3 -m storyvideo stories/<slug>            # add --images fal for AI images
