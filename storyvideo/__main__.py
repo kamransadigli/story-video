@@ -3,13 +3,15 @@
     python -m storyvideo stories/<name>                 # free: SVG scenes + Kokoro voice
     python -m storyvideo stories/<name> --images fal    # AI images from fal.ai (paid)
 
-A shot with "photo": "photos/x.jpg" uses that real photo instead (free, any mode).
+A shot with "photo": "photos/x.jpg" uses that real photo instead (free, any mode),
+and "clip": "clips/x.mp4" plays a real video clip ("clip_start", "clip_audio" volume).
 """
 import argparse
 import json
 import sys
 from pathlib import Path
 
+import numpy as np
 import soundfile as sf
 
 from . import audio, images, tts, video
@@ -40,7 +42,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
 
     # 1. images (a shot can reuse another shot's picture with "image_of")
-    own = [s for s in shots if "image_of" not in s and "photo" not in s]
+    own = [s for s in shots if "image_of" not in s and "photo" not in s and "clip" not in s]
     photos = [s for s in shots if "image_of" not in s and "photo" in s]
     img_paths = {}
     if photos:
@@ -99,7 +101,8 @@ def main():
                 sfx_events.append((start + cd["at"] + k * cd.get("step", 1.0), "tick1"))
         ps = {k: v for k, v in s.items() if k in ("id", "fx", "flashes", "overlays", "countdown",
                                                   "caption_y", "punch", "rain_box")}
-        ps.update({"id": s["id"], "start": start, "end": end, "motion": s.get("motion", "push_in")})
+        ps.update({"id": s["id"], "start": start, "end": end,
+                   "motion": s.get("motion", "still" if "clip" in s else "push_in")})
         plan_shots.append(ps)
         t = end
     total = t
@@ -120,6 +123,26 @@ def main():
     print(f"   length {total:.2f}s, {len(shots)} shots")
     if args.timing_only:
         return
+
+    # real video clips: decode exactly the frames each shot needs, plus the clip's own sound
+    clip_dirs, clip_sound = {}, None
+    clip_shots = [(s, ps) for s, ps in zip(shots, plan_shots) if "clip" in s]
+    if clip_shots:
+        print(f"   decoding {len(clip_shots)} clip(s)")
+        clip_sound = np.zeros(int(total * audio.SR))
+    for s, ps in clip_shots:
+        length = ps["end"] - ps["start"]
+        d, nf = images.render_clip(story_dir, s, length, build / "clips")
+        clip_dirs[s["id"]] = {"dir": str(d), "n": nf}
+        img_paths[s["id"]] = d / "00000.jpg"
+        vol = s.get("clip_audio", 0)
+        if vol > 0:
+            y = images.clip_audio(story_dir, s, length, audio.SR)
+            if y is not None and np.abs(y).max() > 0:
+                y = y / np.abs(y).max() * 0.5 * vol
+                a = int(ps["start"] * audio.SR)
+                b = min(len(clip_sound), a + len(y))
+                clip_sound[a:b] += y[: b - a]
 
     if story.get("stakes"):
         from .stakes import tick_times
@@ -144,14 +167,15 @@ def main():
                             story.get("music_volume", 0.8), story.get("ambience"),
                             fades=story.get("fade", True), babble=babble,
                             babble_volume=story.get("chatter_volume", 0.05),
-                            ambience_volume=story.get("ambience_volume", 0.16)), audio.SR)
+                            ambience_volume=story.get("ambience_volume", 0.16),
+                            extra=clip_sound), audio.SR)
 
     # 4. video
     print("4/4 rendering video")
     plan = {"shots": plan_shots, "badge": story.get("badge"), "captions": captions, "total": total,
             "fade": story.get("fade", True), "layout": story.get("layout", {}),
             "vignette": story.get("vignette", 200), "stakes": story.get("stakes"),
-            "images": {k: str(v) for k, v in img_paths.items()}}
+            "images": {k: str(v) for k, v in img_paths.items()}, "clips": clip_dirs}
     (build / "plan.json").write_text(json.dumps(plan, indent=1))
     video.render(plan, wav, out, workers=args.workers)
     print(f"done -> {out}")

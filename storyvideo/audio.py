@@ -427,6 +427,82 @@ def music_noir(dur, bpm=84):
     return out * fade
 
 
+def music_bright(dur, bpm=112):
+    """Upbeat major-key bed for product videos: plucked arpeggio, bass, soft kick, claps, hats.
+    I-V-vi-IV in C, one chord per bar."""
+    t = _t(dur)
+    n = len(t)
+    beat = 60.0 / bpm
+    bar = beat * 4
+    out = np.zeros(n)
+    r = np.random.default_rng(3)
+
+    def put(sig, at, gain):
+        a = int(at * SR)
+        if a >= n:
+            return
+        b = min(n, a + len(sig))
+        out[a:b] += sig[: b - a] * gain
+
+    chords = [(60, 64, 67), (55, 59, 62), (57, 60, 64), (53, 57, 60)]  # C G Am F
+    # warm pad
+    pad = np.zeros(n)
+    for i in range(int(dur / bar) + 1):
+        a, b = int(i * bar * SR), int(min(dur, (i + 1) * bar) * SR)
+        if a >= n:
+            break
+        tt = t[a:b] - i * bar
+        env = np.minimum(1, tt / 0.15) * np.minimum(1, (bar - tt) / 0.15)
+        for m in chords[i % 4]:
+            for det in (-0.08, 0.08):
+                pad[a:b] += np.sin(2 * np.pi * _note(m) * 2 ** (det / 12) * tt) * env
+    out += _lp(pad, 1800) * 0.025
+
+    # plucked arpeggio on eighth notes
+    pl = int(0.5 * SR)
+    tp = np.arange(pl) / SR
+    pattern = [0, 1, 2, 1, 2, 0, 1, 2]
+    for i in range(int(dur / (beat / 2)) + 1):
+        chord = chords[int(i * beat / 2 / bar) % 4]
+        f = _note(chord[pattern[i % 8]] + 12)
+        note = (np.sin(2 * np.pi * f * tp) + 0.4 * np.sin(4 * np.pi * f * tp)
+                + 0.15 * np.sin(6 * np.pi * f * tp)) * np.exp(-tp * 11)
+        put(note, i * beat / 2, 0.09 if i % 2 == 0 else 0.065)
+
+    # bass on beats 1 and 3, root an octave down
+    bl = int(beat * 1.8 * SR)
+    tb = np.arange(bl) / SR
+    for i in range(int(dur / bar) + 1):
+        f = _note(chords[i % 4][0] - 24)
+        sig = (np.sin(2 * np.pi * f * tb) + 0.3 * np.sin(4 * np.pi * f * tb)) * np.exp(-tb * 2.5)
+        sig *= np.minimum(1, tb / 0.01)
+        put(sig, i * bar, 0.22)
+        put(sig, i * bar + 2 * beat, 0.16)
+
+    # drums
+    kl = int(0.3 * SR)
+    tk = np.arange(kl) / SR
+    kick = np.sin(2 * np.pi * np.cumsum(55 + 90 * np.exp(-tk * 35)) / SR) * np.exp(-tk * 12)
+    cl = int(0.18 * SR)
+    clap = _bp(r.standard_normal(cl), 900, 3500) * np.exp(-np.arange(cl) / SR * 28)
+    hl = int(0.05 * SR)
+    hat = _hp(r.standard_normal(hl), 7000) * np.exp(-np.arange(hl) / SR * 90)
+    for i in range(int(dur / beat) + 1):
+        if i < 4:  # first bar: music only, no drums
+            continue
+        if i % 2 == 0:
+            put(kick, i * beat, 0.35)
+        else:
+            put(clap, i * beat, 0.12)
+        put(hat, i * beat + beat / 2, 0.05)
+
+    fade = np.minimum(1, t / 0.5) * np.minimum(1, (dur - t) / 1.5)
+    return out * fade
+
+
+MUSIC = {"noir": music_noir, "bright": music_bright}
+
+
 def resample(x, sr):
     if sr == SR:
         return x.astype(np.float64)
@@ -490,9 +566,10 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
         bed[:] = _norm(music_drone(total, mute=drone_mute), 0.5)[:n]
         bed *= 1 - 0.45 * env
     elif music:
-        m = music_noir(total + 0.5)
+        gen = MUSIC.get(music, music_noir)
+        m = gen(total + 0.5)
         if not fades:  # looping video: no fade-in/out, just a tiny edge ramp
-            m = music_noir(total + 3.0)[int(1.5 * SR):]
+            m = gen(total + 3.0)[int(1.5 * SR):]
         bed[:] = _norm(m, 0.5)[:n]
         bed *= 1 - 0.35 * env
     amb = np.zeros(n)

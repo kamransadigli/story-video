@@ -46,6 +46,17 @@ def render_svg(story_dir: Path, shots, out_dir: Path):
     return {s["id"]: out_dir / f"{s['id']}.png" for s in shots}
 
 
+def fit_frame(im, shot):
+    """Fit a photo or video frame to the OUT_W x OUT_H canvas (see render_photo for keys)."""
+    if shot.get("fit", "cover") == "contain":
+        bg = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS)
+        bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(60))).enhance(0.85)
+        fg = ImageOps.contain(im, (OUT_W, OUT_H), Image.LANCZOS)
+        bg.paste(fg, ((OUT_W - fg.width) // 2, (OUT_H - fg.height) // 2))
+        return bg
+    return ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS, centering=tuple(shot.get("focus", (0.5, 0.5))))
+
+
 def render_photo(story_dir: Path, shots, out_dir: Path):
     """Real photos (JPG/PNG/WebP) as shots. Per-shot keys:
       photo   path relative to the story folder, e.g. "photos/01-bottle.jpg"
@@ -61,17 +72,53 @@ def render_photo(story_dir: Path, shots, out_dir: Path):
         paths[s["id"]] = dst
         if dst.exists() and dst.stat().st_mtime >= max(src.stat().st_mtime, Path(__file__).stat().st_mtime):
             continue
-        im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
-        if s.get("fit", "cover") == "contain":
-            bg = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS)
-            bg = ImageEnhance.Brightness(bg.filter(ImageFilter.GaussianBlur(60))).enhance(0.85)
-            fg = ImageOps.contain(im, (OUT_W, OUT_H), Image.LANCZOS)
-            bg.paste(fg, ((OUT_W - fg.width) // 2, (OUT_H - fg.height) // 2))
-            out = bg
-        else:
-            out = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS, centering=tuple(s.get("focus", (0.5, 0.5))))
-        out.save(dst)
+        fit_frame(ImageOps.exif_transpose(Image.open(src)).convert("RGB"), s).save(dst)
     return paths
+
+
+def render_clip(story_dir: Path, shot, length, out_dir: Path, fps=30):
+    """Real video clip as a shot: decodes `length` seconds from shot["clip_start"] (default 0)
+    into fitted JPG frames in out_dir/<id>/. Same "fit"/"focus" keys as photos; phone
+    rotation is applied by FFmpeg. Returns (frame_dir, frame_count)."""
+    src = story_dir / shot["clip"]
+    d = out_dir / shot["id"]
+    key = json.dumps({"src": str(src), "mtime": src.stat().st_mtime, "start": shot.get("clip_start", 0),
+                      "len": round(length, 3), "fit": shot.get("fit"), "focus": shot.get("focus"),
+                      "code": Path(__file__).stat().st_mtime, "fps": fps})
+    meta = d / "meta.json"
+    if meta.exists() and json.loads(meta.read_text()).get("key") == key:
+        return d, json.loads(meta.read_text())["n"]
+    if d.exists():
+        for f in d.iterdir():
+            f.unlink()
+    d.mkdir(parents=True, exist_ok=True)
+    long_side = 2400  # enough for the 1.2x headroom canvas, keeps 4K phone clips fast
+    scale = (f"scale='if(gt(iw,ih),min(iw,{long_side}),-2)':'if(gt(iw,ih),-2,min(ih,{long_side}))'")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(shot.get("clip_start", 0)),
+                    "-t", f"{length + 0.1:.3f}", "-i", str(src), "-vf", f"fps={fps},{scale}",
+                    "-q:v", "2", str(d / "raw%05d.jpg")], check=True)
+    raws = sorted(d.glob("raw*.jpg"))
+    if not raws:
+        raise SystemExit(f"clip {src} gave no frames (check clip_start)")
+    for k, f in enumerate(raws):
+        fit_frame(Image.open(f).convert("RGB"), shot).save(d / f"{k:05d}.jpg", quality=92)
+        f.unlink()
+    meta.write_text(json.dumps({"key": key, "n": len(raws)}))
+    if len(raws) < length * fps - 1:
+        print(f"   WARNING: clip {shot['clip']} is {len(raws) / fps:.1f}s but the shot is {length:.1f}s; "
+              f"the last frame is held")
+    return d, len(raws)
+
+
+def clip_audio(story_dir: Path, shot, length, sr):
+    """The clip's own sound (mono float) for the shot, or None if the clip has no audio."""
+    r = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", str(shot.get("clip_start", 0)),
+                        "-t", f"{length:.3f}", "-i", str(story_dir / shot["clip"]), "-vn",
+                        "-ac", "1", "-ar", str(sr), "-f", "f32le", "-"], capture_output=True)
+    if r.returncode != 0 or not r.stdout:
+        return None
+    import numpy as np
+    return np.frombuffer(r.stdout, np.float32).astype(np.float64)
 
 
 def fal_estimate(shots, model):

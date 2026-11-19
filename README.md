@@ -16,10 +16,10 @@ Example: [`samples/phantom-of-heilbronn.mp4`](samples/phantom-of-heilbronn.mp4) 
 | Step | Free version | Paid upgrade |
 |---|---|---|
 | Script and shot list | Claude Code (the `/story-video` skill) | – |
-| Images | SVG illustrations Claude draws, rendered with Chromium; or your own photos (`"photo"` per shot) | fal.ai (Flux / Nano Banana), about $0.03–0.04 each |
+| Images | SVG illustrations Claude draws, rendered with Chromium; or your own photos and phone clips (`"photo"` / `"clip"` per shot) | fal.ai (Flux / Nano Banana), about $0.03–0.04 each |
 | Voice | [Kokoro](https://github.com/thewh1teagle/kokoro-onnx), runs locally | – |
 | Captions | Word-by-word with the spoken word highlighted, timed to the voice | – |
-| Music and SFX | Synthesized noir bed and effects, no licenses needed | – |
+| Music and SFX | Synthesized noir or upbeat (`"music": "bright"`) bed and effects, no licenses needed | – |
 | Motion | Ken Burns push/pull/pan, punch-in on cuts, film grain, vignette | AI motion clips (Kling), planned |
 
 ## Setup

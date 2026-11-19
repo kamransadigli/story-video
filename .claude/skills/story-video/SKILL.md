@@ -60,7 +60,9 @@ The repo's example is `stories/phantom-of-heilbronn/`. Read its `story.json` and
 - `"fit": "cover"` (default) crops to fill 9:16; `"focus": [x, y]` moves the crop centre (image fractions). `"fit": "contain"` shows the whole photo on a blurred copy of itself (use for wide/landscape photos).
 - Phone rotation (EXIF) is fixed automatically. Use photos at least 1080 px wide.
 - For bright product videos set `"vignette": 60` (or `0`) at the top level; the default 200 is a dark noir look.
-- Honesty: every claim in narration/overlays must be visible in a real photo. Never use photos of a product doing something it does not do.
+- Real video: `"clip": "clips/02-demo.mp4"` plays a phone clip in that shot (same `fit`/`focus` keys). `"clip_start": 1.5` skips into the clip; `"clip_audio": 0.6` mixes in the clip's own sound (default 0 = muted). Only the frames the shot needs are decoded; if the clip is shorter than the shot, the last frame is held (a warning is printed). Clip shots default to `"motion": "still"`.
+- Music: `"music": "bright"` is an upbeat major-key bed for product videos (`"noir"` = mystery, `"drone"` = tension).
+- Honesty: every claim in narration/overlays must be visible in a real photo or clip. Never use photos of a product doing something it does not do.
 
 ## 5. Render and review
 ```

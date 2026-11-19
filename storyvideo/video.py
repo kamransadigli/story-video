@@ -416,8 +416,13 @@ def _frame(i):
     t = i / FPS
     shots = plan["shots"]
     s = next((x for x in shots if x["start"] <= t < x["end"]), shots[-1])
-    img = _G["imgs"][s["id"]]
     st = t - s["start"]
+    clip = plan.get("clips", {}).get(s["id"])
+    if clip:  # real video: this frame of the clip (last frame held if the clip is short)
+        k = min(int(st * FPS), clip["n"] - 1)
+        img = Image.open(f"{clip['dir']}/{k:05d}.jpg").convert("RGB")
+    else:
+        img = _G["imgs"][s["id"]]
     span = max(1e-6, s["end"] - s["start"] - 1.0 / FPS)
     p = min(1.0, st / span)
     fx = s.get("fx", [])
