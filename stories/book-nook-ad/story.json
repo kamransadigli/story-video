@@ -19,6 +19,6 @@
      "narration": "Then you switch the light on.", "sfx": "riser"},
     {"id": "06", "clip": "clips/06-final-shelf.mp4", "motion": "pan_right",
      "narration": "Would you build one? Waitlist link in bio.",
-     "overlays": [{"text": "Waitlist ➜ link in bio", "y": 430, "size": 84}], "sfx": "end"}
+     "overlays": [{"text": "Waitlist: link in bio", "y": 430, "size": 84}], "sfx": "end"}
   ]
 }
