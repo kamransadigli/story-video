@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lodge" width="1080" height="1920"/>
+  <use href="#figA" x="8" y="355" width="333" height="1000"/>
+  <use href="#figB" x="310" y="423" width="310" height="930"/>
+  <use href="#figC" x="595" y="394" width="320" height="960"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

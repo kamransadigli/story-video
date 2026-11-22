@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lodge" width="1080" height="1920"/>
+  <!-- table with the EMPTY bracelet box -->
+  <rect x="0" y="1060" width="1080" height="860" fill="#7a4a2a" stroke="#15141f" stroke-width="6"/>
+  <rect x="0" y="1060" width="1080" height="30" fill="#9a6a3a"/>
+  <g transform="translate(230 960)">
+    <path d="M0 40 L440 40 L420 -110 L20 -110 Z" fill="#3a0a14" stroke="#15141f" stroke-width="5"/>
+    <path d="M20 30 L420 30 L402 -96 L38 -96 Z" fill="#c8102e" stroke="#e3b04b" stroke-width="5"/>
+    <path d="M-10 40 L450 40 L440 190 L0 190 Z" fill="#3a0a14" stroke="#15141f" stroke-width="5"/>
+    <path d="M14 56 L426 56 L418 160 L22 160 Z" fill="#c8102e" stroke="#e3b04b" stroke-width="5"/>
+    <ellipse cx="220" cy="108" rx="150" ry="34" fill="none" stroke="#7a0a1c" stroke-width="14"/>
+  </g>
+  <use href="#tlamp" x="760" y="880" width="130" height="217"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

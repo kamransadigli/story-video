@@ -28,12 +28,13 @@ def main():
     ap.add_argument("--out", type=Path)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--timing-only", action="store_true", help="print the timeline and stop")
+    ap.add_argument("--story-file", default="story.json", help="alternate story file in the same folder (e.g. a second ending)")
     args = ap.parse_args()
 
     story_dir = args.story.resolve()
-    story = json.loads((story_dir / "story.json").read_text())
+    story = json.loads((story_dir / args.story_file).read_text())
     shots = story["shots"]
-    build = story_dir / "build"
+    build = story_dir / "build" / Path(args.story_file).stem if args.story_file != "story.json" else story_dir / "build"
     out = args.out or (story_dir / "output" / "video.mp4")
     out.parent.mkdir(parents=True, exist_ok=True)
 

@@ -340,6 +340,29 @@ def music_drone(dur, mute=None):
     return out
 
 
+def ambience_lodge(dur):
+    """Cozy lodge in a snowstorm: muffled wind gusts outside, fireplace crackle, the odd cup clink."""
+    t = _t(dur)
+    n = len(t)
+    gust = np.clip(0.55 + 0.45 * np.sin(2 * np.pi * 0.11 * t + 0.4) + 0.2 * np.sin(2 * np.pi * 0.37 * t), 0.1, 1.3)
+    wind = _lp(_bp(rng.standard_normal(n), 120, 1800), 700, 2) * gust * 2.0
+    fire = _lp(rng.standard_normal(n), 250) * 0.6
+    pops = np.zeros(n)
+    for _ in range(int(dur * 9)):
+        a = int(rng.uniform(0, dur) * SR)
+        ln = int(rng.uniform(0.004, 0.018) * SR)
+        if a + ln < n:
+            pops[a:a + ln] += rng.standard_normal(ln) * rng.uniform(0.3, 1.0) * np.exp(-np.arange(ln) / (0.003 * SR))
+    clinks = np.zeros(n)
+    k = 1.7
+    while k < dur - 0.5:
+        a = int(k * SR)
+        c = sfx_clink(0.5) * 0.25
+        clinks[a:a + len(c)] += c[: n - a]
+        k += rng.uniform(3.0, 5.0)
+    return _norm(wind + fire + _hp(pops, 1200) * 0.8 + clinks, 1.0)
+
+
 SFX = {
     "buzz": (sfx_buzz, 0.5),
     "pop": (sfx_pop, 0.35),
@@ -498,6 +521,8 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     amb = np.zeros(n)
     if ambience == "rain_train":
         amb = ambience_rain_train(total) * ambience_volume * (1 - 0.3 * env)
+    elif ambience == "lodge":
+        amb = ambience_lodge(total) * ambience_volume * (1 - 0.3 * env)
     elif ambience == "station_cold":
         amb = ambience_station_cold(total) * ambience_volume * (1 - 0.3 * env)
 

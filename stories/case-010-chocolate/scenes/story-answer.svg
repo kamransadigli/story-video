@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#5a3a20"/>
+  <ellipse cx="540" cy="800" rx="700" ry="800" fill="url(#lamp)" opacity="0.6"/>
+  <text x="540" y="345" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="96" fill="#ffffff" stroke="#15141f" stroke-width="10" paint-order="stroke">CASE #010 ANSWER ✅</text>
+  <rect x="80" y="400" width="920" height="740" rx="36" fill="#efe3c8"/>
+  <svg x="90" y="410" width="900" height="720" viewBox="-30 240 440 352" preserveAspectRatio="xMidYMid slice">
+    <rect x="-200" y="0" width="800" height="1200" fill="url(#planks)"/>
+    <use href="#figB" width="400" height="1200"/>
+    <ellipse cx="128" cy="500" rx="86" ry="96" fill="none" stroke="#ff1e3c" stroke-width="6"/>
+  </svg>
+  <rect x="80" y="400" width="920" height="740" rx="36" fill="none" stroke="#ffd640" stroke-width="8"/>
+  <text x="540" y="1235" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="92" fill="#ffd640" stroke="#15141f" stroke-width="10" paint-order="stroke">B 🍫</text>
+  <g font-family="Oswald" font-weight="700" font-size="52" fill="#ffffff" stroke="#15141f" stroke-width="8" paint-order="stroke" text-anchor="middle">
+    <text x="540" y="1315">Chocolate doesn't melt in a snowstorm.</text>
+    <text x="540" y="1380">Hers has been in the warm café for hours.</text>
+    <text x="540" y="1445">A looked guilty, but he really just arrived.</text>
+  </g>
+  <text x="540" y="1600" text-anchor="middle" font-family="Oswald" font-weight="400" font-size="42" fill="#f6e2b8">New case every day 🔍</text>
+</svg>
