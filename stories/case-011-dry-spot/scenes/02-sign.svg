@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lot" width="1080" height="1920"/>
+  <rect x="440" y="480" width="40" height="760" fill="#5a5f66" stroke="#15141f" stroke-width="4"/>
+  <g filter="url(#glow)">
+    <rect x="160" y="420" width="600" height="230" rx="30" fill="#c8102e" stroke="#ffd34a" stroke-width="12"/>
+    <text x="460" y="590" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="150" fill="#ffe14a" letter-spacing="10">DINER</text>
+  </g>
+  <circle cx="460" cy="535" r="420" fill="#ff5a3a" opacity="0.12" filter="url(#blur)"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

@@ -363,6 +363,30 @@ def ambience_lodge(dur):
     return _norm(wind + fire + _hp(pops, 1200) * 0.8 + clinks, 1.0)
 
 
+def ambience_rain_lot(dur):
+    """Steady light rain on a parking lot + distant passing traffic."""
+    t = _t(dur)
+    n = len(t)
+    rain = _bp(rng.standard_normal(n), 700, 8000) * (0.85 + 0.15 * np.sin(2 * np.pi * 0.2 * t))
+    drops = np.zeros(n)
+    for _ in range(int(dur * 40)):
+        a = int(rng.uniform(0, dur) * SR)
+        ln = int(0.01 * SR)
+        if a + ln < n:
+            drops[a:a + ln] += rng.standard_normal(ln) * np.exp(-np.arange(ln) / (0.0018 * SR)) * rng.uniform(0.2, 0.6)
+    traffic = np.zeros(n)
+    k = rng.uniform(0.5, 2.5)
+    while k < dur:
+        ln = int(rng.uniform(2.5, 4.0) * SR)
+        a = int(k * SR)
+        env = np.sin(np.linspace(0, np.pi, ln)) ** 2
+        seg = _lp(rng.standard_normal(ln), 400, 2) * env * rng.uniform(0.6, 1.2)
+        b = min(n, a + ln)
+        traffic[a:b] += seg[: b - a]
+        k += rng.uniform(3.5, 6.0)
+    return _norm(rain * 0.3 + _hp(drops, 1800) * 0.5 + traffic * 1.4, 1.0)
+
+
 SFX = {
     "buzz": (sfx_buzz, 0.5),
     "pop": (sfx_pop, 0.35),
@@ -521,6 +545,8 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     amb = np.zeros(n)
     if ambience == "rain_train":
         amb = ambience_rain_train(total) * ambience_volume * (1 - 0.3 * env)
+    elif ambience == "rain_lot":
+        amb = ambience_rain_lot(total) * ambience_volume * (1 - 0.3 * env)
     elif ambience == "lodge":
         amb = ambience_lodge(total) * ambience_volume * (1 - 0.3 * env)
     elif ambience == "station_cold":

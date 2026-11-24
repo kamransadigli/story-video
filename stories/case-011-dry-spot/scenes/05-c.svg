@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#lot" width="1080" height="1920"/>
+  <rect x="266.8" y="1016" width="616.3999999999999" height="62" rx="14" fill="#9ea4aa"/><rect x="276.8" y="1022" width="596.3999999999999" height="8" fill="#b4b9be"/><use href="#carRed" x="240" y="706.1666666666667" width="670" height="335.0"/>
+  <use href="#figC" x="65" y="408" width="220" height="660"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

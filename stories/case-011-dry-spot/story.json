@@ -1,0 +1,434 @@
+{
+  "title": "Case #011: The Dry Spot",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.6,
+  "ambience": "rain_lot",
+  "ambience_volume": 0.14,
+  "fade": false,
+  "vignette": 70,
+  "layout": {
+    "cx": 470,
+    "max_w": 880,
+    "cap_chars": 14
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "One of them is lying. Most people get this wrong.",
+      "caption_y": 1230
+    },
+    {
+      "at": 2.62,
+      "text": "It's been raining for an hour. Ten minutes ago, the diner was robbed. All three say they parked here this morning.",
+      "caption_y": 1250
+    },
+    {
+      "at": 9.1,
+      "text": "Who's lying? Send this to someone who'll get it wrong. Answer in my Story tomorrow.",
+      "caption_y": 1230
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.0,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 345,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "sfx": "hit",
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "02",
+      "duration": 1.0,
+      "svg": "scenes/02-sign.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.08,
+        "c0": [
+          0.44,
+          0.4
+        ],
+        "c1": [
+          0.44,
+          0.4
+        ],
+        "ease": "out"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Raining for 1 hour",
+          "y": 760,
+          "size": 72,
+          "color": [
+            255,
+            255,
+            255
+          ]
+        },
+        {
+          "text": "Robbed 10 min ago",
+          "y": 850,
+          "size": 72,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "start": 0.15
+        }
+      ],
+      "sfx": [
+        {
+          "name": "bell",
+          "at": 0.0
+        }
+      ],
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "03",
+      "duration": 2.0,
+      "svg": "scenes/03-a.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.52
+        ]
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 560,
+          "y": 560
+        }
+      ],
+      "sfx": "whoosh",
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-b.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.52
+        ]
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 560,
+          "y": 560
+        }
+      ],
+      "sfx": "whoosh",
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "05",
+      "duration": 2.0,
+      "svg": "scenes/05-c.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.47,
+          0.5
+        ],
+        "c1": [
+          0.47,
+          0.52
+        ]
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 560,
+          "y": 560
+        }
+      ],
+      "sfx": "whoosh",
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "06",
+      "duration": 2.0,
+      "svg": "scenes/06-lineup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.04,
+        "c0": [
+          0.46,
+          0.55
+        ],
+        "c1": [
+          0.46,
+          0.56
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "text": "Who's lying? 👇",
+          "y": 350,
+          "size": 84,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 160,
+          "y": 600,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 450,
+          "y": 600,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 740,
+          "y": 600,
+          "size": 90
+        }
+      ],
+      "sfx": "hit",
+      "fx": [
+        "rain"
+      ]
+    },
+    {
+      "id": "07",
+      "duration": 3.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.05,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #011",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Send this to someone",
+          "y": 290,
+          "size": 70,
+          "end": 2.7
+        },
+        {
+          "text": "who'll get it wrong 😈",
+          "y": 375,
+          "size": 70,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 2.7
+        },
+        {
+          "text": "✅ Answer in my Story",
+          "y": 480,
+          "size": 60,
+          "start": 0.6,
+          "end": 2.7
+        },
+        {
+          "text": "tomorrow",
+          "y": 555,
+          "size": 60,
+          "start": 0.6,
+          "end": 2.7
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 345,
+          "size": 100,
+          "pop": false,
+          "start": 2.7
+        }
+      ],
+      "sfx": "whoosh",
+      "fx": [
+        "rain"
+      ]
+    }
+  ]
+}
