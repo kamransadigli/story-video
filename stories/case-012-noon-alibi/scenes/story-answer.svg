@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#4a3a2a"/>
+  <ellipse cx="540" cy="760" rx="700" ry="760" fill="url(#lamp)" opacity="0.5"/>
+  <text x="540" y="345" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="96" fill="#ffffff" stroke="#15141f" stroke-width="10" paint-order="stroke">CASE #012 ANSWER ✅</text>
+  <use href="#photoA" x="50" y="420" width="480" height="600"/>
+  <use href="#photoC" x="550" y="420" width="480" height="600"/>
+  <g fill="none" stroke="#ff1e3c" stroke-width="8">
+    <ellipse cx="380" cy="865" rx="170" ry="46" transform="rotate(-8 380 865)"/>
+    <ellipse cx="770" cy="903" rx="70" ry="34"/>
+  </g>
+  <g font-family="Oswald" font-weight="700" font-size="44" text-anchor="middle" stroke="#15141f" stroke-width="7" paint-order="stroke">
+    <text x="290" y="1080" fill="#ff8a8a">A: LONG ✗</text><text x="790" y="1080" fill="#9fe08a">C: SHORT ✓</text>
+  </g>
+  <text x="540" y="1190" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="88" fill="#ffd640" stroke="#15141f" stroke-width="10" paint-order="stroke">A ☀️</text>
+  <g font-family="Oswald" font-weight="700" font-size="42" fill="#ffffff" stroke="#15141f" stroke-width="7" paint-order="stroke" text-anchor="middle">
+    <text x="540" y="1262">At noon the sun is high, so shadows are SHORT</text>
+    <text x="540" y="1316">(look at C). A's shadow is LONG: his photo was</text>
+    <text x="540" y="1370">taken in the evening. B's photo is blurry, but the</text>
+    <text x="540" y="1424">clock says 12:00. C looks nervous, but her shadow is right.</text>
+  </g>
+  <text x="540" y="1585" text-anchor="middle" font-family="Oswald" font-weight="400" font-size="42" fill="#f6e2b8">New case every day 🔍</text>
+</svg>

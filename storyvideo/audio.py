@@ -387,6 +387,25 @@ def ambience_rain_lot(dur):
     return _norm(rain * 0.3 + _hp(drops, 1800) * 0.5 + traffic * 1.4, 1.0)
 
 
+def ambience_museum(dur):
+    """Big quiet hall: low room tone, distant footsteps with long echo."""
+    t = _t(dur)
+    n = len(t)
+    tone = _lp(rng.standard_normal(n), 220, 4) * 1.2 + np.sin(2 * np.pi * 60 * t) * 0.05
+    steps = np.zeros(n)
+    k = 0.6
+    while k < dur - 0.3:
+        a = int(k * SR)
+        ln = int(0.05 * SR)
+        hit = _bp(rng.standard_normal(ln), 200, 2000) * np.exp(-np.arange(ln) / (0.01 * SR))
+        steps[a:a + ln] += hit[: n - a] * 0.5
+        k += rng.uniform(0.55, 0.75)
+    ir_t = np.arange(int(1.2 * SR)) / SR
+    ir = rng.standard_normal(len(ir_t)) * np.exp(-ir_t * 3.5)
+    echo = signal.fftconvolve(steps, ir)[:n] * 0.08
+    return _norm(tone + steps * 0.4 + echo, 1.0)
+
+
 SFX = {
     "buzz": (sfx_buzz, 0.5),
     "pop": (sfx_pop, 0.35),
@@ -545,6 +564,8 @@ def mix(total, voice_clips, sfx_events, music="noir", music_volume=0.8, ambience
     amb = np.zeros(n)
     if ambience == "rain_train":
         amb = ambience_rain_train(total) * ambience_volume * (1 - 0.3 * env)
+    elif ambience == "museum":
+        amb = ambience_museum(total) * ambience_volume * (1 - 0.3 * env)
     elif ambience == "rain_lot":
         amb = ambience_rain_lot(total) * ambience_volume * (1 - 0.3 * env)
     elif ambience == "lodge":

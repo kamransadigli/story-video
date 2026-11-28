@@ -1,0 +1,547 @@
+{
+  "title": "Case #012: The Noon Alibi",
+  "voice": "am_michael",
+  "speed": 1.18,
+  "music": "noir",
+  "music_volume": 0.6,
+  "ambience": "museum",
+  "ambience_volume": 0.12,
+  "fade": false,
+  "vignette": 70,
+  "layout": {
+    "cx": 470,
+    "max_w": 880,
+    "cap_chars": 14
+  },
+  "lines": [
+    {
+      "at": 0.05,
+      "text": "One of them is lying. Almost nobody gets this right.",
+      "caption_y": 1230
+    },
+    {
+      "at": 3.0,
+      "text": "A gold coin was stolen at exactly noon. All three have a photo proving they were somewhere else.",
+      "caption_y": 1250
+    },
+    {
+      "at": 10.85,
+      "text": "Whose photo is fake? Send this to someone who'll get it wrong. Answer in my Story tomorrow.",
+      "caption_y": 1250
+    }
+  ],
+  "shots": [
+    {
+      "id": "01",
+      "duration": 2.0,
+      "svg": "scenes/01-face.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 345,
+          "size": 100,
+          "pop": false
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "02",
+      "duration": 1.0,
+      "svg": "scenes/02-setup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.08,
+        "c0": [
+          0.45,
+          0.45
+        ],
+        "c1": [
+          0.45,
+          0.47
+        ],
+        "ease": "out"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Stolen at exactly",
+          "y": 300,
+          "size": 78
+        },
+        {
+          "text": "12:00 noon ☀️",
+          "y": 395,
+          "size": 90,
+          "color": [
+            255,
+            214,
+            64
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "duration": 1.0,
+      "svg": "scenes/03-a-hold.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.45,
+          0.5
+        ],
+        "c1": [
+          0.45,
+          0.52
+        ]
+      },
+      "fx": [
+        "sway"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 150,
+          "y": 420,
+          "size": 110
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "04",
+      "duration": 2.0,
+      "svg": "scenes/04-a-photo.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.425,
+          0.39
+        ],
+        "c1": [
+          0.425,
+          0.39
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 120,
+          "y": 360,
+          "size": 100
+        }
+      ],
+      "sfx": "shutter"
+    },
+    {
+      "id": "05",
+      "duration": 1.0,
+      "svg": "scenes/05-b-hold.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.45,
+          0.5
+        ],
+        "c1": [
+          0.45,
+          0.52
+        ]
+      },
+      "fx": [
+        "sway"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 150,
+          "y": 420,
+          "size": 110
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "06",
+      "duration": 2.0,
+      "svg": "scenes/06-b-photo.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.425,
+          0.39
+        ],
+        "c1": [
+          0.425,
+          0.39
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 120,
+          "y": 360,
+          "size": 100
+        }
+      ],
+      "sfx": "shutter"
+    },
+    {
+      "id": "07",
+      "duration": 1.0,
+      "svg": "scenes/07-c-hold.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.45,
+          0.5
+        ],
+        "c1": [
+          0.45,
+          0.52
+        ]
+      },
+      "fx": [
+        "sway"
+      ],
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 150,
+          "y": 420,
+          "size": 110
+        }
+      ],
+      "sfx": "whoosh"
+    },
+    {
+      "id": "08",
+      "duration": 2.0,
+      "svg": "scenes/08-c-photo.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.06,
+        "c0": [
+          0.425,
+          0.39
+        ],
+        "c1": [
+          0.425,
+          0.39
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "A, B or C? 👇",
+          "x": 205,
+          "y": 255,
+          "size": 52,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 120,
+          "y": 360,
+          "size": 100
+        }
+      ],
+      "sfx": "shutter"
+    },
+    {
+      "id": "09",
+      "duration": 2.0,
+      "svg": "scenes/09-lineup.svg",
+      "motion": {
+        "z0": 1.0,
+        "z1": 1.05,
+        "c0": [
+          0.45,
+          0.4
+        ],
+        "c1": [
+          0.45,
+          0.4
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Whose photo is fake? 👇",
+          "y": 360,
+          "size": 60,
+          "pop": false
+        },
+        {
+          "type": "label",
+          "text": "A",
+          "x": 175,
+          "y": 480,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "B",
+          "x": 470,
+          "y": 480,
+          "size": 90
+        },
+        {
+          "type": "label",
+          "text": "C",
+          "x": 765,
+          "y": 480,
+          "size": 90
+        }
+      ],
+      "sfx": "hit"
+    },
+    {
+      "id": "10",
+      "duration": 2.0,
+      "image_of": "01",
+      "motion": {
+        "z0": 1.05,
+        "z1": 1.0,
+        "c0": [
+          0.454,
+          0.42
+        ],
+        "c1": [
+          0.454,
+          0.42
+        ],
+        "ease": "linear"
+      },
+      "punch": false,
+      "overlays": [
+        {
+          "text": "CASE #012",
+          "x": 175,
+          "y": 190,
+          "size": 46,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "pop": false
+        },
+        {
+          "text": "Send this to someone",
+          "y": 290,
+          "size": 70,
+          "end": 1.7
+        },
+        {
+          "text": "who'll get it wrong 😈",
+          "y": 375,
+          "size": 70,
+          "color": [
+            255,
+            214,
+            64
+          ],
+          "end": 1.7
+        },
+        {
+          "text": "✅ Answer in my Story",
+          "y": 480,
+          "size": 60,
+          "start": 0.3,
+          "end": 1.7
+        },
+        {
+          "text": "tomorrow",
+          "y": 555,
+          "size": 60,
+          "start": 0.3,
+          "end": 1.7
+        },
+        {
+          "text": "ONE OF THEM IS LYING",
+          "y": 345,
+          "size": 100,
+          "pop": false,
+          "start": 1.7
+        }
+      ],
+      "sfx": "whoosh"
+    }
+  ]
+}

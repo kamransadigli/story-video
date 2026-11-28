@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#museum" width="1080" height="1920"/>
+  <g transform="translate(740 640) scale(1.5)">
+      <circle r="78" fill="#fbf7ef" stroke="#15141f" stroke-width="8"/>
+      <g stroke="#15141f" stroke-width="6" stroke-linecap="round"><line x1="0.0" y1="-64.0" x2="0.0" y2="-54.0"/><line x1="32.0" y1="-55.4" x2="27.0" y2="-46.8"/><line x1="55.4" y1="-32.0" x2="46.8" y2="-27.0"/><line x1="64.0" y1="-0.0" x2="54.0" y2="-0.0"/><line x1="55.4" y1="32.0" x2="46.8" y2="27.0"/><line x1="32.0" y1="55.4" x2="27.0" y2="46.8"/><line x1="0.0" y1="64.0" x2="0.0" y2="54.0"/><line x1="-32.0" y1="55.4" x2="-27.0" y2="46.8"/><line x1="-55.4" y1="32.0" x2="-46.8" y2="27.0"/><line x1="-64.0" y1="0.0" x2="-54.0" y2="0.0"/><line x1="-55.4" y1="-32.0" x2="-46.8" y2="-27.0"/><line x1="-32.0" y1="-55.4" x2="-27.0" y2="-46.8"/></g>
+      <text x="0" y="-30" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="22" fill="#15141f">12</text>
+      <line x1="0" y1="0" x2="0" y2="-38" stroke="#15141f" stroke-width="10" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="0" y2="-58" stroke="#15141f" stroke-width="5" stroke-linecap="round"/>
+      <circle r="6" fill="#c8102e"/></g>
+  <rect x="200" y="760" width="520" height="520" fill="#dfe9ef" fill-opacity="0.55" stroke="#15141f" stroke-width="6"/>
+  <rect x="180" y="1270" width="560" height="120" fill="#7a5a3a" stroke="#15141f" stroke-width="6"/>
+  <path d="M360 1270 L360 1150 C360 1110 560 1110 560 1150 L560 1270 Z" fill="#c8102e" stroke="#15141f" stroke-width="5"/>
+  <ellipse cx="460" cy="1150" rx="70" ry="18" fill="#7a0a1c"/>
+  <path d="M220 790 L300 790 L230 900" stroke="#ffffff" stroke-width="8" opacity="0.6" fill="none"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

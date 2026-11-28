@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#museum" width="1080" height="1920"/>
+  <use href="#holdA" x="90" y="230" width="720" height="1260"/>
+  <g transform="rotate(-4 460 1000)">
+    <use href="#photoA" x="270" y="760" width="400" height="500"/>
+    <ellipse cx="282" cy="1090" rx="34" ry="44" fill="#d8a27c" stroke="#15141f" stroke-width="5"/>
+    <ellipse cx="658" cy="1090" rx="34" ry="44" fill="#d8a27c" stroke="#15141f" stroke-width="5"/>
+  </g>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>

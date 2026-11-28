@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920">
+  <use href="#museum" width="1080" height="1920"/>
+  <rect width="1080" height="1920" fill="#3a2a1e" opacity="0.18"/>
+  <use href="#photoC" x="100" y="300" width="720" height="900"/>
+  <rect width="1080" height="1920" filter="url(#grit)"/>
+</svg>
